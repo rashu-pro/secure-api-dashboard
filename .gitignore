@@ -1,0 +1,14 @@
+*.DS_Store
+*.log
+*.zip
+.idea
+.sass-cache/
+/nbproject/
+/nbproject/private/
+/node_modules/
+/plugins/
+/documentation/
+/dist/img/
+
+ad.js
+

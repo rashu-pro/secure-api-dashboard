@@ -1,0 +1,55 @@
+.header{
+  &.fixed{
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+}
+.navigation{
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 20%);
+  .logo{
+    &-wrapper{
+      img{
+        max-width:200px;
+        max-height:70px;
+      }
+    }
+    &-credit{
+      &-wrapper{
+        img{
+          max-width:200px;
+          max-height:50px;
+        }
+      }
+    }
+  }
+
+  @media (min-width:768px){
+    .logo{
+      &-wrapper{
+        img{
+          max-width:300px;
+          max-height:80px;
+        }
+      }
+      &-credit{
+        &-wrapper{
+          img{
+            max-width:300px;
+            max-height:70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-head{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

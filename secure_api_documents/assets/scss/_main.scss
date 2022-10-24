@@ -1,0 +1,19 @@
+.main{
+  &-wrapper{
+    //background-color: #f2f2f2;
+  }
+}
+
+.section{
+  padding:50px 0;
+  &-title{
+    font-size:24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom:15px;
+    &.medium{
+      font-size: 20px;
+    }
+  }
+}

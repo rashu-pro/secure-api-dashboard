@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Person Details</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect.
+    -->
+    <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+    <!--custom css-->
+    <link rel="stylesheet" href="dist/css/custom.css?v=1.0.5">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <!-- Menu toggle button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the messages -->
+                                <ul class="menu">
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <!-- User Image -->
+                                                <img src="dist/img/user2-160x160.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <!-- Message title and timestamp -->
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <!-- The message -->
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                </ul>
+                                <!-- /.menu -->
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- /.messages-menu -->
+
+                    <!-- Notifications Menu -->
+                    <li class="dropdown notifications-menu">
+                        <!-- Menu toggle button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- Inner Menu: contains the notifications -->
+                                <ul class="menu">
+                                    <li><!-- start notification -->
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+                                    <!-- end notification -->
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks Menu -->
+                    <li class="dropdown tasks-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- Inner menu: contains the tasks -->
+                                <ul class="menu">
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <!-- Task title and progress text -->
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <!-- The progress bar -->
+                                            <div class="progress xs">
+                                                <!-- Change the css width attribute to simulate progress -->
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account Menu -->
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- The user image in the navbar-->
+                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">Alexander Pierce</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- The user image in the menu -->
+                            <li class="user-header">
+                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>admin</p>
+                    <!-- Status -->
+                    <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">MENU</li>
+                <!-- Optionally, you can add icons to the links -->
+
+                <li class="">
+                    <a href="dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-graduation-cap"></i> <span>School</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="pages/tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                </li>
+
+                <li class="">
+                    <a href="pages/tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+
+                </li>
+                <li class="">
+                    <a href="pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+
+                </li>
+                <li class="">
+                    <a href="pages/tables/data_parents.html"><i class="fa fa-male"></i> <span>Parents</span></a>
+
+                </li>
+                <li class="">
+                    <a href="data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
+
+                </li>
+                <li class="">
+                    <a href="pages/tables/data_teachers.html"><i class="fa fa-user"></i> <span>Teachers</span></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Settings</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="pages/tables/data_topics.html">Topics</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-sticky-note"></i> <span>Assignments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="pages/tables/data_assignments.html">Due Assignments</a></li>
+                        <li><a href="pages/forms/form_create_assignment.html">Create Assignment</a></li>
+                        <li><a href="pages/tables/data_assignments.html">All Assignments</a></li>
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-calendar"></i> <span>Events</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/events">Event List</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-users"></i> <span>Persons</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/persons">All Persons</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-gift"></i> <span>Payments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/give/pledges">Pledges</a></li>
+                        <li><a href="/admin/give/payments">Payments</a></li>
+                        <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
+                        <li><a href="/admin/give/company/customers">CC Customers</a></li>
+                        <li><a href="/admin/give/company/settings">Setup</a></li>
+                        <li><a href="/admin/give/company/deposits">CC Deposits</a></li>
+                        <li><a href="/admin/donation/categories">Donation Categories</a></li>
+                        <li><a href="/admin/give/company/products">CC Products</a></li>
+
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/admin/users"><i class="fa fa-user"></i> <span>User Settings</span></a>
+
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Components</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="pages/forms/form_create_assignment.htmlbtn_action.html"> Action
+                            Button </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <section class="content">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <!-- Profile Image -->
+                    <div class="box box-primary">
+                        <div class="box-body box-profile">
+                            <div class="edit-area">
+                                <a href="javascript:;" class="toggle-edit-area">
+                                    <!--<span class="mdi mdi-more"></span>-->
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </a>
+
+                                <div class="edit-buttons">
+                                    <a href="dist/img/avatar_2.png" class="view-button view-popup">
+                                        <span class="glyphicon glyphicon-zoom-in"></span>
+                                    </a>
+
+                                    <a href="javascript:;" class="view-button">
+                                        <span class="fa fa-upload"></span>
+                                        <form action="/Admin/Persons/ProfilePictureUpdate" method="post"
+                                              enctype="multipart/form-data" id="profile-pic-upload-form">
+                                            <input name="__RequestVerificationToken" type="hidden"
+                                                   value="mBQ8hI4YX4mNh0tkDhZ4pZmIiCsZlqEEta4elETqceGUTDDo7gJHlHDFc5xnwr3JVMkAFEg9Ot-iHvi8ahlfAAU0KvSA_Flih8GHRFpPJnQ1">
+                                            <input type="file" name="file" class="file-field"
+                                                   onchange="uploadProfilePic()" accept="image/*">
+                                            <input type="hidden" value="b19d190c-6af0-4db4-a5e4-cef7e91dbd84"
+                                                   name="key">
+                                        </form>
+                                    </a>
+
+                                    <a href="javascript:;" class="view-button">
+                                        <span class="fa fa-trash"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="avatar-card">
+                                <div class="avatar-img">
+                                    <img class="img-responsive" src="dist/img/avatar_2.png" alt="User Profile picture">
+                                </div>
+
+                                <div class="avatar-info">
+                                    <h3 class="profile-username m-0">Saeed Shaikh</h3>
+                                    <p class="profile-meta"><span class="id-holder"><strong style="padding-right:4px;">ID:</strong>3774</span>
+                                        <span class="label bg-green">Parent</span></p>
+                                </div>
+
+
+                            </div>
+
+                            <ul class="list-group list-group-unbordered">
+                                <li class="list-group-item">
+                                    <b class="icon"><i class="fa fa-phone-square"></i> </b>
+                                    <span class="text">3178409847</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <b class="icon"><i class="fa fa-envelope"></i> </b>
+                                    <span class="text">srs.ihp@sbcglobal.net</span>
+                                </li>
+                            </ul>
+
+                            <a title="Edit person information"
+                               href="/admin/persons/edit/b19d190c-6af0-4db4-a5e4-cef7e91dbd84"
+                               class="btn btn-primary btn-block"><i class="fa fa-edit"></i> <b>Edit Person Info</b></a>
+                            <br>
+                            <a data-url="/admin/users/edit/c8c16328-6676-43b3-b815-036b8a906d2e"
+                               class="btn btn-success btn-block js-edit"><i class="fa fa-user"></i><b> User Info
+                                Update</b></a>
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+
+                    <!-- /.box -->
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Details</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <strong><i class="fa fa-map-marker margin-r-5"></i> Address</strong>
+                            <p class="text-muted">
+                                12673 Kossuth St
+                                <br>Carmel&nbsp;Indiana&nbsp;46032
+                            </p>
+                            <hr>
+                            <strong><i class="fa fa-clock-o margin-r-5"></i> Created</strong>
+                            <p class="text-muted">03 Aug, 2019</p>
+                            <hr>
+
+
+                            <a data-toggle="confirmation" data-placement="top"
+                               data-title="Update Child's Address, Are you sure?"
+                               data-href="/Admin/Persons/UpdateStudentAddress?parentKey=b19d190c-6af0-4db4-a5e4-cef7e91dbd84"
+                               class="btn btn-success btn-sm btn-fill btn-block" data-original-title="" title=""><b>Update
+                                Child's Address</b> &nbsp; <i class="fa fa-refresh fa-lg"></i></a>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#relationships" data-toggle="tab" aria-expanded="true"><i
+                                        class="glyphicon glyphicon-link margin-r-5"></i><strong>Family</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#pledges" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-credit-card margin-r-5"></i><strong>Pledges</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#donations" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-credit-card margin-r-5"></i><strong>Payments/Donations</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#subscriptions" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-credit-card margin-r-5"></i><strong>Subscriptions</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#invoice" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-credit-card margin-r-5"></i><strong>Upcoming
+                                    Invoice</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#courses" data-toggle="tab" aria-expanded="false"><i
+                                        class="fa fa-book margin-r-5"></i><strong>Courses</strong></a>
+                            </li>
+
+                            <li class="">
+                                <a href="#registration" data-toggle="tab" aria-expanded="false"><i
+                                        class="fa fa-book margin-r-5"></i><strong>Registration</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#documents" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-book margin-r-5"></i><strong>Documents</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#memberships" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-hourglass margin-r-5"></i><strong>Memberships</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#demographics" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-stats margin-r-5"></i><strong>Demographics</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#user" data-toggle="tab" aria-expanded="false"><i
+                                        class="glyphicon glyphicon-user margin-r-5"></i><strong>User
+                                    Details</strong></a>
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="relationships">
+
+                                <div class="d-flex justify-space-between align-center mb-10">
+                                    <h3 class="section-title v2 m-0">Family Members List</h3>
+                                    <a class="btn btn-primary mr-10" href="#"> Add New <i
+                                            class="fa fa-plus ml-2"></i></a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                First Name
+                                            </th>
+                                            <th>
+                                                Last Name
+                                            </th>
+                                            <th>
+                                                Relation
+                                            </th>
+                                            <th>
+                                                Reverse Relation
+                                            </th>
+                                            <th>
+                                                First Name
+                                            </th>
+                                            <th>
+                                                Last Name
+                                            </th>
+
+                                            <th>
+                                                Action
+                                            </th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+
+                                            <td>
+                                                <a href="#" class="btn-link-underlined">
+                                                    Saeed <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Shaikh
+                                            </td>
+                                            <td>
+                                                Child
+                                            </td>
+                                            <td>
+                                                Parent
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn-link-underlined">
+                                                    Faris <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Shaikh
+                                            </td>
+                                            <td class="">
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-user-plus"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <a href="#" class="btn-link-underlined">
+                                                    Saeed <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Shaikh
+                                            </td>
+                                            <td>
+                                                Spouse
+                                            </td>
+                                            <td>
+                                                Spouse
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn-link-underlined">
+                                                    Asima <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Yunus
+                                            </td>
+                                            <td class="">
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="pledges">
+
+                                <div class="d-flex justify-space-between align-center mb-10">
+                                    <h3 class="section-title v2 m-0">Pledges List</h3>
+                                    <a class="btn btn-primary mr-10" href="#"> Add New <i
+                                            class="fa fa-plus ml-2"></i></a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-2tr-for-dtr">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Id
+                                            </th>
+                                            <th>
+                                                Created On
+                                            </th>
+                                            <th>
+                                                Campaign
+                                            </th>
+                                            <th>
+                                                Total Due
+                                            </th>
+                                            <th>
+                                                Total Paid
+                                            </th>
+                                            <th>
+                                                Outstanding
+                                            </th>
+                                            <th>
+                                                Frequency
+                                            </th>
+                                            <th>
+                                                Note
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        <!-- data row -->
+                                        <tr class="bg-grey">
+                                            <td>
+                                                4429
+                                            </td>
+                                            <td>
+                                                9/25/2022<br> 9:42:58 AM
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                <span>
+                                    $0.00
+                                </span>
+
+                                            </td>
+                                            <td>
+                                                ONETIME
+                                            </td>
+                                            <td>
+                                                AL ILM 2022-23 Academic Year Returning Registration Payment
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="bg-grey action-tr">
+                                            <td colspan="8">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger  mr-15"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                    <a href="#" class="btn link-btn"> View Payment<i
+                                                            class="fa fa-chevron-down ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+                                        <tr id="collapseme-1" class="collapse out">
+                                            <td colspan="9">
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <div class="box-title">
+                                                            <h4>Payment Details</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-body">
+
+                                                        <div class="donation-table"></div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+                                        <!-- data row -->
+                                        <tr class="">
+                                            <td>
+                                                4429
+                                            </td>
+                                            <td>
+                                                9/25/2022 <br> 9:42:58 AM
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                <span>
+                                    $0.00
+                                </span>
+
+                                            </td>
+                                            <td>
+                                                ONETIME
+                                            </td>
+                                            <td>
+                                                AL ILM 2022-23 Academic Year Returning Registration Payment
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="action-tr">
+                                            <td colspan="8">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger  mr-15"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                    <a href="#" class="btn link-btn"> View Payment<i
+                                                            class="fa fa-chevron-down ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+                                        <tr id="collapseme-2" class="collapse out">
+                                            <td colspan="9">
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <div class="box-title">
+                                                            <h4>Payment Details</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-body">
+
+                                                        <div class="donation-table"></div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+
+                                        <!-- data row -->
+                                        <tr class="bg-grey">
+                                            <td>
+                                                4429
+                                            </td>
+                                            <td>
+                                                9/25/2022 <br> 9:42:58 AM
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                <span>
+                                    $0.00
+                                </span>
+
+                                            </td>
+                                            <td>
+                                                ONETIME
+                                            </td>
+                                            <td>
+                                                AL ILM 2022-23 Academic Year Returning Registration Payment
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="bg-grey action-tr">
+                                            <td colspan="8">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger  mr-15"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                    <a href="#" class="btn link-btn"> View Payment<i
+                                                            class="fa fa-chevron-down ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+                                        <tr id="collapseme-3" class="collapse out">
+                                            <td colspan="9">
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <div class="box-title">
+                                                            <h4>Payment Details</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-body">
+
+                                                        <div class="donation-table"></div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- TABLE FOOT (TABLE INFORMATION SUMMARY) -->
+                                <div class="table-foot text-right">
+                                    <div class="table-foot-inner">
+                                        <span class="mr-10">Records: 6</span>
+                                        <span class="mr-10">Pledge: $2,020.00</span>
+                                        <span class="mr-10">Paid: $1,625.96</span>
+                                        <span class="text-danger">Due: $394.00</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="donations">
+
+                                <div class="d-flex justify-space-between align-center mb-10">
+                                    <h3 class="section-title v2 m-0">Payments/Donations</h3>
+                                    <a class="btn btn-primary mr-10" href="#"> Add New <i
+                                            class="fa fa-plus ml-2"></i></a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-2tr-for-dtr">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Id
+                                            </th>
+                                            <th>
+                                                Date
+                                            </th>
+                                            <th>
+                                                Method
+                                            </th>
+                                            <th>
+                                                Category
+                                            </th>
+                                            <th>
+                                                Note
+                                            </th>
+                                            <th>
+                                                Amount
+                                            </th>
+                                            <th>
+                                                VendorKey
+                                            </th>
+
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <!-- data row -->
+                                        <tr class="bg-grey">
+                                            <td>
+                                                48686
+                                            </td>
+                                            <td>
+                                                2022-09-26
+                                            </td>
+                                            <td>
+                                                ADMIN APPLIED CREDIT
+                                            </td>
+                                            <td>
+                                                SUPPLY FEES
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                $40.00
+                                            </td>
+                                            <td>
+                                                <a target="_blank" href="/admin/give/company/cc-donations/details">
+
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="bg-grey action-tr">
+                                            <td colspan="7">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">View Details
+                                                        <i class="fa fa-file-text-o ml-2"></i></a>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+
+                                        <!-- data row -->
+                                        <tr>
+                                            <td>
+                                                48682
+                                            </td>
+                                            <td>
+                                                2022-09-25
+                                            </td>
+                                            <td>
+                                                CREDIT CARD
+                                            </td>
+                                            <td>
+                                                TUITION &amp; PTO
+                                            </td>
+                                            <td>
+                                                AL-ILM-2022-393169
+                                            </td>
+                                            <td>
+                                                $520.00
+                                            </td>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/give/company/cc-donations/details/ch_3LlxxPGO2d32CTQN1pUSaEK6">
+                                                    ch_3LlxxPGO2d32CTQN1pUSaEK6
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="action-tr">
+                                            <td colspan="7">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">View Details
+                                                        <i class="fa fa-file-text-o ml-2"></i></a>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+
+                                        <!-- data row -->
+                                        <tr class="bg-grey">
+                                            <td>
+                                                32643
+                                            </td>
+                                            <td>
+                                                2021-08-09
+                                            </td>
+                                            <td>
+                                                CREDIT CARD
+                                            </td>
+                                            <td>
+                                                TUITION &amp; PTO
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                $462.00
+                                            </td>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/give/company/cc-donations/details/ch_3JMkSfGO2d32CTQN0DfhXxwL">
+                                                    ch_3JMkSfGO2d32CTQN0DfhXxwL
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="bg-grey action-tr">
+                                            <td colspan="7">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">View Details
+                                                        <i class="fa fa-file-text-o ml-2"></i></a>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+
+                                        <!-- data row -->
+                                        <tr class="">
+                                            <td>
+                                                19949
+                                            </td>
+                                            <td>
+                                                2020-07-30
+                                            </td>
+                                            <td>
+                                                CREDIT CARD
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                AL-ILM-REG-2020-460
+                                            </td>
+                                            <td>
+                                                $153.00
+                                            </td>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/give/company/cc-donations/details/ch_1HAhsDGO2d32CTQNQRJciYN9">
+                                                    ch_1HAhsDGO2d32CTQNQRJciYN9
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="action-tr">
+                                            <td colspan="7">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">View Details
+                                                        <i class="fa fa-file-text-o ml-2"></i></a>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+
+                                        <!-- data row -->
+                                        <tr class="bg-grey">
+                                            <td>
+                                                8755
+                                            </td>
+                                            <td>
+                                                2019-08-03
+                                            </td>
+                                            <td>
+                                                CREDIT CARD
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                AL-ILM Tuition
+                                            </td>
+                                            <td>
+                                                $450.00
+                                            </td>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/give/company/cc-donations/details/ch_1F3ZSHGO2d32CTQNB69nVUBW">
+                                                    ch_1F3ZSHGO2d32CTQNB69nVUBW
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <!-- actions -->
+                                        <tr class="bg-grey action-tr">
+                                            <td colspan="7">
+                                                <div class="button-group text-right">
+                                                    <strong class="mr-5">Actions: </strong>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">View Details
+                                                        <i class="fa fa-file-text-o ml-2"></i></a>
+                                                    <a target="_blank" href="#" class="btn link-btn mr-15">Edit Details
+                                                        <i class="fa fa-pencil-square-o ml-2"></i></a>
+                                                    <a data-href="#" class="btn link-btn link-btn-danger"
+                                                       data-original-title="" title="">Delete Pledge <i
+                                                            class="fa fa-trash ml-2"></i></a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- ################################## -->
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- TABLE FOOT (TABLE INFORMATION SUMMARY) -->
+                                <div class="table-foot text-right">
+                                    <div class="table-foot-inner">
+                                        <span class="mr-10">Records: 5</span>
+                                        <span class="mr-10">Paid: $1,625.96</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="tab-pane" id="subscriptions">
+
+
+                                <div class="box-body table-responsive">
+                                    <table class="table table-bordered table-striped table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Product
+                                            </th>
+                                            <th>
+                                                Plan
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                                Billing
+                                            </th>
+                                            <th>
+                                                Created
+                                            </th>
+                                            <th>
+                                                Cancel
+                                            </th>
+                                            <th>
+                                                Action
+                                            </th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <script>
+                                    function subscriptionCancel(subscriptionId) {
+                                        $.post('/Admin/ServiceProducts/CancelSubscription',
+                                            {id: subscriptionId}, function (data) {
+                                                if (data == true) {
+                                                    $('#validationGreen-' + subscriptionId).html('Successfully canceled the subscription!');
+
+                                                    setTimeout(function () {
+                                                        $('#validationGreen-' + subscriptionId).html('');
+                                                        location.reload();
+                                                    }, 3000);
+                                                }
+                                                else {
+                                                    $('#validation-' + subscriptionId).html('An error occured, please try again!');
+                                                    setTimeout(function () {
+                                                        $('#validation-' + subscriptionId).html('');
+                                                    }, 3000);
+                                                }
+                                            });
+                                    }
+                                </script>
+                            </div>
+
+                            <div class="tab-pane" id="invoice">
+
+
+                                <p>No upcoming invoice of this customer!</p>
+
+
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="courses">
+
+
+                                <div class="box-body table-responsive">
+                                </div>
+
+
+                            </div>
+
+                            <div class="tab-pane" id="registration">
+
+                                <!-- tab head -->
+                                <div class="d-flex justify-space-between align-center mb-10">
+                                    <h3 class="section-title v2 m-0">Registrations</h3>
+                                </div>
+                                <div class="table-responsive">
+
+                                    <table class="table table-bordered table-striped table-hover">
+                                        <thead>
+
+                                        <tr>
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Student CT
+                                            </th>
+                                            <th>
+                                                Total Due
+                                            </th>
+                                            <th>
+                                                Paid
+                                            </th>
+                                            <th>
+                                                Outstanding
+                                            </th>
+                                            <th>
+                                                Date Enterd
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                                Action
+                                            </th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/2bb169af-f575-4f42-afa9-1ea7c33cda71">
+                                                    AL-ILM-2022-393169
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                520
+                                            </td>
+                                            <td>
+                                                520
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                9/25/2022 9:42:58 AM
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger label-medium text-uppercase">Not Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/2bb169af-f575-4f42-afa9-1ea7c33cda71">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/a29b7820-7053-40ed-b130-deb5a8688283">
+                                                    AL-ILM-6796
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                462
+                                            </td>
+                                            <td>
+                                                462
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                8/9/2021 6:51:12 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/a29b7820-7053-40ed-b130-deb5a8688283">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/11df68e9-8fc3-4f01-9890-e9fc5662563a">
+                                                    AL-ILM-4760
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                283
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                283
+                                            </td>
+                                            <td>
+                                                11/12/2020 4:22:23 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/11df68e9-8fc3-4f01-9890-e9fc5662563a">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/c69dedef-8162-42df-b2fb-08349fa8292c">
+                                                    AL-ILM-4786
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                11/12/2020 4:22:23 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/c69dedef-8162-42df-b2fb-08349fa8292c">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/94b44f92-2586-4843-a957-ba664b55a4ff">
+                                                    AL-ILM-460
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                275
+                                            </td>
+                                            <td>
+                                                153
+                                            </td>
+                                            <td>
+                                                122
+                                            </td>
+                                            <td>
+                                                7/30/2020 12:55:38 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/94b44f92-2586-4843-a957-ba664b55a4ff">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/e1c80bf6-7615-4fd5-a94e-cb5b5bde345e">
+                                                    AL-ILM-448
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                0
+                                            </td>
+                                            <td>
+                                                7/29/2020 9:03:02 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/e1c80bf6-7615-4fd5-a94e-cb5b5bde345e">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank"
+                                                   href="/admin/school/registration/details/3fa05992-b101-4338-b42c-7164ca9df6c1">
+                                                    AL-ILM-252
+                                                </a>
+                                            </td>
+                                            <td>
+                                                Saeed Shaikh
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                440
+                                            </td>
+                                            <td>
+                                                450.96
+                                            </td>
+                                            <td>
+                                                -10.96
+                                            </td>
+                                            <td>
+                                                8/3/2019 7:23:22 PM
+                                            </td>
+                                            <td>
+                                                <span class="label label-medium label-success text-uppercase">Approved</span>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" class="btn btn-success btn-sm btn-fill"
+                                                   href="/admin/school/registration/details/3fa05992-b101-4338-b42c-7164ca9df6c1">
+                                                    <i class="fa fa-info-circle fa-lg"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+
+                            <!-- documents -->
+                            <div class="tab-pane" id="documents">
+
+
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form action="/Admin/Persons/SaveDocument" clas="form-horizontal"
+                                                  enctype="multipart/form-data" method="post" novalidate="novalidate">
+                                                <input data-val="true" data-val-required="The Guid field is required."
+                                                       id="PersonKey" name="PersonKey" type="hidden"
+                                                       value="b19d190c-6af0-4db4-a5e4-cef7e91dbd84">
+                                                <div class="col-md-4">
+                                                    <input type="file" name="files" id="file1" class="form-control">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="submit" class="btn btn-sm">
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="col-md-12" style="margin-top:20px">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-striped table-hover">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Id
+                                                        </th>
+                                                        <th>
+                                                            Name
+                                                        </th>
+                                                        <th>
+                                                            Description
+                                                        </th>
+                                                        <th>
+                                                            Category Name
+                                                        </th>
+                                                        <th>
+                                                            Upload date
+                                                        </th>
+                                                        <th>
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <!-- memberships -->
+                            <div class="tab-pane" id="memberships">
+
+                                <div class="box-body table-responsive">
+                                    <div class="box-tools">
+                                        <a href="" type="button" data-toggle="modal" data-target="#add-membership-modal"
+                                           class="btn bg-purple btn-md margin"><i class="fa fa-plus fa-lg"></i>
+                                            &nbsp;<b>Add New</b></a>
+                                    </div>
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-bordered table-striped table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>
+                                                    Id
+                                                </th>
+                                                <th>
+                                                    Type
+                                                </th>
+                                                <th>
+                                                    Start Date
+                                                </th>
+                                                <th>
+                                                    Expiration Date
+                                                </th>
+                                                <th>
+                                                    Entered On
+                                                </th>
+                                                <th width="120">
+                                                    Action
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="add-membership-modal" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" id="modalClose" class="close"
+                                                        data-dismiss="modal">x
+                                                </button>
+                                                <h3 class="modal-title">Add Membership</h3>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4 id="add-membership-validation"
+                                                    style="text-align:center; color:red"></h4>
+                                                <h4 id="add-membership-validationGreen"
+                                                    style="text-align:center; color:#008d4c"></h4>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="form-group">
+                                                            <label>Membership Type</label>
+                                                            <select class="form-control select2 select2-hidden-accessible"
+                                                                    id="MembershipType" name="MembershipType"
+                                                                    style="width:100%" tabindex="-1"
+                                                                    aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" style="width: 100%;"><span
+                                                                class="selection"><span
+                                                                class="select2-selection select2-selection--single"
+                                                                role="combobox" aria-autocomplete="list"
+                                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                                aria-labelledby="select2-MembershipType-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-MembershipType-container"></span><span
+                                                                class="select2-selection__arrow" role="presentation"><b
+                                                                role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper"
+                                                                aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="form-group">
+                                                            <label>Date of Start</label>
+                                                            <input class="form-control datepicker"
+                                                                   id="modal-membership-startdate" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="form-group">
+                                                            <label>Date of Expiration</label>
+                                                            <input class="form-control datepicker"
+                                                                   id="modal-membership-expiredate" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                        <button id="modal-add-membership-btn" type="submit"
+                                                                class="btn btn-success btn-lg btn-fill pull-right">Save
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- demographics -->
+                            <div class="tab-pane" id="demographics">
+
+
+                                <style type="text/css">
+                                    .table-dmg tr th {
+                                        background-color: #21333D !important;
+                                        color: white !important;
+                                        border: 1px solid #ECECEC !important;
+                                        text-align: right !important;
+                                        width: 30% !important;
+                                    }
+                                </style>
+
+                                <!-- Info boxes -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="box">
+                                            <div class="box-body table-responsive">
+                                                <table class="table table-hover table-striped table-bordered table-dmg"
+                                                       cellspacing="0" width="100%">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Age</th>
+                                                        <td>
+                                                            <span>15 year(s)</span>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>PTO Interested</th>
+                                                        <td>NO</td>
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- user details -->
+                            <div class="tab-pane" id="user">
+                                <section class="content">
+
+                                    <div class="d-flex justify-space-between align-center mb-10">
+                                        <h3 class="section-title v2 m-0">User Details</h3>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <!-- Profile Image -->
+                                            <div class="box box-primary v2">
+                                                <div class="box-body box-profile">
+                                                    <div class="avatar-card">
+                                                        <div class="avatar-info">
+                                                            <h3 class="profile-username m-0">srs.ihp@sbcglobal.net</h3>
+                                                            <p class="profile-meta"><span class="id-holder"><strong
+                                                                    style="padding-right:4px;">User Name</strong></span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-group list-group-unbordered">
+                                                        <li class="list-group-item">
+                                                            <b class="icon"><i class="fa fa-phone-square"></i> </b>
+                                                            <span class="text">+13178409847</span>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <b class="icon"><i class="fa fa-envelope"></i> </b>
+                                                            <span class="text">srs.ihp@sbcglobal.net</span>
+                                                        </li>
+                                                    </ul>
+
+                                                    <a data-url="/admin/users/edit/c8c16328-6676-43b3-b815-036b8a906d2e"
+                                                       class="btn btn-primary js-edit mr-10"
+                                                       title="Update user info"><i class="fa fa-edit"></i><b>
+                                                        Edit</b></a>
+                                                    <a data-url="/admin/users/password/change/c8c16328-6676-43b3-b815-036b8a906d2e"
+                                                       class="btn btn-warning js-edit"
+                                                       title="Change user password"><i class="fa fa-key"></i><b> Change
+                                                        Password</b></a>
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+
+                                            <!-- /.box -->
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <!-- border divider -->
+                                            <div class="border-divider"></div>
+
+                                            <div class="table-responsive mt-10">
+                                                <div id="example1_wrapper"
+                                                     class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+                                                    <!-- table filter area -->
+                                                    <div class="d-md-flex justify-space-between align-center mb-10">
+                                                        <div class="dataTables_length" id="example1_length">
+                                                            <label>Show
+                                                                <select name="example1_length"
+                                                                        aria-controls="example1"
+                                                                        class="form-control input-sm" style="width: 55px;padding: 0 8px;height: 30px;margin: 0 2px;">
+                                                                    <option value="10">10</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="100">100</option>
+                                                                </select> entries</label></div>
+
+                                                        <div id="example1_filter" class="dataTables_filter">
+                                                            <label><span class="mr-10">Search:</span> <input style="min-width: 250px;" type="search"
+                                                                                                             class="form-control input-sm"
+                                                                                                             placeholder=""
+                                                                                                             aria-controls="example1"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="example1"
+                                                                   class="table table-bordered table-striped table-hover dataTable no-footer"
+                                                                   role="grid" aria-describedby="example1_info">
+                                                                <thead>
+                                                                <tr role="row">
+                                                                    <th class="sorting_asc" tabindex="0"
+                                                                        aria-controls="example1" rowspan="1"
+                                                                        colspan="1" aria-sort="ascending"
+                                                                        aria-label="
+                                        Logged In At
+                                    : activate to sort column descending" style="width: 0px;">
+                                                                        Logged In At
+                                                                    </th>
+
+                                                                    <th class="sorting_disabled" rowspan="1"
+                                                                        colspan="1" aria-label="
+                                        IP Address
+                                    " style="width: 0px;">
+                                                                        IP Address
+                                                                    </th>
+
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+
+
+                                                                <tr role="row" class="odd">
+
+                                                                    <td class="sorting_1">
+                                                                        8/10/2021 1:46:37 AM
+                                                                    </td>
+
+                                                                    <td>
+                                                                        71.46.94.24
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr role="row" class="even">
+
+                                                                    <td class="sorting_1">
+                                                                        8/10/2021 2:09:50 AM
+                                                                    </td>
+
+                                                                    <td>
+                                                                        71.46.94.24
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+
+                                                                    <td class="sorting_1">
+                                                                        9/25/2022 4:41:49 PM
+                                                                    </td>
+
+                                                                    <td>
+                                                                        107.77.209.154
+                                                                    </td>
+
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-5">
+                                                            <div class="dataTables_info" id="example1_info"
+                                                                 role="status" aria-live="polite">Showing 1 to 3 of
+                                                                3 entries
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-7">
+                                                            <div class="dataTables_paginate paging_simple_numbers text-right"
+                                                                 id="example1_paginate">
+                                                                <ul class="pagination m-0">
+                                                                    <li class="paginate_button previous disabled"
+                                                                        id="example1_previous"><a href="#"
+                                                                                                  aria-controls="example1"
+                                                                                                  data-dt-idx="0"
+                                                                                                  tabindex="0">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button active"><a href="#"
+                                                                                                          aria-controls="example1"
+                                                                                                          data-dt-idx="1"
+                                                                                                          tabindex="0">1</a>
+                                                                    </li>
+                                                                    <li class="paginate_button next disabled"
+                                                                        id="example1_next"><a href="#"
+                                                                                              aria-controls="example1"
+                                                                                              data-dt-idx="2"
+                                                                                              tabindex="0">Next</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+</html>

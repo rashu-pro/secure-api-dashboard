@@ -1,0 +1,71 @@
+﻿.e-grid * {
+    font-size: 14px !important;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.e-columnheader th {
+    background-color: #4e778d !important;
+    /*background-color: #21333D !important;*/
+    color: white !important;
+}
+
+.e-headercell {
+    border-left-color: black !important;
+}
+
+.e-icon-filter {
+    color: white !important;
+}
+
+.e-headertext {
+    color: white !important;
+}
+
+
+.margin {
+    margin: 5px;
+}
+
+.form-control {
+    border: 1px solid #1E282C;
+}
+
+/*.fa {
+    font: normal normal normal 14px/1 FontAwesome !important;
+}*/
+
+.checked {
+}
+
+.form-group {
+    margin-bottom: 10px !important;
+}
+
+.bootstrap-datetimepicker-widget {
+    z-index: 10800 !important;
+    display: block;
+}
+
+/*.modal-header .close {
+    margin-top: -30px;
+}*/
+
+.e-grid .e-movablecontent {
+    /* overflow-x: hidden !important;*/
+}
+
+.e-grid .e-frozenheader.e-frozen-right-header > .e-table,
+.e-grid .e-frozencontent.e-frozen-right-content > .e-table,
+.e-grid .e-rowcell .e-frozen-default-cursor,
+.e-grid .e-gridheader .e-headercell .e-frozen-default-cursor,
+.e-grid .e-gridheader .e-filterbarcell .e-frozen-default-cursor {
+    border-left-color: gray !important;
+}
+
+.e-grid .e-summarycell {
+    font-weight: bold !important;
+}
+
+.mr-1 {
+    margin-right: 5px !important;
+}
