@@ -1126,10 +1126,10 @@ HELP PAGE
 
 .link-btn.link-btn-default,
 .table .link-btn.link-btn-default{
-  background: #dbd9d9;
-  color:#474747;
-  border-color: #838383;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #f4f4f4;
+  color: #444;
+  border-color: #b5b5b5;
 }
 
 .table .link-btn.link-btn2{
@@ -1406,7 +1406,9 @@ HELP PAGE
 }
 .section-title.v2{
   color: #e91e63;
+  color: #444;
   border-left: 4px solid #e91e63;
+  border-left: 4px solid #444;
   padding-left: 9px;
 }
 .btn .fa{
@@ -1764,11 +1766,6 @@ button.close-modal{
 table tr.bg-white td,
 table tr.bg-white tr th{
   background-color: #fff;
-}
-
-.button-group .btn{
-  margin-top:3px;
-  margin-bottom: 3px;
 }
 
 .table-responsive .table td{
