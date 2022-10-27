@@ -18,9 +18,26 @@
   padding-top:30px;
   padding-bottom:30px;
 }
-
+.px-15{
+  padding-left:15px;
+  padding-right:15px;
+}
+.p-15{
+  padding:15px;
+}
+.pb-30{
+  padding-bottom:30px;
+}
+.pt-30{
+  padding-top:30px;
+}
 //=== border
 .border-1{
   border:1px solid #ddd;
   border-radius:4px;
+}
+
+//=== border radius
+.round-5{
+  border-radius:5px;
 }

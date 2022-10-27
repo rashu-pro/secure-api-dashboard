@@ -2,3 +2,25 @@
   margin-top:3px;
   margin-bottom: 3px;
 }
+
+@media(min-width:992px){
+  .btn{
+    padding:5px 15px;
+    font-size:16px;
+  }
+  .btn-sm{
+    padding:5px 15px;
+    font-size:16px;
+  }
+}
+
+.btn{
+  &-md{
+    padding:8px 20px;
+  }
+  @media (min-width:992px){
+    &-md{
+      padding:8px 20px;
+    }
+  }
+}

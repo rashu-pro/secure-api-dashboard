@@ -28,9 +28,18 @@
 if($('.overlay-scrollbar-js').length>0 && typeof $.fn.overlayScrollbars != 'undefined'){
     $('.navbar .menu.overlay-scrollbar-js').overlayScrollbars({ });
 }
-//Initialize Select2 Elements
+//=== Initialize Select2 Elements
 if($(".select2").length>0){
     $(".select2").select2();
+}
+
+//=== INITIALIZING ICHECK
+if ($('.i-check').length > 0) {
+    $('.i-check').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+    });
 }
 
 

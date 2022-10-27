@@ -26,9 +26,30 @@
   padding-bottom: 30px;
 }
 
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
 .border-1 {
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.round-5 {
+  border-radius: 5px;
 }
 
 .alert-warning.alert-warning-custom p {
@@ -176,6 +197,110 @@
 .button-group .btn {
   margin-top: 3px;
   margin-bottom: 3px;
+}
+
+@media (min-width: 992px) {
+  .btn {
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+
+  .btn-sm {
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+}
+.btn-md {
+  padding: 8px 20px;
+}
+@media (min-width: 992px) {
+  .btn-md {
+    padding: 8px 20px;
+  }
+}
+
+.modal-content {
+  border-radius: 0.8rem;
+}
+@media (min-width: 992px) {
+  .modal-dialog.modal-md {
+    width: 800px;
+  }
+  .modal-dialog.modal-md .modal-header {
+    padding: 20px 30px;
+  }
+  .modal-dialog.modal-md .modal-body {
+    padding: 30px;
+  }
+  .modal-dialog.modal-md .modal-footer {
+    padding: 20px 30px;
+  }
+  .modal-dialog.modal-md .close-modal, .modal-dialog.modal-md button.close-modal {
+    top: 20px;
+    right: 20px;
+  }
+}
+.modal-dialog-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-dialog-style .modal-sm2 {
+  margin: 0;
+}
+.modal-sm2 .modal-content {
+  padding: 15px;
+}
+@media (min-width: 576px) {
+  .modal-sm2 {
+    width: 480px;
+  }
+  .modal-sm2 .modal-content {
+    border-radius: 0.8rem;
+  }
+}
+
+.close-modal,
+button.close-modal {
+  width: 35px;
+  height: 35px;
+  background-color: #e5e7eb;
+  color: #7e8591;
+  opacity: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  float: none;
+  font-size: 24px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 999;
+  border-radius: 0.4rem;
+}
+
+.close-modal img {
+  max-width: 12px;
+}
+
+.close-modal:hover {
+  color: #202020;
+  background: #b5bbc7;
+  opacity: 0.8;
+}
+
+.icon-svg-info {
+  width: 6rem;
+  height: 6rem;
+  color: #9ca3af;
+}
+.icon-svg-close {
+  width: 20px;
+  height: 20px;
+  color: #202020;
 }
 
 body {
@@ -1631,17 +1756,6 @@ HELP PAGE
   color: #fff;
 }
 
-@media (min-width: 992px) {
-  .btn {
-    padding: 5px 15px;
-    font-size: 16px;
-  }
-
-  .btn-sm {
-    padding: 5px 15px;
-    font-size: 16px;
-  }
-}
 .filter-box {
   /*min-height: 68px;*/
 }
@@ -2044,41 +2158,17 @@ a:hover {
   position: relative;
 }
 
-.close-modal,
-button.close-modal {
-  width: 35px;
-  height: 35px;
-  background: #000;
-  color: #fff;
-  opacity: 1;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  float: none;
-  font-size: 24px;
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  z-index: 999;
-}
-
-.close-modal img {
-  max-width: 12px;
-}
-
-.close-modal:hover {
-  opacity: 0.8;
-}
-
 .icheck-checkbox {
   padding-left: 0;
 }
 
 .icheck-checkbox label {
   padding-left: 0;
+  color: #202020;
+}
+
+.icheckbox_square-blue {
+  margin-right: 6px;
 }
 
 table tr.bg-white td,
