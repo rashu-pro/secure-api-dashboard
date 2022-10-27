@@ -1,0 +1,108 @@
+<div id="{id}" class="modal">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Modal Title</h3>
+            </div>
+            <!-- modal close button -->
+            <button type="button" class="close close-modal" data-dismiss="modal">
+                <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+
+            <form action="#" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="cey--UsdeckdIbG0gt8KKmGb_QF4H0SdPpGSdBm9Et7ozTX7HRyE3QE6ugeHcqQRWQ0RptTh_Cc4vb1aZImHqo93zjZcb1cnv379MUtyWlI1">
+                <div class="modal-body">
+                    <h4 class="payment-validation" style="text-align:center; color:red"></h4>
+                    <h4 class="payment-validationGreen" style="text-align:center; color:#008d4c"></h4>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <div class="checkbox checkbox-inline icheck-checkbox m-0">
+                                    <label>
+                                        <input type="checkbox" class="i-check" id="check-pay-now"> Pay Now
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-6 payment-plan-div">
+                            <div class="form-group">
+                                <div class="checkbox checkbox-inline icheck-checkbox m-0">
+                                    <label>
+                                        <input type="checkbox" class="i-check" id="check-payment-plan"> Payment Plan
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="installment-body">
+                        <input type="hidden" id="pledgeKey" class="pledgeKey" name="PledgeKey" value="">
+                        <input type="hidden" id="personKey" class="personKey" name="PersonKey" value="">
+                        <input type="hidden" id="companySlug" class="companySlug" name="CompanySlug" value="">
+
+                        <input type="hidden" id="isPayNow" class="isPayNow" name="isPayNow" value="true">
+
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="payment-type-div">
+                                <div class="form-group">
+                                    <label>Payment Method</label>
+                                    <select class="form-control payment-type" id="PaymentType" name="PaymentType" required="required"><option value="">NONE</option>
+                                        <option value="CASH">CASH</option>
+                                        <option value="CHECK">CHECK</option>
+                                        <option value="CREDIT CARD">CREDIT CARD</option>
+                                        <option value="PAYPAL">PAYPAL</option>
+                                        <option value="QUICKPAY/ZELLE">QUICKPAY/ZELLE</option>
+                                        <option value="OTHER">OTHER</option>
+                                        <option value="FINANCIAL ASSISTANCE">FINANCIAL ASSISTANCE</option>
+                                        <option value="ADMIN APPLIED CREDIT">ADMIN APPLIED CREDIT</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="recurring-type-div">
+                                <div class="form-group">
+                                    <label>Installment Type</label>
+                                    <select id="recurring-type" name="RecurringType" class="form-control recurring-type" required="">
+                                        <option value="">--SELECT--</option>
+                                        <option value="month">MONTHLY</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="duration-div">
+                                <div class="form-group">
+                                    <label>Recurring Duration</label>
+                                    <input class="form-control recurring-duration" name="RecurringDuration" id="recurring-duration" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="total-amount-div">
+                                <div class="form-group">
+                                    <label>Total Amount</label>
+                                    <input class="form-control total-amount" id="total-amount" name="TotalAmount">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="installment-amount-div">
+                                <label>Installment Amount</label>
+                                <input class="form-control installment-amount" name="InstallmentAmount" id="installment-amount">
+                                <span class="show-recurring-type"></span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6" id="user-note">
+                                <label>Note</label>
+                                <textarea class="form-control" name="Note" rows="3" style="max-width:100%"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default btn-md mr-15" type="button" data-dismiss="modal"><i class="fa fa-ban"></i> <span>Cancel</span></button>
+                    <button class="btn btn-success btn-md" type="button" data-dismiss="modal"><i class="fa fa-credit-card-alt"></i> <span>Pay Now</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
