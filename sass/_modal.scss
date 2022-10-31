@@ -29,6 +29,12 @@
         }
       }
     }
+
+    &.modal-sm{
+      @media (min-width:768px) {
+        width: 550px;
+      }
+    }
   }
 
   &-dialog-style{

@@ -95,6 +95,17 @@ $(document).on('click', '#btn-person-info', function (e) {
     console.log('all fields are valid!');
 });
 
+$(document).on('click', '#create-enroll', function (e) {
+    let self = $(this);
+    $('.loader-wrapper').addClass('active');
+    setTimeout(function () {
+        self.closest('.modal').modal('hide');
+        $('.loader-wrapper').removeClass('active');
+        // Display a success toast, with a title
+        toastr.success('Enroll created!')
+    },600);
+});
+
 /**
  * -------------------------------------
  * 5. EVENT LISTENER: KEYUP / BLUR

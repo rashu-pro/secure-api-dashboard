@@ -261,6 +261,10 @@ textarea.form-control {
   font-size: 15px !important;
 }
 
+.form-group .select2-container {
+  display: block;
+  width: 100% !important;
+}
 .form-group .select2-container--default .select2-selection.field-invalid {
   border-color: #a94442;
 }
@@ -288,6 +292,11 @@ textarea.form-control {
   .modal-dialog.modal-md .close-modal, .modal-dialog.modal-md button.close-modal {
     top: 20px;
     right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .modal-dialog.modal-sm {
+    width: 550px;
   }
 }
 .modal-dialog-style {

@@ -8,6 +8,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -501,7 +503,7 @@
                             <!-- modal dialog -->
                             <div class="border-1 round-5 p-15 mb-30">
                                 <h2 class="m-0 mb-10">Dialog Modal</h2>
-                                <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#modal-dialog">Open Modal</a>
+                                <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#modal-dialog">Launch Modal</a>
 
                                 <div class="mt-15">
                                     <h2>HTML</h2>
@@ -555,8 +557,62 @@
                                 </div>
                             </div>
 
+                            <!-- modal small -->
+                            <div id="modal-small-div" class="border-1 round-5 p-15 mb-30">
+                                <h2 class="m-0 mb-10">Modal Small</h2>
+                                <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#modal-small">Launch Modal</a>
+
+                                <div class="mt-15">
+                                    <h2>HTML</h2>
+                                    <div class="code-area">
+                                        <div class="make-snippet">
+
+<div id="{id}" class="modal">
+    <!-- 'modal-sm' class is needed to change the width of the modal -->
+    <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Modal Title</h3>
+            </div>
+            <!-- modal close button -->
+            <button type="button" class="close close-modal" data-dismiss="modal">
+                <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <form action="#" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="cey--UsdeckdIbG0gt8KKmGb_QF4H0SdPpGSdBm9Et7ozTX7HRyE3QE6ugeHcqQRWQ0RptTh_Cc4vb1aZImHqo93zjZcb1cnv379MUtyWlI1">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-control-label" for="name">Name</label>
+                        <input class="form-control" id="name" name="Name" value="Zain Hamza" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="class-key">Select Class</label>
+                        <select class="form-control select2" id="class-key" name="ClassKey" >
+                            <option value="01de8e08-44e8-4eb9-b652-9ad0e6804eda">YEAR:2022-2023-Islamic Studies-KG</option>
+                            <option value="703defc2-6843-4ddd-b47c-dba6bf8ff388">YEAR:2022-2023-Islamic Studies-1ST GRADE</option>
+                            <option value="ae6d1b5e-f353-4a75-99a3-d24b7764d9a4">YEAR:2022-2023-Islamic Studies-2ND GRADE</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default btn-md mr-15" type="button" data-dismiss="modal"><i class="fa fa-ban"></i> <span class="ml-2">Cancel</span></button>
+                    <button class="btn btn-success btn-md" type="button" data-dismiss="modal"><i class="fa fa-floppy-o"></i> <span class="ml-2">Create</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
                             <!-- modal medium -->
-                            <div class="border-1 round-5 p-15 mb-30">
+                            <div id="modal-medium-div" class="border-1 round-5 p-15 mb-30">
                                 <h2 class="m-0 mb-10">Modal Medium</h2>
                                 <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#modal-medium">Open Modal</a>
 
@@ -847,6 +903,84 @@
         </div>
     </div>
 
+    <!-- MODAL SMALL -->
+    <div id="modal-small" class="modal">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Create Enroll</h3>
+                </div>
+                <!-- modal close button -->
+                <button type="button" class="close close-modal" data-dismiss="modal">
+                    <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+
+                <form action="#" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="cey--UsdeckdIbG0gt8KKmGb_QF4H0SdPpGSdBm9Et7ozTX7HRyE3QE6ugeHcqQRWQ0RptTh_Cc4vb1aZImHqo93zjZcb1cnv379MUtyWlI1">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="form-control-label" for="name">Name</label>
+                            <input class="form-control" id="name" name="Name" value="Zain Hamza" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="class-key">Select Class</label>
+                            <select class="form-control select2" id="class-key" name="ClassKey" >
+                                <option value="01de8e08-44e8-4eb9-b652-9ad0e6804eda">YEAR:2022-2023-Islamic Studies-KG</option>
+                                <option value="703defc2-6843-4ddd-b47c-dba6bf8ff388">YEAR:2022-2023-Islamic Studies-1ST GRADE</option>
+                                <option value="ae6d1b5e-f353-4a75-99a3-d24b7764d9a4">YEAR:2022-2023-Islamic Studies-2ND GRADE</option>
+                                <option value="6e69308c-7849-4f20-ac8a-17611d6ec6ad">YEAR:2022-2023-Islamic Studies-3RD GRADE</option>
+                                <option value="aec729e6-ec49-43a2-987c-14884cb0a16b">YEAR:2022-2023-Islamic Studies-4TH GRADE</option>
+                                <option value="a3ab178f-e55e-44a9-ab84-8d9e7223a16d">YEAR:2022-2023-Islamic Studies-5TH GRADE</option>
+                                <option value="19009771-0acf-48cb-a7a1-ae1d531e7c61">YEAR:2022-2023-Islamic Studies-6TH GRADE</option>
+                                <option value="4ea2e4bb-3561-4d00-9c4c-9eafef5da0d4">YEAR:2022-2023-Islamic Studies-7TH GRADE</option>
+                                <option value="b677fc1f-f28b-47b4-bf0f-5151ab03ba7d">YEAR:2022-2023-Islamic Studies-8TH GRADE</option>
+                                <option value="9358108f-1692-453f-9134-2d6c53d58643">YEAR:2022-2023-Islamic Studies-9TH GRADE</option>
+                                <option value="3834d2d1-fe61-46f4-b532-476ea90d110c">YEAR:2022-2023-Islamic Studies-10TH GRADE</option>
+                                <option value="541873d0-7b63-49c0-971f-f2d0fadb8c7d">YEAR:2022-2023-Islamic Studies-11TH GRADE</option>
+                                <option value="f66229a0-07cb-4b42-8ed1-395de9dcf9d2">YEAR:2022-2023-Islamic Studies-12TH GRADE</option>
+                                <option value="06f23755-9a7b-4fa9-a24c-b3a0b2e3ddff">YEAR:2022-2023-Islamic Studies-SPECIAL CLASS</option>
+                                <option value="72b1e2b5-63d0-4521-b160-9fe7458f7273">YEAR:2022-2023-Quranic Studies-KG</option>
+                                <option value="d34ead70-aa44-470f-aad8-753f873df85a">YEAR:2022-2023-Quranic Studies-1ST GRADE</option>
+                                <option value="59896d2d-881b-42d4-9605-3986e97c6f07">YEAR:2022-2023-Quranic Studies-2ND GRADE</option>
+                                <option value="b130c35a-010a-4b90-b720-941675c470b3">YEAR:2022-2023-Quranic Studies-3RD GRADE</option>
+                                <option value="77d3df25-1b97-48ce-9ecb-318aca7c57c7">YEAR:2022-2023-Quranic Studies-4TH GRADE</option>
+                                <option value="918bdee9-7a95-4b4c-be6f-6a702131363b">YEAR:2022-2023-Quranic Studies-5TH GRADE</option>
+                                <option value="0123ea4d-7584-4965-a8d1-0d496033be85">YEAR:2022-2023-Quranic Studies-6TH GRADE</option>
+                                <option value="b500ddb6-1d5a-4059-94f7-c070625e3a67">YEAR:2022-2023-Quranic Studies-7TH GRADE</option>
+                                <option value="13f1db5a-0f25-460f-9f25-30d2b1565963">YEAR:2022-2023-Quranic Studies-8TH GRADE</option>
+                                <option value="37ebf6c9-54fd-485d-b4d2-30d07a2b2641">YEAR:2022-2023-Quranic Studies-9TH GRADE</option>
+                                <option value="dcdf8d80-76d0-49d3-a734-bc7e176ee0c0">YEAR:2022-2023-Quranic Studies-10TH GRADE</option>
+                                <option value="efbfb6a5-d5c2-4e40-b3be-402fcb710e71">YEAR:2022-2023-Quranic Studies-11TH GRADE</option>
+                                <option value="37ed955f-6b21-46ce-92b4-a1c5b7be6f4d">YEAR:2022-2023-Quranic Studies-12TH GRADE</option>
+                                <option value="9b9d4893-4bb7-451a-9306-9d985084dcfe">YEAR:2022-2023-Quranic Studies-SPECIAL CLASS</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-default btn-md mr-15" type="button" data-dismiss="modal"><i class="fa fa-ban"></i> <span class="ml-2">Cancel</span></button>
+                        <button class="btn btn-success btn-md" id="create-enroll" type="button"><i class="fa fa-floppy-o"></i> <span class="ml-2">Create</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LOADER WRAPPER -->
+    <div class="loader-wrapper">
+        <div class="loader-page">
+            <div class="loader-inner">
+                <div>
+                    <div class="loader-spinner"></div>
+                    <p class="m-0 mt-10">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <!-- ./wrapper -->
 
@@ -857,6 +991,8 @@
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Toastr -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- overlayScrollbars -->
 <script src="../../plugins/OverlayScrollbars/OverlayScrollbars.min.js"></script>
 <!-- select2 -->
