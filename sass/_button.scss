@@ -3,24 +3,34 @@
   margin-bottom: 3px;
 }
 
-@media(min-width:992px){
-  .btn{
-    padding:5px 15px;
-    font-size:16px;
-  }
-  .btn-sm{
-    padding:5px 15px;
-    font-size:16px;
-  }
-}
-
 .btn{
+  &-lg{
+    min-width:100px;
+    padding:8px 20px;
+  }
+
   &-md{
     padding:8px 20px;
   }
   @media (min-width:992px){
     &-md{
       padding:8px 20px;
+    }
+
+    &-lg{
+      min-width:120px;
+      padding:8px 20px;
+    }
+  }
+}
+
+@media(min-width:992px){
+  .btn{
+    //padding:5px 15px;
+    //font-size:16px;
+    &-sm{
+      padding:5px 15px;
+      font-size:16px;
     }
   }
 }

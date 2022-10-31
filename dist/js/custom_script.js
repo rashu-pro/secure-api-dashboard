@@ -42,6 +42,17 @@ if ($('.i-check').length > 0) {
     });
 }
 
+$(document).on('click', '.file-uploader-icon', function (e) {
+    e.preventDefault();
+    let self = $(this);
+    self.closest('.file-uploader-wrapper').find('input[type=file]').trigger('click');
+});
+
+if($('.dropify').length>0){
+    $('.dropify').dropify();
+}
+
+
 
 /**
  * -------------------------------------
@@ -64,15 +75,73 @@ $(document).on('click', '.dropdown-menu-child', function(){
     self.closest('.dropdown').find('.dropdown-toggle-icon img').attr('src', self.find('img').attr('src'));
 });
 
+$(document).on('click', '#btn-person-info', function (e) {
+    e.preventDefault();
+    let self = $(this);
+    let formWrapper = self.closest('.form-wrapper');
+    let requiredFieldGropus = formWrapper.find('.form-group.required-group');
+    let errorMessage = "The field is required";
+
+    //=== FIELD VALIDATION
+    requiredFieldGropus.each(function (i, element) {
+        singleValidation($(element).find('.form-control'), $(element), 'field-invalid', 'field-validated', 'error-message', errorMessage);
+    });
+
+    //=== FOCUS THE INVALID INPUT
+    if(formWrapper.find('.form-group .form-control.invalid').length>0){
+        formWrapper.find('.form-group .form-control.invalid').first().focus();
+        return;
+    }
+    console.log('all fields are valid!');
+});
 
 /**
  * -------------------------------------
  * 5. EVENT LISTENER: KEYUP / BLUR
  * -------------------------------------
  */
-
 $(document).on('keyup', '.search-dropdown', function () {
     filterFunction();
+});
+
+$(document).on('keyup', '.form-group.required-group .form-control', function (e) {
+    let self = $(this);
+
+    if(self.val().length>0){
+        self.removeClass('invalid');
+        self.closest('.form-group').find('.error-message').remove();
+    }
+});
+
+$(document).on('blur', '.form-group.required-group .form-control', function (e) {
+    let self = $(this);
+    let errorMessage = "The field is required";
+
+    //=== FIELD VALIDATION
+    singleValidation(self, self.closest('.form-group'),'field-invalid', 'field-validated', 'error-message', errorMessage);
+});
+
+
+/**
+ * -------------------------------------
+ * 6. EVENT LISTENER: CHANGE
+ * -------------------------------------
+ */
+
+$(document).on('change', '.form-group.required-group .form-control', function (e) {
+    let self = $(this);
+    let errorMessage = "The field is required";
+
+    //=== FIELD VALIDATION
+    singleValidation(self, self.closest('.form-group'),'field-invalid', 'field-validated', 'error-message', errorMessage);
+});
+
+$('#create-user-checkbox').on('ifChecked', function () {
+    $('#user-password').show();
+});
+
+$('#create-user-checkbox').on('ifUnchecked', function () {
+    $('#user-password').hide();
 });
 
 
@@ -114,4 +183,138 @@ function dropdownHeightDynamic(self){
         return;
     }
     scrollDiv.height(scrollDivInitialHeight);
+}
+
+/**
+ *
+ * @param formControl
+ * @param formGroup
+ * @param invalidClassName
+ * @param validClassName
+ * @param errorMessageClassName
+ * @param errorMessage
+ *
+ * @effects: check whether the input fields are validate
+ * - or not and show warning message as needed
+ */
+function singleValidation(formControl, formGroup, invalidClassName, validClassName, errorMessageClassName, errorMessage) {
+    errorMessage = "The field is required";
+    let paramObj = {
+        "formControl": formControl,
+        "formGroup": formGroup,
+        "invalidClassName": invalidClassName,
+        "validClassName": validClassName,
+        "errorMessageClassName": errorMessageClassName,
+        "errorMessage": errorMessage
+    };
+
+    //=== IF FORM GROUP HAS DISPLAY NONE PROPERTIES
+    if(formGroup.css('display')==='none') return;
+
+    //=== INPUT FIELD VALIDATION: EMPTY FIELD
+    if(formControl.val()===''){
+        validationFailed(paramObj);
+        return;
+    }
+
+    //=== INPUT FIELD VALIDATION: TEXT FIELD
+    if(formControl.hasClass('validation-text')){
+        formControl.val()!==''?validationSuccess(paramObj):validationFailed(paramObj);
+    }
+
+    //=== ONLY NUMBER VALIDATION
+    if(formControl.hasClass('validation-number')){
+        if(formControl.data('length-min')){
+            isNumber(formControl.val())&&formControl.val().length>=formControl.data('length-min')?validationSuccess(paramObj):validationFailed(paramObj);
+        }
+
+        if(formControl.data('length-max')){
+            isNumber(formControl.val())&&formControl.val().length<formControl.data('length-max')?validationSuccess(paramObj):validationFailed(paramObj);
+        }
+
+        if(formControl.data('length-min') && formControl.data('length-max')){
+            isNumber(formControl.val()) && formControl.val().length>=formControl.data('length-min') && formControl.val().length<formControl.data('length-max')?validationSuccess(paramObj):validationFailed(paramObj);
+        }
+    }
+
+    //=== SELECT DROPDOWN VALIDATION
+    if(formControl.prop('tagName')==='SELECT'){
+        if(formControl.hasClass('select2')){
+            formControl.val()!==null?validationSuccess(paramObj):validationFailed(paramObj);
+            return;
+        }
+        formControl.val()!==''?validationSuccess(paramObj):validationFailed(paramObj);
+    }
+
+    //=== INPUT FIELD VALIDATION: EMAIL FIELD
+    if(formControl.hasClass('validation-email')){
+        paramObj.errorMessage = "Invalid Email Address!";
+        isEmailValid(formControl.val())?validationSuccess(paramObj):validationFailed(paramObj);
+    }
+}
+
+/**
+ *
+ * This function checks whether a given
+ * - string is number or not
+ *
+ * @param string
+ * @return {boolean}
+ */
+function isNumber(string){
+    return /^\d+$/.test(string);
+}
+
+/**
+ *
+ * This function checks whether the given value is valid email or not
+ * @param email
+ * @return {boolean}
+ */
+function isEmailValid(email){
+    return /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i.test(email);
+}
+
+/**
+ *
+ * @param paramObj
+ */
+function validationSuccess(paramObj){
+    paramObj.formControl.removeClass(paramObj.invalidClassName);
+    paramObj.formControl.removeClass('invalid');
+    paramObj.formControl.addClass('valid');
+    paramObj.formGroup.addClass(paramObj.validClassName);
+    //=== FOR SELECT 2
+    paramObj.formGroup.find('.select2-selection').removeClass(paramObj.invalidClassName);
+    paramObj.formGroup.find('.select2-selection').removeClass('invalid');
+    paramObj.formGroup.find('.select2-selection').addClass('valid');
+    paramObj.formGroup.find('.select2-selection').addClass(paramObj.validClassName);
+    //=== REMOVE WARNING TEXT
+    paramObj.formGroup.find('.'+paramObj.errorMessageClassName).remove();
+}
+
+/**
+ *
+ * @param paramObj
+ */
+function validationFailed(paramObj) {
+    paramObj.formGroup.removeClass(paramObj.validClassName);
+    paramObj.formControl.addClass(paramObj.invalidClassName);
+    paramObj.formControl.removeClass('valid');
+    paramObj.formControl.addClass('invalid');
+    //=== FOR SELECT 2
+    paramObj.formGroup.find('.select2-selection').removeClass(paramObj.validClassName);
+    paramObj.formGroup.find('.select2-selection').addClass(paramObj.invalidClassName);
+
+    notifyError(paramObj);
+}
+
+/**
+ *
+ * @param paramObj [an oject containg all the parametes]
+ * @effects shows error message for invalid field
+ */
+function notifyError(paramObj) {
+    paramObj.formGroup.find('.'+paramObj.errorMessageClassName).remove();
+    paramObj.formGroup.append('<p class="'+paramObj.errorMessageClassName+' text-danger">'+paramObj.errorMessage+'</p>');
 }

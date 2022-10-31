@@ -271,39 +271,6 @@ margin: 0 auto 0;*/
   height: calc(100vh - 110px);
 }
 
-.panel-fullscreen-textarea {
-  height: calc(100vh - 150px) !important;
-}
-
-.btn-br-6{
-  border-radius:6px !important;
-}
-
-.input-br-6 {
-  border-radius: 6px !important;
-}
-
-input.form-control,select.form-control{
-  border-radius:0;
-  border-color:#c3c3c3;
-  color:#202020;
-  height:34px;
-}
-textarea {
-  border-radius: 6px;
-}
-textarea.form-control{
-  border-color:#c3c3c3;
-  border-radius:0;
-}
-
-.control-label {
-  text-align: right !important;
-}
-
-.input-lg {
-  font-size: 15px !important;
-}
 
 .table thead,
 .e-table thead {
@@ -1522,10 +1489,6 @@ a:hover{
   border: 0;
   background: url(../../plugins/iCheck/square/blue.png) no-repeat;
   background-position: -48px 0;
-}
-
-.btn-lg{
-  min-width:120px;
 }
 
 @media (min-width:992px){

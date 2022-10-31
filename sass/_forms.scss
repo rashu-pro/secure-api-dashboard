@@ -1,0 +1,62 @@
+.panel-fullscreen-textarea {
+  height: calc(100vh - 150px) !important;
+}
+
+.btn-br-6{
+  border-radius:6px !important;
+}
+
+.input-br-6 {
+  border-radius: 6px !important;
+}
+
+input.form-control,select.form-control{
+  border-radius:0;
+  border-color:#c3c3c3;
+  color:#202020;
+  height:36px;
+  &.invalid{
+    border-color:#a94442;
+  }
+}
+textarea {
+  border-radius: 6px;
+}
+textarea.form-control{
+  border-color:#c3c3c3;
+  border-radius:0;
+}
+
+.control-label {
+  text-align: right !important;
+}
+
+.input-lg {
+  font-size: 15px !important;
+}
+
+
+.form{
+  &-group{
+
+    .select2{
+      &-container{
+        &--default{
+          .select2{
+            &-selection{
+              &.field-invalid{
+                border-color:#a94442;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .error-message{
+      margin:0;
+      font-size: 14px;
+    }
+  }
+}
+
