@@ -273,6 +273,14 @@ textarea.form-control {
   font-size: 14px;
 }
 
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+  height: 36px;
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+}
+
 .modal-content {
   border-radius: 0.8rem;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Class Edit</title>
+    <title>Create Assignment</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -425,7 +425,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Class Edit
+                Create Assignment
             </h1>
         </section>
 
@@ -436,24 +436,18 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
+                <form action="#" enctype="multipart/form-data" id="Form-Class" method="post" novalidate="novalidate">
 
-                <form action="/admin/school/class/edit" enctype="multipart/form-data" id="Form-Class" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="BBX69HdV0Lg8mmZo-gi4Gu4L8UqHrN-_E5jvuSxC5w-P_fsUFVb7vVlZj2Z_5GUABy_L8u9j8kXxy5OhNfzAFcIxBRFGr7GRekBWvVLLFTw1">
-                    <input data-val="true" data-val-required="The UniqueKey field is required." id="UniqueKey" name="UniqueKey" type="hidden" value="01de8e08-44e8-4eb9-b652-9ad0e6804eda">
                     <div class="box-body">
 
                         <div class="row">
 
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label" for="RegistrationCalendarName">Class Name</label>
-                                    <input type="text" class="form-control" value="Year: 2022-2023-islamic-studies-kg">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group">
-                                    <label class="control-label" for="RegistrationCalendarName">Registration Calender</label>
-                                    <select class="form-control regCalendarKey select2" data-val="true" data-val-required="The RegistrationCalendarKey field is required." id="RegistrationCalendarName" name="RegistrationCalendarKey" style="max-width:100%" tabindex="-1" aria-hidden="true"><option selected="selected" value="8dd5e910-5b63-4a9c-93d0-23b0766d51e3">2022-2023 Full Academic Year</option>
+                                    <label class="control-label" for="RegistrationCalendarName">Select Class</label>
+                                    <select class="form-control regCalendarKey select2" data-val="true" data-val-required="The RegistrationCalendarKey field is required." id="RegistrationCalendarName" name="RegistrationCalendarKey" style="max-width:100%" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select a class</option>
+                                        <option value="8dd5e910-5b63-4a9c-93d0-23b0766d51e3">2022-2023 Full Academic Year</option>
                                         <option value="4bbdda67-2c41-4581-82bd-f25b48a4d8b8">2021-2022 Full Academic Year</option>
                                         <option value="b2d634be-6f1d-4290-859c-13df3d133479">2020-2021 Academic Year Semester II</option>
                                         <option value="be3597a9-17e1-40eb-bc22-f8b683bff78a">2020-2021 Academic Year Semester I</option>
@@ -462,83 +456,41 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <label>Grade</label>
-                                    <select class="form-control select2 gradeKey valid" data-val="true" data-val-required="The GradeKey field is required." id="gradeKey" name="gradeKey"><option value="28e961ba-f5a7-4266-be6e-12b0c2b32e21">8TH GRADE</option>
-                                        <option selected="selected" value="e9a23e20-c605-4666-901b-1527326d4807">KG</option>
-                                        <option value="b12b549a-f837-44a2-a1d1-2ce349e35b5d">2ND GRADE</option>
-                                        <option value="cb209b02-f3c1-44df-9983-2f713e28fbe0">1ST GRADE</option>
-                                        <option value="0e2ae62f-7fd5-485f-a5a4-49f25d8c8ef3">7TH GRADE</option>
-                                        <option value="03ad2cf0-a4ff-4c6a-a010-4accd60a24a7">SPECIAL CLASS</option>
-                                        <option value="77ce2c76-1210-47ac-88a2-5d3a7975bd33">12TH GRADE</option>
-                                        <option value="9f2c4078-f8db-4b81-9070-5e55f42c2d81">3RD GRADE</option>
-                                        <option value="db02499b-26b6-4723-8905-62bfe2263371">9TH GRADE</option>
-                                        <option value="25450b0e-cc68-4030-9221-6687d76fe318">6TH GRADE</option>
-                                        <option value="02fe7ea7-cc2a-4665-8300-7f7e53518262">5TH GRADE</option>
-                                        <option value="21b1f588-9f63-465f-b0db-801c933f6671">10TH GRADE</option>
-                                        <option value="531448a0-d49a-4d1f-aee6-ac6c2cbbdaeb">4TH GRADE</option>
-                                        <option value="29e8b9ad-5489-4619-8c0a-fd82d7d2d136">11TH GRADE</option>
+                                    <label class="control-label" for="RegistrationCalendarName">Class Occurances</label>
+                                    <select class="form-control regCalendarKey select2" data-val="true" data-val-required="The RegistrationCalendarKey field is required." id="RegistrationCalendarName" name="RegistrationCalendarKey" style="max-width:100%" tabindex="-1" aria-hidden="true">
+                                        <option value="">Select an option</option>
+                                        <option value="8dd5e910-5b63-4a9c-93d0-23b0766d51e3">2022-2023 Full Academic Year</option>
+                                        <option value="4bbdda67-2c41-4581-82bd-f25b48a4d8b8">2021-2022 Full Academic Year</option>
+                                        <option value="b2d634be-6f1d-4290-859c-13df3d133479">2020-2021 Academic Year Semester II</option>
+                                        <option value="be3597a9-17e1-40eb-bc22-f8b683bff78a">2020-2021 Academic Year Semester I</option>
+                                        <option value="8875aa95-abc1-41a0-bdd7-274185242d42">2019-2020 Full Academic Year</option>
                                     </select>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group">
-                                    <label>Subject Name</label>
-                                    <select class="form-control subjectKey select2" data-val="true" data-val-required="The SubjectKey field is required." id="subjectKey" name="subjectKey" style="max-width:100%" tabindex="-1" aria-hidden="true"><option value="">Select Subject</option>
-                                        <option selected="selected" value="15c15a88-fc05-4ff4-aec2-cb115df9afc1">Islamic Studies</option>
-                                        <option value="a711a609-e291-44cf-a0a5-1d8c75ebdc75">Quranic Studies</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group">
-                                    <label for="Details">Details</label>
-                                    <textarea class="form-control" id="Details" name="Details" rows="2">YEAR:2022-2023-Islamic Studies-KG</textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group">
-                                    <label for="location">Location</label>
-                                    <textarea class="form-control" id="location" name="Details" rows="2">Room Number: 144</textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group">
-                                    <label for="sort-order">Sot Order</label>
-                                    <input type="number" class="form-control" value="1">
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <div class="d-md-flex align-center">
-                                        <div class="checkbox checkbox-inline m-0">
-                                            <label class="m-0 d-block">&nbsp;</label>
-                                            <label>
-                                                <input type="checkbox" class="i-check" id="is-show"> Is Show
-                                                <span data-toggle="tooltip" data-placement="top"
-                                                      title="Is show?"><i
-                                                        class="fa fa-question-circle"></i></span>
-                                            </label>
-                                        </div>
-
-                                        <div class="checkbox checkbox-inline m-0">
-                                            <label class="m-0 d-block">&nbsp;</label>
-                                            <label>
-                                                <input type="checkbox" class="i-check" id="status"> Status
-                                                <span data-toggle="tooltip" data-placement="top"
-                                                      title="Status: Active"><i
-                                                        class="fa fa-question-circle"></i></span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <label for="assignment-name">Name of The Assignment</label>
+                                    <input type="text" id="assignment-name" class="form-control">
                                 </div>
                             </div>
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="assignment-document">Assignment Deocument</label>
+                                    <input type="file" id="assignment-document" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-dm-12">
+                                <div class="form-group">
+                                    <label for="assignment-details">Details</label>
+                                    <textarea class="form-control" id="assignment-details" name="Details" rows="10"></textarea>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -573,9 +525,8 @@
 <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
 <script src="../../plugins/select2/select2.full.min.js"></script>
-<!-- DataTables -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- CK EDITOR -->
+<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -586,6 +537,33 @@
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js"></script>
+
+<!-- ck editor -->
+<script>
+    ClassicEditor
+        .create(document.querySelector('#assignment-details'), {
+            toolbar: {
+                items: [
+                    'heading', '|',
+                    'fontfamily', 'fontsize', '|',
+                    'alignment', '|',
+                    'fontColor', 'fontBackgroundColor', '|',
+                    'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                    'link', '|',
+                    'outdent', 'indent', '|',
+                    'bulletedList', 'numberedList', 'todoList', '|',
+                    'code', 'codeBlock', '|',
+                    'insertTable', '|',
+                    'blockQuote', '|',
+                    'undo', 'redo'
+                ],
+                shouldNotGroupWhenFull: true
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
 </body>
 </html>
