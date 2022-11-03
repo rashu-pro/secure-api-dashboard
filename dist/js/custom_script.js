@@ -33,6 +33,13 @@ if($(".select2").length>0){
     $(".select2").select2();
 }
 
+//=== SELECT2 SEARCH FIELD LESS
+if($('.select2-searchless').length>0){
+    $('.select2-searchless').select2({
+        minimumResultsForSearch: -1
+    });
+}
+
 //=== INITIALIZING ICHECK
 if ($('.i-check').length > 0) {
     $('.i-check').iCheck({

@@ -66,6 +66,10 @@ textarea.form-control{
   height: 36px;
 }
 
+.select2-container--default .select2-results>.select2-results__options{
+  max-height: 250px;
+}
+
 //=== CKEDITOR HEIGHT
 .ck-editor__editable{
   min-height:300px;
