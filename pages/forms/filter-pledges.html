@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../../plugins/OverlayScrollbars/OverlayScrollbars.min.css">
     <!-- select2 -->
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+    <!-- prism css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -576,7 +578,33 @@
 
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <h2>Here goes page content...</h2>
+
+                    <!-- code snippets -->
+                    <div class="mt-15">
+                        <h2>HTML snippets for Page Header</h2>
+                        <div class="code-area">
+                            <div class="make-snippet">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="d-sm-flex align-center justify-space-between">
+        <h1 class="m-0 mb-10">
+            Page Title
+        </h1>
+
+        <div class="button-group">
+            <a href="#" type="button" class="btn btn-success btn-md mr-5"><i class="fa fa-plus"></i> <span class="ml-2">Button 1</span></a>
+            <a href="#" type="button" class="btn btn-primary btn-md mr-5"><i class="fa fa-plus"></i> <span class="ml-2">Button 2</span></a>
+            <button type="button"
+                    class="btn btn-navy btn-md">
+                <i class="fa fa-paper-plane"></i> <span class="ml-2">Button 3</span>
+            </button>
+        </div>
+    </div>
+</section>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -610,10 +638,39 @@
 <script src="../../plugins/OverlayScrollbars/OverlayScrollbars.min.js"></script>
 <!-- select2 -->
 <script src="../../plugins/select2/select2.min.js"></script>
+<!-- prism markup js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script>
+<!-- prism js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.0"></script>
+
+<!-- CODE SNIPPET STYLE SCRIPT -->
+<script>
+    (function(){
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+
+            var list = document.querySelectorAll('.make-snippet');
+
+            [].forEach.call(list, function(el) {
+                var snippet = el.innerHTML.replace(/</g,'&lt;');
+                snippet = snippet.replace(/ /g,'&nbsp;');
+                var code = '<pre class="language-markup"><code>'+snippet+'</pre></code>';
+                el.insertAdjacentHTML('afterend',code);
+            });
+
+            // if your page has prism.js you get syntax highlighting
+            if(window.Prism){
+                Prism.highlightAll(false);
+            }
+
+        });
+
+    })();
+</script>
 
 </body>
 </html>

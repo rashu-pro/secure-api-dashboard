@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
+    <!-- prism css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
     <!-- OverlayScrollBars -->
     <link rel="stylesheet" href="../../plugins/OverlayScrollbars/OverlayScrollbars.min.css">
     <!-- Theme style -->
@@ -429,7 +431,6 @@ desired effect
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
         <section class="content">
             <div class="row">
 
@@ -1593,60 +1594,76 @@ desired effect
 
                             <!-- documents -->
                             <div class="tab-pane" id="documents">
-
-
-                                <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <form action="/Admin/Persons/SaveDocument" clas="form-horizontal"
-                                                  enctype="multipart/form-data" method="post" novalidate="novalidate">
-                                                <input data-val="true" data-val-required="The Guid field is required."
-                                                       id="PersonKey" name="PersonKey" type="hidden"
-                                                       value="b19d190c-6af0-4db4-a5e4-cef7e91dbd84">
-                                                <div class="col-md-4">
-                                                    <input type="file" name="files" id="file1" class="form-control">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form action="/Admin/Persons/SaveDocument" class="form-horizontal"
+                                              enctype="multipart/form-data" method="post" novalidate="novalidate">
+                                            <input data-val="true" data-val-required="The Guid field is required."
+                                                   id="PersonKey" name="PersonKey" type="hidden"
+                                                   value="b19d190c-6af0-4db4-a5e4-cef7e91dbd84">
+                                            <div class="col-md-5">
+                                                <div class="form-group mt-15">
+                                                    <label data-for="upload-document">Upload Document</label>
+                                                    <div class="input-group">
+                                                        <input type="file" id="upload-document" class="form-control">
+                                                        <span class="input-group-addon btn btn-primary"><button type="button" class="btn btn-primary">Upload</button></span>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <input type="submit" class="btn btn-sm">
-                                                </div>
-                                            </form>
-                                        </div>
 
-                                        <div class="col-md-12" style="margin-top:20px">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered table-striped table-hover">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Id
-                                                        </th>
-                                                        <th>
-                                                            Name
-                                                        </th>
-                                                        <th>
-                                                            Description
-                                                        </th>
-                                                        <th>
-                                                            Category Name
-                                                        </th>
-                                                        <th>
-                                                            Upload date
-                                                        </th>
-                                                        <th>
-                                                            Action
-                                                        </th>
-                                                    </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                    </tbody>
-                                                </table>
                                             </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="col-md-12" style="margin-top:20px">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>
+                                                        Id
+                                                    </th>
+                                                    <th>
+                                                        Name
+                                                    </th>
+                                                    <th>
+                                                        Description
+                                                    </th>
+                                                    <th>
+                                                        Category Name
+                                                    </th>
+                                                    <th>
+                                                        Upload date
+                                                    </th>
+                                                    <th>
+                                                        Action
+                                                    </th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
 
-
+                                <!-- code snippets -->
+                                <div class="mt-15">
+                                    <hr>
+                                    <h2>HTML snippets for Upload Document Input Group</h2>
+                                    <div class="code-area">
+                                        <div class="make-snippet">
+<!-- Input Group (file uploader) -->
+<div class="form-group mt-15">
+    <label data-for="upload-document">Upload Document</label>
+    <div class="input-group">
+        <input type="file" id="upload-document" class="form-control">
+        <span class="input-group-addon btn btn-primary"><button type="button" class="btn btn-primary">Upload</button></span>
+   </div>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.tab-pane -->
 
@@ -2020,14 +2037,40 @@ desired effect
 <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="../../plugins/OverlayScrollbars/OverlayScrollbars.min.js"></script>
+<!-- prism markup js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script>
+<!-- prism js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.0"></script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
+<!-- CODE SNIPPET STYLE SCRIPT -->
+<script>
+    (function(){
+
+        document.addEventListener('DOMContentLoaded', function(event) {
+
+            var list = document.querySelectorAll('.make-snippet');
+
+            [].forEach.call(list, function(el) {
+                var snippet = el.innerHTML.replace(/</g,'&lt;');
+                snippet = snippet.replace(/ /g,'&nbsp;');
+                var code = '<pre class="language-markup"><code>'+snippet+'</pre></code>';
+                el.insertAdjacentHTML('afterend',code);
+            });
+
+            // if your page has prism.js you get syntax highlighting
+            if(window.Prism){
+                Prism.highlightAll(false);
+            }
+
+        });
+
+    })();
+</script>
+
+
 </body>
 </html>

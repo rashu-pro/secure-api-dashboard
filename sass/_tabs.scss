@@ -1,11 +1,14 @@
 .nav-tabs{
   &-custom{
     .nav-tabs{
+      display: flex;
+      flex-wrap: wrap;
       &>li{
         border-bottom-width:3px;
         border-bottom-style: solid;
         border-bottom-color:transparent;
         border-top:0;
+        float: none;
 
         a{
           line-height: 1;
