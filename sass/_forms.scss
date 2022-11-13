@@ -31,8 +31,20 @@ textarea.form-control{
   text-align: right !important;
 }
 
-.input-lg {
-  font-size: 15px !important;
+.input{
+  &-lg{
+    font-size: 15px !important;
+  }
+  &-group {
+    .input{
+      &-group{
+        &-addon{
+          border-color: #c3c3c3;
+          background-color: #eee;
+        }
+      }
+    }
+  }
 }
 
 
@@ -58,6 +70,12 @@ textarea.form-control{
     .error-message{
       margin:0;
       font-size: 14px;
+    }
+  }
+
+  &-control{
+    &.datepicker{
+      padding:6px 12px;
     }
   }
 }

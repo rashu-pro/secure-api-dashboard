@@ -3,6 +3,13 @@
   margin-bottom: 3px;
 }
 
+.button{
+  &-group{
+
+  }
+}
+
+
 .btn{
   &-lg{
     min-width:100px;
@@ -10,9 +17,9 @@
   }
 
   &-md{
-    padding:8px 20px;
+    padding:8px 12px;
   }
-  @media (min-width:992px){
+  @media (min-width:$md){
     &-md{
       padding:8px 20px;
     }

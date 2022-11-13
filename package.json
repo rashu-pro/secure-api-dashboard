@@ -1,0 +1,27 @@
+{
+  "name": "secure-api",
+  "version": "2.0.0",
+  "description": "Secure api portal UI customization",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss dist/css/custom.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashu-pro/secure-api-dashboard.git"
+  },
+  "keywords": [
+    "dashboard",
+    "data",
+    "data",
+    "filter",
+    "admin",
+    "template"
+  ],
+  "author": "rashu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rashu-pro/secure-api-dashboard/issues"
+  },
+  "homepage": "https://github.com/rashu-pro/secure-api-dashboard#readme"
+}

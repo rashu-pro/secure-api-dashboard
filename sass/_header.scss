@@ -1,0 +1,23 @@
+.main{
+  &-header{
+    max-height: min-content;
+    @media (min-width: $md) {
+      max-height: 100px;
+    }
+  }
+}
+
+.content{
+  &-header{
+    .button-group{
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding-bottom: 10px;
+      @media (min-width: $md){
+        white-space: normal;
+        overflow-x: auto;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

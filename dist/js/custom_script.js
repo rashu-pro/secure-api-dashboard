@@ -59,6 +59,13 @@ if($('.dropify').length>0){
     $('.dropify').dropify();
 }
 
+//=== datepicker initialization
+if($('.datepicker').length>0){
+    $('.datepicker').datepicker({
+        'autoclose':true
+    });
+}
+
 
 
 /**

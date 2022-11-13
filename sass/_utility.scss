@@ -41,3 +41,16 @@
 .round-5{
   border-radius:5px;
 }
+
+.d-sm-flex{
+  @media (min-width:$sm){
+    display: flex;
+  }
+}
+
+.d-sm-inline-block{
+  display: none;
+  @media (min-width: $sm){
+    display: inline-block;
+  }
+}

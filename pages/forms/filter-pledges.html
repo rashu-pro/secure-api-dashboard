@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Filter | Secure API</title>
+    <title>Pledges | Secure API</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../../plugins/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- select 2 -->
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
@@ -471,97 +474,94 @@
             <section class="content-header">
                 <div class="d-sm-flex align-center justify-space-between">
                     <h1 class="m-0 mb-10">
-                        Filter Data
+                        Pledges
                     </h1>
 
                     <div class="button-group">
+                        <a href="#" type="button" class="btn btn-success btn-md mr-5"><i class="fa fa-plus"></i> <span class="ml-2">Add New</span></a>
+
                         <button type="button"
-                                class="btn btn-primary btn-md margin-r-5 btn-fill">
-                            <i class="fa fa-credit-card"></i>
-                            <span class="ml-2">Download <span class="d-sm-inline-block">Donation Report</span></span></button>
-                        <button type="button" data-toggle="modal" data-target="#smsModal"
-                                class="btn btn-default btn-md margin-r-5 btn-fill"> <i class="fa fa-paper-plane"></i> <span class="ml-2">Send Sms</span></button>
-                        <a href="#" type="button" class="btn bg-purple btn-md"><i class="fa fa-plus"></i> <span class="ml-2">Add New</span></a>
+                                class="btn btn-navy btn-md">
+                            <i class="fa fa-paper-plane"></i> <span class="ml-2">Unpaid Pledges</span></button>
                     </div>
                 </div>
             </section>
 
-            <div class="box">
+            <div class="box box-success">
 
                 <!-- filter area -->
                 <div class="box-header">
-                    <h3 class="box-title">Filter Persons</h3>
+                    <h3 class="box-title">Filter Pledges</h3>
                     <div class="form-wrapper form-filter mt-15">
                         <form method="post" action="#">
 
                             <div class="row">
-                                <!-- filter by tag -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">Tag</label>
-                                        <select class="form-control select2" name="tagList" multiple>
-                                            <option value="Volunteer">Volunteer</option>
-                                            <option value="Parent">Parent</option>
-                                            <option value="Ex-Teacher">Ex-Teacher</option>
-                                            <option value="Student">Student</option>
-                                            <option value="Admin">Admin</option>
-                                        </select>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <!-- filter by date -->
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="form-group filter-box">
+                                                <label class="form-group-label" for="start-date">Start Date</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control datepicker" id="start-date">
+                                                    <label class="input-group-addon" for="start-date"><i class="fa fa-calendar-o"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- filter by date -->
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="form-group filter-box">
+                                                <label class="form-group-label" for="end-date">Start Date</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control datepicker" id="end-date">
+                                                    <label class="input-group-addon" for="end-date"><i class="fa fa-calendar-o"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- filter by id -->
+                                        <div class="col-sm-12 col-md-4">
+                                            <div class="form-group filter-box">
+                                                <label class="form-group-label">Filter by ID/Name/Email/Phone</label>
+                                                <input type="text" class="form-control" name="personId">
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
 
-                                <!-- filter by id -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">ID</label>
-                                        <input type="text" class="form-control" name="personId">
-                                    </div>
-                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <!-- filter by first name -->
+                                        <div class="col-xs-6 col-sm-6">
+                                            <div class="form-group filter-box">
+                                                <label class="form-group-label">Min. Amount</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
 
-                                <!-- filter by first name -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">First Name</label>
-                                        <input type="text" class="form-control" name="firstName">
+                                        <!-- filter by last name -->
+                                        <div class="col-xs-6 col-sm-6">
+                                            <div class="form-group filter-box">
+                                                <label class="form-group-label">Max. Amount</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <!-- filter by last name -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">Last Name</label>
-                                        <input type="text" class="form-control" name="lastName">
-                                    </div>
                                 </div>
                             </div>
 
                             <div class="row">
-
-                                <!-- filter by cell number -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">Cell Number</label>
-                                        <input type="text" class="form-control" name="cellNumber">
-                                    </div>
-                                </div>
-
-                                <!-- filter by email address -->
-                                <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
-                                        <label class="form-group-label">Email Address</label>
-                                        <input type="email" class="form-control" name="email">
-                                    </div>
-                                </div>
-
                                 <!-- filter button -->
                                 <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="form-group filter-box">
+                                    <div class="filter-box">
                                         <div class="d-inline-block mr-15">
-                                            <label class="form-group-label d-block hidden-xs hidden-sm">&nbsp;</label>
                                             <button type="button" class="btn btn-success"> <i class="fa fa-filter"></i> <span class="ml-2">Filter</span></button>
                                         </div>
 
                                         <div class="d-inline-block">
-                                            <label class="form-group-label d-block hidden-xs hidden-sm">&nbsp;</label>
                                             <button type="button" class="btn btn-default"> <i class="fa fa-refresh"></i> <span class="ml-2">Reset</span></button>
                                         </div>
 
@@ -569,10 +569,7 @@
                                 </div>
                             </div>
                         </form>
-
-                        <div class="alert alert-warning alert-warning-custom">
-                            Please enter a search criteria.
-                        </div>
+                        <hr>
                     </div>
                 </div>
                 <!-- /. filter area end -->
@@ -607,6 +604,8 @@
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- bootstrap datepicker -->
+<script src="../../plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="../../plugins/OverlayScrollbars/OverlayScrollbars.min.js"></script>
 <!-- select2 -->
