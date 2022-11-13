@@ -1,0 +1,20 @@
+.tagged{
+  border-width: 1px;
+  border-style: dashed;
+  /* border-radius: 7px; */
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+  &-success{
+    background: #c6f6d5;
+    color: #1f3d2e;
+    border-color: #5ab889;
+  }
+  &-danger{
+    background: #fed7d7;
+    color: #c53030;
+    border-color: #c53030;
+  }
+}
