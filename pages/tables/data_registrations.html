@@ -271,7 +271,7 @@
                     <p>admin</p>
 
                     <!-- Status -->
-                    <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
+                    <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
 
@@ -281,7 +281,7 @@
                 <!-- Optionally, you can add icons to the links -->
 
                 <li class="">
-                    <a href="../../dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                    <a href="../../dashboard_new.html" data-route="/secure_api_dashboard/dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
                 </li>
 
                 <li class="">
@@ -294,38 +294,52 @@
                 </li>
 
                 <li class="">
-                    <a href="data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                    <a href="data_class_v5.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
                 </li>
 
-                <li class="active">
-                    <a href="data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+                <li class="">
+                    <a href="data_registrations.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="data_students.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="data_student_details.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/tables/data_student_details.html">Student Details</a> </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0)"><i class="fa fa-male"></i> <span>Parents</span></a>
 
                 </li>
                 <li class="">
-                    <a href="data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+                    <a href="data_person_details.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
 
                 </li>
                 <li class="">
-                    <a href="/admin/school/parents"><i class="fa fa-male"></i> <span>Parents</span></a>
-
-                </li>
-                <li class="">
-                    <a href="/admin/persons/profile"><i class="fa fa-male"></i> <span>Profile</span></a>
-
-                </li>
-                <li class="">
-                    <a href="/admin/school/class-teachers"><i class="fa fa-user"></i> <span>Teachers</span></a>
+                    <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Teachers</span></a>
 
                 </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-cog"></i> <span>Settings</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/settings/topics">Topics</a></li>
+                        <li><a href="data_topics.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_topics.html">Topics</a></li>
 
                     </ul>
                 </li>
@@ -333,49 +347,58 @@
                     <a href="#">
                         <i class="fa fa-sticky-note"></i> <span>Assignments</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/school/assignments/due">Due Assignments</a></li>
-                        <li><a href="/admin/school/assignments/create">Create Assignment</a></li>
-                        <li><a href="/admin/school/assignments">All Assignments</a></li>
-
+                        <li><a href="data_assignments.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">Due Assignments</a></li>
+                        <li><a href="../forms/form_create_assignment.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/forms/form_create_assignment.html">Create Assignment</a></li>
+                        <li><a href="data_assignments.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">All Assignments</a></li>
                     </ul>
                 </li>
-                <li class="treeview ">
+
+                <li class="treeview">
                     <a href="#">
                         <i class="fa fa-calendar"></i> <span>Events</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/events">Event List</a></li>
-
+                        <li class=""><a href="data_events.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/tables/data_events.html">Event List</a></li>
                     </ul>
                 </li>
+
                 <li class="treeview ">
                     <a href="#">
                         <i class="fa fa-users"></i> <span>Persons</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/persons">All Persons</a></li>
+                        <li><a href="javascript:void(0)">All Persons</a></li>
 
                     </ul>
                 </li>
+
                 <li class="treeview ">
                     <a href="#">
                         <i class="fa fa-gift"></i> <span>Payments</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/give/pledges">Pledges</a></li>
+                        <li><a href="javascript:void(0)">Pledges</a></li>
                         <li><a href="/admin/give/payments">Payments</a></li>
                         <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
                         <li><a href="/admin/give/company/customers">CC Customers</a></li>
@@ -389,6 +412,23 @@
                 <li class="">
                     <a href="/admin/users"><i class="fa fa-user"></i> <span>User Settings</span></a>
 
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Components</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../components/btn_action.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/components/btn_action.html"> Action Button </a></li>
+                        <li class=""><a href="../components/btn_action_no_text.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/components/btn_action_no_text.html"> Action Button (no text) </a></li>
+                    </ul>
                 </li>
             </ul>
             <!-- /.sidebar-menu -->
@@ -2610,200 +2650,6 @@
         <strong>Copyright © 2022 <a target="_blank" href="https://MasjidSolutions.Net">Masjid Solutions</a>.</strong>
         All rights reserved.
     </footer>
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-user bg-yellow"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                                <p>New phone +1(800)555-1234</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                                <p>nora@example.com</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                                <p>Execution time 5 seconds</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-2 label-danger pull-right">70%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Update Resume
-                                <span class="label label-2 label-success pull-right">95%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Laravel Integration
-                                <span class="label label-2 label-warning pull-right">50%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Back End Framework
-                                <span class="label label-2 label-primary pull-right">68%</span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-            </div>
-            <!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Other sets of options are available
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Allow the user to show his name in blog posts
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Show me as online
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Turn off notifications
-                            <input type="checkbox" class="pull-right">
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Delete chat history
-                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-                </form>
-            </div>
-            <!-- /.tab-pane -->
-        </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 
@@ -3003,22 +2849,6 @@ new ejs.grids.Grid({
 
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
 <script src="../../dist/js/custom_script.js"></script>
-<!-- page script -->
-<script>
-    $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-        });
-    });
-</script>
 </body>
 </html>

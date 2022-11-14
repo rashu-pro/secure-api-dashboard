@@ -13,7 +13,7 @@
                 <p>admin</p>
 
                 <!-- Status -->
-                <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
+                <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
             <!-- Optionally, you can add icons to the links -->
 
             <li class="">
-                <a href="../../dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                <a href="../../dashboard_new.html" data-route="/secure_api_dashboard/dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
             </li>
 
             <li class="">
@@ -36,29 +36,39 @@
             </li>
 
             <li class="">
-                <a href="data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                <a href="data_class_v5.html"
+                   class="menu-link"
+                   data-route="/secure_api_dashboard/pages/tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
             </li>
 
             <li class="">
-                <a href="data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+                <a href="data_registrations.html"
+                   class="menu-link"
+                   data-route="/secure_api_dashboard/pages/tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
 
             </li>
-            <li class="treeview active">
-                <a href="data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+            <li class="treeview">
+                <a href="data_students.html"
+                   class="menu-link"
+                   data-route="/secure_api_dashboard/pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="data_student_details.html">Student Details</a> </li>
+                    <li class=""><a href="data_student_details.html"
+                                    class="menu-link"
+                                    data-route="/secure_api_dashboard/pages/tables/data_student_details.html">Student Details</a> </li>
                 </ul>
             </li>
             <li class="">
-                <a href="data_parents.html"><i class="fa fa-male"></i> <span>Parents</span></a>
+                <a href="javascript:void(0)"><i class="fa fa-male"></i> <span>Parents</span></a>
 
             </li>
             <li class="">
-                <a href="data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
+                <a href="data_person_details.html"
+                   class="menu-link"
+                   data-route="/secure_api_dashboard/pages/tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
 
             </li>
             <li class="">
-                <a href="data_teachers.html"><i class="fa fa-user"></i> <span>Teachers</span></a>
+                <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Teachers</span></a>
 
             </li>
             <li class="treeview">
@@ -69,7 +79,9 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="data_topics.html">Topics</a></li>
+                    <li><a href="data_topics.html"
+                           class="menu-link"
+                           data-route="/secure_api_dashboard/pages/tables/data_topics.html">Topics</a></li>
 
                 </ul>
             </li>
@@ -81,10 +93,15 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="data_assignments.html">Due Assignments</a></li>
-                    <li><a href="../forms/form_create_assignment.html">Create Assignment</a></li>
-                    <li><a href="data_assignments.html">All Assignments</a></li>
-
+                    <li><a href="data_assignments.html"
+                           class="menu-link"
+                           data-route="/secure_api_dashboard/pages/tables/data_assignments.html">Due Assignments</a></li>
+                    <li><a href="../forms/form_create_assignment.html"
+                           class="menu-link"
+                           data-route="/secure_api_dashboard/pages/forms/form_create_assignment.html">Create Assignment</a></li>
+                    <li><a href="data_assignments.html"
+                           class="menu-link"
+                           data-route="/secure_api_dashboard/pages/tables/data_assignments.html">All Assignments</a></li>
                 </ul>
             </li>
 
@@ -92,11 +109,13 @@
                 <a href="#">
                     <i class="fa fa-calendar"></i> <span>Events</span>
                     <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-angle-right pull-right"></i>
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class=""><a href="data_events.html">Event List</a></li>
+                    <li class=""><a href="data_events.html"
+                                    class="menu-link"
+                                    data-route="/secure_api_dashboard/pages/tables/data_events.html">Event List</a></li>
                 </ul>
             </li>
 
@@ -108,7 +127,7 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="data_persons.html">All Persons</a></li>
+                    <li><a href="javascript:void(0)">All Persons</a></li>
 
                 </ul>
             </li>
@@ -121,7 +140,7 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="data_pledges.html">Pledges</a></li>
+                    <li><a href="javascript:void(0)">Pledges</a></li>
                     <li><a href="/admin/give/payments">Payments</a></li>
                     <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
                     <li><a href="/admin/give/company/customers">CC Customers</a></li>
@@ -145,8 +164,12 @@
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class=""><a href="../components/btn_action.html"> Action Button </a></li>
-                    <li class=""><a href="../components/btn_action_no_text.html"> Action Button (no text) </a></li>
+                    <li class=""><a href="../components/btn_action.html"
+                                    class="menu-link"
+                                    data-route="/secure_api_dashboard/pages/components/btn_action.html"> Action Button </a></li>
+                    <li class=""><a href="../components/btn_action_no_text.html"
+                                    class="menu-link"
+                                    data-route="/secure_api_dashboard/pages/components/btn_action_no_text.html"> Action Button (no text) </a></li>
                 </ul>
             </li>
         </ul>

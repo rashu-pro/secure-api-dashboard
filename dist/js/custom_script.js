@@ -66,6 +66,22 @@ if($('.datepicker').length>0){
     });
 }
 
+//=== pass active class to the active page
+let base_url = window.location.origin,
+    host = window.location.host,
+    pathString = window.location.pathname,
+    pathArray = pathString.split( '/' );
+let consoleString = `base url: ${base_url}\nHost: ${host}\n Path: ${pathString}\nPath array: ${pathArray}`;
+console.log(consoleString);
+
+$('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
+    if($(element).data('route') === pathString){
+        $(element).closest('li').addClass('active');
+        $(element).closest('.treeview').addClass('active');
+
+    }
+});
+
 
 
 /**
