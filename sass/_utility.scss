@@ -31,6 +31,12 @@
 .pt-30{
   padding-top:30px;
 }
+.pl-0{
+  padding-left:0;
+}
+.pl-15{
+  padding-left:15px;
+}
 //=== border
 .border-1{
   border:1px solid #ddd;
@@ -52,5 +58,23 @@
   display: none;
   @media (min-width: $sm){
     display: inline-block;
+  }
+}
+
+//=== text
+.text-small{
+  font-size:14px;
+}
+
+
+.hr{
+  &-2{
+    border-top:2px solid #ddd;
+  }
+}
+
+.d-sm-flex{
+  @media (min-width: 768px) {
+    display: flex;
   }
 }

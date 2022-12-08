@@ -59,6 +59,15 @@ textarea.form-control{
 
 
 .form{
+
+  &-wrapper{
+    .form{
+      &-group{
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   &-group{
 
     .select2{
@@ -88,6 +97,17 @@ textarea.form-control{
       padding:6px 12px;
     }
   }
+
+  &-section{
+    &-head{
+      //border-left: 4px solid #0f74a8;
+      //padding-left: 15px;
+      //margin-bottom: 15px;
+      h2{
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .select2-container--default .select2-selection--single, .select2-selection .select2-selection--single{
@@ -101,4 +121,27 @@ textarea.form-control{
 //=== CKEDITOR HEIGHT
 .ck-editor__editable{
   min-height:300px;
+}
+
+.icheck{
+  &-wrapper{
+    .checkbox{
+      label{
+        padding-left:0;
+      }
+      .check-info{
+        padding-left:32px;
+      }
+
+      &-lg{
+        label{
+          font-size: 18px;
+          font-weight: 600;
+          .check-info{
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
 }

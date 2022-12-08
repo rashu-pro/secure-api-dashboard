@@ -61,8 +61,11 @@ if($('.dropify').length>0){
 
 //=== datepicker initialization
 if($('.datepicker').length>0){
+    let startDate = true;
+
     $('.datepicker').datepicker({
-        'autoclose':true
+        'autoclose': true,
+        'startDate': new Date()
     });
 }
 
@@ -78,7 +81,6 @@ $('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
     if($(element).data('route') === pathString){
         $(element).closest('li').addClass('active');
         $(element).closest('.treeview').addClass('active');
-
     }
 });
 

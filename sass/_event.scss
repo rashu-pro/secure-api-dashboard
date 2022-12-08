@@ -1,0 +1,56 @@
+.w-app{
+  margin:0 auto;
+  @media (min-width:768px){
+    max-width:650px;
+  }
+}
+
+.datepicker{
+  .table{
+    box-shadow: none;
+    border: 0;
+    th{
+      background-color: #fff!important;
+      color:#000!important;
+      &.next{
+        background-color: #f0f0f0!important;
+      }
+      &.prev{
+        background-color: #f0f0f0!important;
+      }
+    }
+    td{
+      &.active{
+        background: #009688!important;
+        font-weight: 600!important;
+      }
+      &.day{
+        &:hover{
+          background-color: #d7e9e7;
+        }
+      }
+    }
+  }
+
+  &.dropdown{
+    &-menu{
+      background-color: #fff;
+      padding: 15px!important;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.datepicker.dropdown-menu th, .datepicker.dropdown-menu td{
+  border: 0;
+  border-radius: 0;
+  vertical-align: middle;
+  height: 0;
+  padding: 8px;
+}
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover{
+  opacity: 0.5;
+}
+.content-box{
+  max-width:800px;
+}
