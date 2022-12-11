@@ -1,0 +1,8 @@
+.table{
+  &-borderless{
+    border:0!important;
+    td{
+      border:0!important;
+    }
+  }
+}

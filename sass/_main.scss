@@ -347,7 +347,14 @@ margin: 0 auto 0;*/
   box-shadow: 0px 2px 25px 0px #0000002b;
   margin-bottom: 30px;
   border-collapse: initial;
-  border:1px solid #BDBDBD;
+  border:1px solid rgba(189, 189, 189, 0.6);
+  &-column-fatty{
+    td{
+      padding-top:15px!important;
+      padding-bottom:15px!important;
+    }
+
+  }
 }
 .table thead{
   background-color: #21333D;
@@ -1348,6 +1355,11 @@ HELP PAGE
 .section-title{
   margin: 0;
   margin-bottom:8px;
+  &-bordered{
+    padding: 0 0 10px;
+    border-bottom: 1px solid cornflowerblue;
+    color: cornflowerblue;
+  }
 }
 .section-title.v2{
   color: #e91e63;
@@ -1545,9 +1557,9 @@ a:hover{
   max-width:80px;
   margin:0 auto;
 }
-.d-none{
-  display: none;
-}
+//.d-none{
+//  display: none;
+//}
 
 .info-box.v2{
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.20);
@@ -1732,6 +1744,19 @@ table tr.bg-white tr th{
   padding:0 10px;
 }
 
+.box{
+  &-head{
+    @media(max-width:992px){
+      padding:15px 30px;
+    }
+  }
+  &-body{
+    padding:20px 30px;
+    @media(max-width:992px){
+      padding:20px 30px;
+    }
+  }
+}
 
 
 @media(max-width:992px){
@@ -1743,5 +1768,18 @@ table tr.bg-white tr th{
   }
   .mt-md-15-down{
     margin-top:15px;
+  }
+}
+
+.body-overlayer{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.3);
+  visibility: hidden;
+  &.active{
+    visibility: visible;
   }
 }

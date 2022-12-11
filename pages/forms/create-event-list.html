@@ -70,7 +70,7 @@
                             <div class="dropdown-toggle-content">
                                 <div class="dropdown-toggle-content-inner">
                                     <div class="dropdown-toggle-icon">
-                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png" alt="company">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
                                     </div>
                                     <div class="dropdown-toggle-title">IWS-ICGC</div>
                                 </div>
@@ -453,73 +453,181 @@
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1 class="text-center">
-                Add Event Details
-            </h1>
+            <div class="d-flex justify-space-between align-center">
+                <h1 class="text-center m-0">
+                    Events List
+                </h1>
+            </div>
         </section>
 
         <!-- Main content -->
-        <section class="content content-box">
+        <section class="content">
             <div class="box box-success">
+
+                <div class="box-header">
+                    <div class="d-flex justify-space-between align-center mb-10">
+                        <div class="w-md-50">
+                            <h2 class="m-0 mb-10">Search Events</h2>
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="search-event">
+                                            <label class="input-group-addon" for="search-event"><img src="../../dist/img/search-24.png" alt="search events"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <select class="form-control select2-searchless">
+                                            <option value="draft">Draft</option>
+                                            <option value="upcoming_events">Upcoming Events</option>
+                                            <option value="past_events">Past Events</option>
+                                            <option value="all_events">All Events</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add New</span> </a>
+                    </div>
+                </div>
 
                 <div class="box-body">
 
-                    <div class="form-wrapper v2 w-app pt-15 pb-30">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-column-fatty">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Event
+                                </th>
+                                <th>
+                                    Sold
+                                </th>
+                                <th>
+                                    Gross
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                            </thead>
 
-                        <!-- banner image -->
-                        <div>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Main Banner Image</h2>
-                                <p>82% of attendees prefer main event images that show an event's vibe and atmosphere.</p>
-                            </div>
+                            <tbody>
+                            <tr>
 
-                            <div class="form-group">
-                                <div class="file-uploader-wrapper">
-                                    <input type="file" class="file-uploader image-input dropify" id="image-input">
-                                </div>
-                                <div>
-                                    <ul class="d-sm-flex justify-space-between pt-4 pl-15">
-                                        <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
-                                        <li class="text-small text-info">Maximum file size: 10MB</li>
-                                        <li class="text-small text-info">Supported image files: JPEG or PNG</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                <td>
+                                    <a href="#">
+                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
+                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
+                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
+                                    </a>
+                                </td>
+                                <td>
+                                    05/10
+                                    <div class="ticket-sell-scale">
+                                        <div class="ticket-sold-scale"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $120
+                                </td>
+                                <td>
+                                    <span class="tagged tagged-success text-uppercase">Active</span>
+                                </td>
 
-                        <!-- summary -->
-                        <div>
-                            <hr>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Summary</h2>
-                                <p>Grab people's attention with a short description about your event. Attendees will see this at the top of your event page.</p>
-                            </div>
+                                <td class="">
+                                    <div class="button-group">
+                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                class="fa fa-trash"></i></a>
+                                    </div>
 
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4"></textarea>
-                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
-                            </div>
-                        </div>
 
-                        <!-- text editor -->
-                        <div class="">
-                            <hr>
-                            <h2 class="m-0 mb-10">Description</h2>
-                            <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
-                            <div class="form-group">
-                                <textarea id="editor"></textarea>
-                            </div>
-                        </div>
+                                </td>
 
-                        <div class="form-wrapper-foot pt-15">
-                            <hr class="hr-2">
-                            <div class="text-right button-group">
-                                <button type="button" class="btn btn-default btn-lg mr-15">Discard</button>
-                                <a href="create-event-ticket.html" class="btn btn-success btn-lg">Next</a>
-                            </div>
-                        </div>
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <a href="#">
+                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
+                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
+                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
+                                    </a>
+                                </td>
+                                <td>
+                                    05/10
+                                    <div class="ticket-sell-scale">
+                                        <div class="ticket-sold-scale"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $120
+                                </td>
+                                <td>
+                                    <span class="tagged tagged-success text-uppercase">Active</span>
+                                </td>
+
+                                <td class="">
+                                    <div class="button-group">
+                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                class="fa fa-trash"></i></a>
+                                    </div>
+
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <a href="#">
+                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
+                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
+                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
+                                    </a>
+                                </td>
+                                <td>
+                                    05/10
+                                    <div class="ticket-sell-scale">
+                                        <div class="ticket-sold-scale"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    $120
+                                </td>
+                                <td>
+                                    <span class="tagged tagged-success text-uppercase">Active</span>
+                                </td>
+
+                                <td class="">
+                                    <div class="button-group">
+                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                class="fa fa-trash"></i></a>
+                                    </div>
+
+
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+
                     </div>
-
 
                 </div>
 
@@ -560,28 +668,6 @@
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.5"></script>
-
-<!-- ck editor -->
-<script>
-  ClassicEditor
-    .create(document.querySelector('#editor'), {
-      toolbar: {
-        items: [
-          'heading', '|',
-          'fontfamily', 'fontsize', '|',
-          'alignment', '|',
-          'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-          'link', '|',
-          'bulletedList', 'numberedList', 'todoList', '|',
-          'code', 'codeBlock', '|',
-        ],
-        shouldNotGroupWhenFull: true
-      }
-    })
-    .catch(error => {
-      console.error(error);
-    });
-</script>
 
 
 </body>

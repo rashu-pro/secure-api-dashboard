@@ -48,6 +48,10 @@
   border-radius:5px;
 }
 
+.d-none{
+  display: none;
+}
+
 .d-sm-flex{
   @media (min-width:$sm){
     display: flex;
@@ -65,6 +69,21 @@
 .text-small{
   font-size:14px;
 }
+.text{
+  &-dark{
+    color:#000;
+  }
+  &-underline{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &-md{
+    font-size: 20px;
+  }
+}
 
 
 .hr{
@@ -77,4 +96,22 @@
   @media (min-width: 768px) {
     display: flex;
   }
+}
+
+.w-75{
+  width:75%;
+}
+@media (min-width:768px){
+  .w-sm-75{
+    width: 75%;
+  }
+}
+
+@media (min-width:992px){
+  .w-md-50{
+    width: 50%;
+  }
+}
+.box-shadow-none{
+  box-shadow: none!important;
 }

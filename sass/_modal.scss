@@ -35,6 +35,14 @@
         width: 550px;
       }
     }
+
+    .table{
+      &-responsive{
+        td{
+          max-width: 0!important;
+        }
+      }
+    }
   }
 
   &-dialog-style{

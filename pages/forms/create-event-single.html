@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Create Event Details</title>
+    <title>Event - Tickets</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -70,7 +70,7 @@
                             <div class="dropdown-toggle-content">
                                 <div class="dropdown-toggle-content-inner">
                                     <div class="dropdown-toggle-icon">
-                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png" alt="company">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
                                     </div>
                                     <div class="dropdown-toggle-title">IWS-ICGC</div>
                                 </div>
@@ -453,73 +453,50 @@
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1 class="text-center">
-                Add Event Details
-            </h1>
+            <div class="d-flex justify-space-between align-center">
+                <h1 class="text-center m-0">
+                    Tickets
+                </h1>
+            </div>
         </section>
 
         <!-- Main content -->
-        <section class="content content-box">
+        <section class="content">
             <div class="box box-success">
 
                 <div class="box-body">
 
-                    <div class="form-wrapper v2 w-app pt-15 pb-30">
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#addmission" data-toggle="tab" aria-expanded="true"><strong>Addmission</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#addons" data-toggle="tab" aria-expanded="false"><strong>Add-Ons</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#promo-codes" data-toggle="tab" aria-expanded="false"><strong>Promo Codes</strong></a>
+                            </li>
+                        </ul>
 
-                        <!-- banner image -->
-                        <div>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Main Banner Image</h2>
-                                <p>82% of attendees prefer main event images that show an event's vibe and atmosphere.</p>
+                        <div class="tab-content">
+
+                            <!-- addmission tab -->
+                            <div class="tab-pane active" id="addmission">
+                                addmission
                             </div>
 
-                            <div class="form-group">
-                                <div class="file-uploader-wrapper">
-                                    <input type="file" class="file-uploader image-input dropify" id="image-input">
-                                </div>
-                                <div>
-                                    <ul class="d-sm-flex justify-space-between pt-4 pl-15">
-                                        <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
-                                        <li class="text-small text-info">Maximum file size: 10MB</li>
-                                        <li class="text-small text-info">Supported image files: JPEG or PNG</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- summary -->
-                        <div>
-                            <hr>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Summary</h2>
-                                <p>Grab people's attention with a short description about your event. Attendees will see this at the top of your event page.</p>
+                            <!-- addon tab -->
+                            <div class="tab-pane" id="addons">
+                                addons
                             </div>
 
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4"></textarea>
-                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
-                            </div>
-                        </div>
-
-                        <!-- text editor -->
-                        <div class="">
-                            <hr>
-                            <h2 class="m-0 mb-10">Description</h2>
-                            <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
-                            <div class="form-group">
-                                <textarea id="editor"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-wrapper-foot pt-15">
-                            <hr class="hr-2">
-                            <div class="text-right button-group">
-                                <button type="button" class="btn btn-default btn-lg mr-15">Discard</button>
-                                <a href="create-event-ticket.html" class="btn btn-success btn-lg">Next</a>
+                            <!-- promo codes tab -->
+                            <div class="tab-pane" id="promo-codes">
+                                promo codes
                             </div>
                         </div>
                     </div>
-
 
                 </div>
 
@@ -560,28 +537,6 @@
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.5"></script>
-
-<!-- ck editor -->
-<script>
-  ClassicEditor
-    .create(document.querySelector('#editor'), {
-      toolbar: {
-        items: [
-          'heading', '|',
-          'fontfamily', 'fontsize', '|',
-          'alignment', '|',
-          'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-          'link', '|',
-          'bulletedList', 'numberedList', 'todoList', '|',
-          'code', 'codeBlock', '|',
-        ],
-        shouldNotGroupWhenFull: true
-      }
-    })
-    .catch(error => {
-      console.error(error);
-    });
-</script>
 
 
 </body>

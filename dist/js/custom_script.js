@@ -69,6 +69,17 @@ if($('.datepicker').length>0){
     });
 }
 
+//=== height fix for ticket add popup
+ticketFormHeight();
+function ticketFormHeight(){
+    let heightNav = $('.main-header .navbar').outerHeight();
+    let heightTicketHead = $('.ticket-add-form-head').outerHeight();
+    let heightTicketFoot = $('.ticket-add-form-foot').outerHeight();
+    let minHeightTicketBody = `calc(100vh - ${heightNav+heightTicketHead+heightTicketFoot}px)`;
+    $('.ticket-add-form-body').css('height', minHeightTicketBody);
+}
+
+
 //=== pass active class to the active page
 let base_url = window.location.origin,
     host = window.location.host,
@@ -137,6 +148,20 @@ $(document).on('click', '#create-enroll', function (e) {
         toastr.success('Enroll created!')
     },600);
 });
+
+$(document).on('click', '.ticket-add-js', function(){
+    $('.ticket-add-form-js').addClass('active');
+    $('.body-overlayer').addClass('active');
+    setTimeout(function (){
+        ticketFormHeight();
+        $('.ticket-add-form-js').css('visibility','visible');
+    },100);
+});
+
+$(document).on('click', '.ticket-add-form-close-js', function (){
+    $(this).closest('.ticket-add-form-js').removeClass('active');
+    $('.body-overlayer').removeClass('active');
+})
 
 /**
  * -------------------------------------

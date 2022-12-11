@@ -1,0 +1,87 @@
+.ticket{
+  &-icon{
+    &-holder{
+      margin:0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f8f8;
+      border:1px solid #ddd;
+      padding:20px 0;
+    }
+    max-width: 70%;
+  }
+
+  &-add{
+    &-form{
+      display: none;
+      visibility: hidden;
+      position: fixed;
+      top: 54px;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 1px 17px 0 rgba(40, 44, 53, 0.1),
+                  0 2px 4px 0 rgba(40, 44, 53, 0.1);
+      z-index: 999;
+      &.active{
+        display: block;
+      }
+      @media (min-width: 768px){
+        width: 500px;
+      }
+
+      &-wrapper{
+        position: relative;
+      }
+
+      &-head{
+        border-bottom: 1px solid #ddd;
+        padding-top:15px;
+        padding-bottom: 15px;
+      }
+
+      &-body{
+        padding-top:30px;
+        padding-bottom: 30px;
+        overflow-y: auto;
+      }
+
+      &-foot{
+        border-top:1px solid #ddd;
+        padding-top:15px;
+        padding-bottom:15px;
+      }
+    }
+  }
+
+  &-sell{
+    &-scale{
+      height: 8px;
+      background-color: #dddbdb;
+      border-radius: 8px;
+      position: relative;
+    }
+  }
+  &-sold{
+    &-scale{
+      position: absolute;
+      left:0;
+      top:0;
+      height: 100%;
+      width:50%;
+      background-color: #0f74a8;
+      border-radius: 8px;
+    }
+  }
+}
+
+.add-ticket-padding{
+  padding-left:20px;
+  padding-right:20px;
+  @media (min-width: 768px){
+    padding-left:50px;
+    padding-right:50px;
+  }
+}
