@@ -1,0 +1,51 @@
+.text-md{
+  &-medium{
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .d{
+    &-md{
+      &-lfex{
+        display: flex;
+      }
+      &-block{
+        display: block;
+      }
+      &-inline{
+        &-flex{
+          display: inline-flex;
+        }
+        &-block{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .mb{
+    &-md{
+      &-10{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .w-md-50{
+    width: 50%;
+  }
+
+  .text-md{
+    &-medium{
+      font-size:18px;
+    }
+    &-center{
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width:768px){
+  .w-sm-75{
+    width: 75%;
+  }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Event - Tickets</title>
+    <title>Event - Coupons list</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -267,13 +267,10 @@
         </nav>
     </header>
 
-
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
-
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
@@ -450,36 +447,28 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
-        <div class="bg-white">
-            <ul class="nav nav-event-navigation d-flex justify-center">
-                <li class="complete"><a href="#">Basic Info</a> </li>
-                <li class="complete"><a href="#">Details</a> </li>
-                <li class="active"><a href="#">Tickets</a> </li>
-                <li><a href="#">Publish</a> </li>
-            </ul>
-        </div>
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="d-flex justify-space-between align-center">
+                <h1 class="text-center m-0">
+                    Tickets
+                </h1>
+            </div>
+        </section>
 
         <!-- Main content -->
         <section class="content">
-
-            <h1 class="text-center text-bold mb-20">
-                Tickets
-            </h1>
-
             <div class="box box-success">
-
                 <div class="box-body">
-
                     <div class="nav-tabs-custom box-shadow-none">
                         <ul class="nav nav-tabs nav-tabs-responsive">
-                            <li class="active">
+                            <li class="">
                                 <a href="#addmission" data-toggle="tab" aria-expanded="true"><strong>Addmission</strong></a>
                             </li>
                             <li class="">
                                 <a href="#addons" data-toggle="tab" aria-expanded="false"><strong>Add-Ons</strong></a>
                             </li>
-                            <li class="">
+                            <li class="active">
                                 <a href="#promo-codes" data-toggle="tab" aria-expanded="false"><strong>Promo Codes</strong></a>
                             </li>
                         </ul>
@@ -487,47 +476,29 @@
                         <div class="tab-content">
 
                             <!-- addmission tab -->
-                            <div class="tab-pane active" id="addmission">
+                            <div class="tab-pane" id="addmission">
                                 <div class="text-right mb-10">
                                     <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
                                 </div>
                                 <div class="table-custom">
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-50">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
+                                    <div class="d-none d-md-block">
+                                        <div class="table-row table-head bg-gray-light font-600 mb-10">
+                                            <div class="table-column w-40">
+                                                Event
                                             </div>
-                                        </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
-                                        </div>
 
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
+                                            <div class="table-column w-60">
+                                                <div class="d-flex justify-space-between align-center">
+                                                    <span class="">Type</span>
+                                                    <span>Price</span>
+                                                    <div>Action</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="table-row mb-10">
-                                        <div class="table-column w-50">
+                                        <div class="table-column w-40">
                                             <div class="d-md-flex justify-space-between align-center">
                                                 <div class="mb-md-10">
                                                     <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
@@ -546,16 +517,52 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
+
+                                        <div class="table-column w-60">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <span class="tagged tagged-success text-uppercase">Paid</span>
+                                                <span>$120</span>
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row mb-10">
+                                        <div class="table-column w-40">
+                                            <div class="d-md-flex justify-space-between align-center">
+                                                <div class="mb-md-10">
+                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                    <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                        <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                    </p>
+                                                </div>
+
+                                                <div>
+                                                    4/10
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
+                                        <div class="table-column w-60">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <span class="tagged tagged-success text-uppercase">Free</span>
+                                                <p class="m-0 font-600"> -- </p>
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -564,35 +571,208 @@
 
                             <!-- addon tab -->
                             <div class="tab-pane" id="addons">
-                                <div class="addon-empty">
-                                    <div class="text-center mb-10 mt-15">
-                                        <div class="addon-empty-image">
-                                            <img src="../../dist/img/ticket-addon.png" alt="addon">
+                                <div class="text-right mb-10">
+                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
+                                </div>
+                                <div class="table-custom">
+                                    <div class="table-row mb-10">
+                                        <div class="table-column w-50">
+                                            <div class="d-md-flex justify-space-between align-center">
+                                                <div class="mb-md-10">
+                                                    <a href="#" class="text-dark">
+                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                        <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                            <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                        </p>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    4/10
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-column w-25">
+                                            <span class="tagged tagged-success text-uppercase">Free</span>
+                                        </div>
+
+                                        <div class="table-column w-25">
+                                            <div class="button-group">
+                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                        class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="text-center">
-                                        <h2 class="text-bold m-0 mb-10">Do you want to add addons for your event?</h2>
-                                        <p class="font-600 text-medium mb-30">Sell additional items for your event - like parking, merchandise, or campsites.</p>
-                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
+                                    <div class="table-row mb-10">
+                                        <div class="table-column w-50">
+                                            <div class="d-md-flex justify-space-between align-center">
+                                                <div class="mb-md-10">
+                                                    <a href="#" class="text-dark">
+                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                        <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                            <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                        </p>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    4/10
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-column w-25">
+                                            <span class="tagged tagged-blue text-uppercase">Paid</span>
+                                        </div>
+
+                                        <div class="table-column w-25">
+                                            <div class="button-group">
+                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                        class="fa fa-pencil-square-o"></i></a>
+                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- promo codes tab -->
-                            <div class="tab-pane" id="promo-codes">
-                                <div class="promo-empty">
-                                    <div class="text-center mb-10 mt-15">
-                                        <div class="empty-image">
-                                            <img src="../../dist/img/discount.png" alt="addon">
-                                        </div>
-                                    </div>
+                            <div class="tab-pane active" id="promo-codes">
 
-                                    <div class="text-center">
-                                        <h2 class="text-bold m-0 mb-10">Attract more attendees with promo codes</h2>
-                                        <p class="font-600 text-medium mb-30">With promo codes, you can offer reduced prices with discount codes or reveal hidden tickets to attendees with access codes.</p>
-                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Promo Code</span> </a>
-                                    </div>
+                                <div class="text-right mb-10">
+                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Add Coupon</span> </a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-column-fatty m-0">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Discount
+                                            </th>
+                                            <th>
+                                                Uses
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+
+                                            <td>
+                                                VOUCHER
+                                            </td>
+                                            <td>
+                                                10.00%
+                                            </td>
+                                            <td>
+                                                25
+                                            </td>
+
+                                            <td>
+                                                <span class="tagged tagged-success text-uppercase">Active</span>
+                                            </td>
+
+                                            <td class="">
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>
+                                                COUPON-2022
+                                            </td>
+                                            <td>
+                                                $22
+                                            </td>
+                                            <td>
+                                                30/50
+                                                <div class="ticket-sell-scale" data-total="50">
+                                                    <div class="ticket-sold-scale" data-sold="35"></div>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <span class="tagged tagged-success text-uppercase">Active</span>
+                                            </td>
+
+                                            <td class="">
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>
+                                                V-2021
+                                            </td>
+                                            <td>
+                                                10.00%
+                                            </td>
+                                            <td>
+                                                38/40
+                                                <div class="ticket-sell-scale" data-total="40">
+                                                    <div class="ticket-sold-scale" data-sold="38"></div>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <span class="tagged tagged-danger text-uppercase">Inactive</span>
+                                            </td>
+
+                                            <td class="">
+                                                <div class="button-group">
+                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
                                 </div>
                             </div>
                         </div>

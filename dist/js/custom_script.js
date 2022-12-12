@@ -79,6 +79,17 @@ function ticketFormHeight(){
     $('.ticket-add-form-body').css('height', minHeightTicketBody);
 }
 
+//=== ticket sold scale
+let ticketSellScale = $('.ticket-sell-scale');
+if(ticketSellScale.length>0){
+    ticketSellScale.each(function (i, element){
+        let attr = $(element).attr('data-total');
+        if (typeof attr !== 'undefined' && attr !== false) {
+            let ticketSoldScale = (100*parseInt($(element).find('.ticket-sold-scale').attr('data-sold')))/parseInt(attr);
+            $(element).find('.ticket-sold-scale').css('width', ticketSoldScale+'%');
+        }
+    })
+}
 
 //=== pass active class to the active page
 let base_url = window.location.origin,
@@ -161,6 +172,21 @@ $(document).on('click', '.ticket-add-js', function(){
 $(document).on('click', '.ticket-add-form-close-js', function (){
     $(this).closest('.ticket-add-form-js').removeClass('active');
     $('.body-overlayer').removeClass('active');
+})
+
+//=== preview switch
+$(document).on('click', '.mobile-preview-js', function (e){
+    e.preventDefault();
+    $(this).closest('.preview-nav').find('li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    $('.preview-holder').addClass('preview-mobile');
+})
+
+$(document).on('click', '.desktop-preview-js', function (e){
+    e.preventDefault();
+    $(this).closest('.preview-nav').find('li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    $('.preview-holder').removeClass('preview-mobile');
 })
 
 /**

@@ -34,7 +34,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.5">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.6">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -451,15 +451,22 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1 class="text-center">
-                Add Event Ticket
-            </h1>
-        </section>
+        <div class="bg-white">
+            <ul class="nav nav-event-navigation d-flex justify-center">
+                <li class="complete"><a href="#">Basic Info</a> </li>
+                <li class="complete"><a href="#">Details</a> </li>
+                <li class="active"><a href="#">Tickets</a> </li>
+                <li><a href="#">Publish</a> </li>
+            </ul>
+        </div>
 
         <!-- Main content -->
         <section class="content content-box">
+
+            <h1 class="text-center text-bold mb-20">
+                Add Event Ticket
+            </h1>
+
             <div class="box box-success">
 
                 <div class="box-body">
@@ -672,8 +679,8 @@
 
                                 <div class="ticket-add-form-foot add-ticket-padding">
                                     <div class="text-right button-group">
-                                        <button type="button" class="btn btn-default btn-lg mr-15">Cancel</button>
-                                        <button type="button" class="btn btn-success btn-lg ticket-save-js">Save & Continue</button>
+                                        <button type="button" class="btn btn-default btn-lg mr-15" data-dismiss="modal">Cancel</button>
+                                        <a href="create-event-single.html" class="btn btn-success btn-lg ticket-save-js">Save & Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -683,6 +690,68 @@
                     </div>
                 </div>
             </div>
+
+            <!-- modal -->
+            <div id="event-price-details" class="modal">
+                <!-- 'modal-sm' class is needed to change the width of the modal -->
+                <div class="modal-dialog modal-sm">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Price Details</h3>
+                        </div>
+                        <!-- modal close button -->
+                        <button type="button" class="close close-modal" data-dismiss="modal">
+                            <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+
+                        <div class="modal-body">
+                            <div class="">
+                                <h3 class="m-0 section-title-bordered">Cost to Buyer:</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-borderless box-shadow-none font-600 text-medium">
+                                        <tr>
+                                            <td>Ticket Price</td>
+                                            <td>$155.00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Service Fee</td>
+                                            <td>$7.02</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Processing Fee</td>
+                                            <td>$4.05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>$166.07</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <h3 class="m-0 section-title-bordered">Your Payout:</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-borderless box-shadow-none font-600 text-medium m-0">
+                                        <tr>
+                                            <td>Ticket Revenue</td>
+                                            <td>$155.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-default btn-md" type="button" data-dismiss="modal"> <span class="">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- /.content -->
     </div>
@@ -695,68 +764,6 @@
         <!-- Default to the left -->
         <strong>Copyright © 2022 <a target="_blank" href="https://MasjidSolutions.Net">Masjid Solutions</a>.</strong> All rights reserved.
     </footer>
-
-
-    <!-- modal -->
-    <div id="event-price-details" class="modal">
-        <!-- 'modal-sm' class is needed to change the width of the modal -->
-        <div class="modal-dialog modal-sm">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Price Details</h3>
-                </div>
-                <!-- modal close button -->
-                <button type="button" class="close close-modal" data-dismiss="modal">
-                    <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-
-                <div class="modal-body">
-                    <div class="">
-                        <h3 class="m-0 section-title-bordered">Cost to Buyer:</h3>
-                        <div class="table-responsive">
-                            <table class="table table-borderless box-shadow-none font-600 text-medium">
-                                <tr>
-                                    <td>Ticket Price</td>
-                                    <td>$155.00</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Service Fee</td>
-                                    <td>$7.02</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Processing Fee</td>
-                                    <td>$4.05</td>
-                                </tr>
-                                <tr>
-                                    <td>Total</td>
-                                    <td>$166.07</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="">
-                        <h3 class="m-0 section-title-bordered">Your Payout:</h3>
-                        <div class="table-responsive">
-                            <table class="table table-borderless box-shadow-none font-600 text-medium m-0">
-                                <tr>
-                                    <td>Ticket Revenue</td>
-                                    <td>$155.00</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn btn-default btn-md" type="button" data-dismiss="modal"> <span class="">Close</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="body-overlayer"></div>
 
@@ -782,7 +789,7 @@
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.5"></script>
+<script src="../../dist/js/custom_script.js?v=1.0.6"></script>
 
 
 </body>

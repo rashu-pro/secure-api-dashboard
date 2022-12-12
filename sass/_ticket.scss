@@ -85,3 +85,21 @@
     padding-right:50px;
   }
 }
+
+.addon{
+  &-empty{
+    &-image{
+      img{
+        max-width:180px;
+        max-height: 200px;
+      }
+    }
+  }
+}
+
+.empty-image{
+  img{
+    max-width:180px;
+    max-height: 200px;
+  }
+}

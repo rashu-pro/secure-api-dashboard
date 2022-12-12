@@ -3,6 +3,16 @@
     .nav-tabs{
       display: flex;
       flex-wrap: wrap;
+
+      &-responsive{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        li{
+          white-space: nowrap;
+        }
+      }
+
       &>li{
         border-bottom-width:3px;
         border-bottom-style: solid;
