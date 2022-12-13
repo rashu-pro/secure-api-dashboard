@@ -48,11 +48,9 @@
   height: 0;
   padding: 8px;
 }
+
 .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover{
   opacity: 0.5;
-}
-.content-box{
-  max-width:800px;
 }
 
 .link-preview{
@@ -61,6 +59,7 @@
   top:-40px;
   border-bottom:2px solid;
 }
+
 .preview{
   &-wrapper{
 
@@ -250,6 +249,31 @@
       }
     }
   }
+
+  &-view{
+    &-image{
+      //padding-top:52%;
+      //position: relative;
+      img{
+        //position: absolute;
+        //top:0;
+        //left:0;
+        //right:0;
+        //bottom:0;
+        object-fit: cover;
+        object-position: center;
+        height:100%;
+      }
+    }
+
+    &-wrapper{
+      border:1px solid #eeedf2;
+      box-shadow: 0 4px 8px 0 rgba(40, 44, 53, 0.06),
+      0 2px 2px 0 rgba(40, 44, 53, 0.06);
+    }
+  }
+
+
 }
 
 .nav-event-navigation{
@@ -304,6 +328,16 @@
           background-color: #ecf0f5;
         }
       }
+    }
+  }
+
+  &-wrapper{
+    position: relative;
+    .nav-right{
+      position: absolute;
+      right:20px;
+      top:50%;
+      transform:translateY(-50%);
     }
   }
 }

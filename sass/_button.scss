@@ -16,6 +16,55 @@
     background-color: transparent;
   }
 
+  &-outlined{
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #202020;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+      background-color: #f8f8f8;
+    }
+    &.active{
+      background-color: rgba(54,89,227,.1);
+      border: 1px solid #3659e3;
+      color: #3659e3;
+    }
+  }
+
+  &-outline2{
+    position: relative;
+    /* border: 1px solid #c8e3f9; */
+    border: 1px solid #1d527c;
+    display: inline-block;
+    line-height: inherit;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 6px 10px;
+    background-color: #c8e3f9;
+    color: #0a3a60;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover{
+      background-color: #eaf5fe;
+      color: #2196f3;
+      border-color: #2196f3;
+    }
+
+    &.success{
+      background-color: #cbf6e2;
+      /* border-color: #31674c; */
+      border-color: #134d33;
+      color: #134d33;
+      &:hover{
+        background-color: #e7f3ee;
+        border-color: #1db26e;
+        color: #1db26e;
+      }
+    }
+  }
+
   &-lg{
     min-width:100px;
     padding:8px 20px;

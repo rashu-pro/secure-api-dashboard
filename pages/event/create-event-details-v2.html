@@ -451,13 +451,17 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- event navigation -->
-        <div class="bg-white">
+        <div class="bg-white nav-event-navigation-wrapper">
             <ul class="nav nav-event-navigation d-flex justify-center">
                 <li class="complete"><a href="#">Basic Info</a> </li>
                 <li class="active"><a href="#">Details</a> </li>
                 <li><a href="#">Tickets</a> </li>
                 <li><a href="#">Publish</a> </li>
             </ul>
+
+            <div class="nav-right">
+                <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview Event</a>
+            </div>
         </div>
 
         <!-- Main content -->
@@ -467,7 +471,7 @@
                 Add Event Details
             </h1>
             <div class="box box-success">
-                <a href="#" class="link-preview font-600 font-md-medium" data-toggle="modal" data-target="#preview-event">Preview Event</a>
+
                 <div class="box-body">
 
                     <div class="form-wrapper v2 w-app pt-15 pb-30">

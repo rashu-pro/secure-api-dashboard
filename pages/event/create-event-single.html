@@ -451,13 +451,18 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        <div class="bg-white">
+        <div class="bg-white nav-event-navigation-wrapper">
             <ul class="nav nav-event-navigation d-flex justify-center">
                 <li class="complete"><a href="#">Basic Info</a> </li>
                 <li class="complete"><a href="#">Details</a> </li>
                 <li class="active"><a href="#">Tickets</a> </li>
                 <li><a href="#">Publish</a> </li>
             </ul>
+
+            <div class="nav-right">
+                <a href="create-event-publish.html" class="btn btn-outline2 success mr-15"> <img src="../../dist/img/publish.png" class="mr-5" alt="publish"> Publish Event</a>
+                <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview Event</a>
+            </div>
         </div>
 
         <!-- Main content -->
@@ -489,7 +494,7 @@
                             <!-- addmission tab -->
                             <div class="tab-pane active" id="addmission">
                                 <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                    <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
                                 </div>
 
                                 <div class="table-responsive">
@@ -535,7 +540,6 @@
                                             <td>Draft</td>
                                             <td>
                                                 <div class="button-group">
-                                                    <a href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
                                                     <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
                                                             class="fa fa-pencil-square-o"></i></a>
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
@@ -564,7 +568,6 @@
                                             <td>Draft</td>
                                             <td>
                                                 <div class="button-group">
-                                                    <a href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
                                                     <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
                                                             class="fa fa-pencil-square-o"></i></a>
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
@@ -575,6 +578,211 @@
 
                                         </tbody>
                                     </table>
+                                </div>
+
+                                <!-- Ticket add form popup -->
+                                <div class="ticket-add-form ticket-add-form-js">
+                                    <div class="ticket-add-form-wrapper">
+                                        <div class="ticket-add-form-head add-ticket-padding">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="m-0">Add Ticket</h2>
+
+                                                <button type="button" class="btn btn-none popup-form-close-js">
+                                                    <span class="d-none d-sm-inline-block mr-5">Close</span> <img src="../../dist/img/close_black_32.png" alt="close">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-body add-ticket-padding">
+                                            <div class="ticket-add-form-body-wrapper">
+
+                                                <div class="form-group">
+                                                    <label for="ticket-type">Ticket Type</label>
+                                                    <select id="ticket-type" class="form-control select2-searchless">
+                                                        <option value="paid">Paid</option>
+                                                        <option value="free">Free</option>
+                                                        <option value="donation">Donation</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="" for="ticket-name">Name</label>
+                                                    <input type="text" id="ticket-name" class="form-control" name="TicketName">
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="" for="ticket-quantity">Quantity</label>
+                                                            <input type="number" id="ticket-quantity" class="form-control" name="TicketQuantity">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="" for="ticket-quantity-per-order">Tickets per order</label>
+                                                            <input type="number" id="ticket-quantity-per-order" class="form-control" name="TicketQuantity">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <div class="input-wrapper">
+                                                                <label class="" for="ticket-price">Price</label>
+                                                                <input type="text" id="ticket-price" class="form-control" name="TicketPrice">
+                                                            </div>
+                                                            <div class="d-flex justify-space-between align-center">
+                                                                <p class="m-0 text-small">Buyer total: $560</p>
+                                                                <a href="javascript:void(0)" class="text-small text-underline" data-toggle="modal" data-target="#event-price-details">View Details</a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- date and time -->
+                                                <div>
+                                                    <hr>
+                                                    <div class="form-section-head">
+                                                        <h2 class="m-0 mb-10">Sales Time</h2>
+                                                        <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-start">Sales Start</label>
+                                                                <input type="text" id="ticket-date-start"
+                                                                       class="form-control datepicker"
+                                                                       data-start="now"
+                                                                       name="StartDate"
+                                                                       placeholder="dd/mm/yy"
+                                                                       autocomplete="off">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-start">Start Time</label>
+                                                                        <select id="ticket-time-start" class="form-control select2" name="StartTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM">06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM">08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM">05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM">09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-end">Sales End</label>
+                                                                <input type="text" id="ticket-date-end" class="form-control datepicker" name="EndDate" placeholder="dd/mm/yy">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-end">End Time</label>
+                                                                        <select id="ticket-time-end" class="form-control select2" name="EndTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM">06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM">08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM">05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM">09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-foot add-ticket-padding">
+                                            <div class="text-right button-group">
+                                                <button type="button" class="btn btn-default btn-lg popup-form-close-js mr-15" data-dismiss="modal">Cancel</button>
+                                                <a href="create-event-single.html" class="btn btn-success btn-lg ticket-save-js">Save & Continue</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

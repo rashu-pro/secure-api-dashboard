@@ -1788,4 +1788,19 @@ table tr.bg-white tr th{
   &-header{
 
   }
+
+  &-box{
+    max-width:800px;
+
+    &.medium{
+      max-width:1000px;
+    }
+
+    .btn{
+      &-outlined{
+        padding-left:4px;
+        padding-right:4px;
+      }
+    }
+  }
 }

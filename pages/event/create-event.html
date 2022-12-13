@@ -481,26 +481,51 @@
                                 <label class="form-label" for="event-title">Event Title</label>
                                 <input type="text" id="event-title" class="form-control" name="EventTitle" placeholder="Be clear and descriptive">
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="event-type">Event Type</label>
-                                        <select id="event-type" class="form-control select2-searchless" name="EventType">
-                                            <option value="individual_single">Individual Single</option>
-                                            <option value="individual_multiple">Individual Multiple</option>
-                                            <option value="chaplaincy">Chaplaincy</option>
-                                            <option value="matrimonial">Matrimonial</option>
-                                        </select>
-                                    </div>
 
+                            <div class="event-type-wrapper">
+                                <label>Event Type </label>
+                                <input type="hidden" class="event-type-js" name="EventType">
+
+                                <div class="event-type-list">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-outlined btn-lg btn-block btn-event-type-js active">Individual Single</button>
+                                                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-outlined btn-lg btn-block btn-event-type-js">Individual Multiple</button>
+                                                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-outlined btn-lg btn-block btn-event-type-js">Chaplaincy</button>
+                                                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-outlined btn-lg btn-block btn-event-type-js">Matrimonial</button>
+                                                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div class="form-group">
+                                                <button type="button" class="btn btn-outlined btn-lg btn-block btn-event-type-js">Youth Conference</button>
+                                                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label" for="event-organizer">Event Organizer</label>
-                                        <input type="text" id="event-organizer" class="form-control">
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
