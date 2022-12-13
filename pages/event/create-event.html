@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Event - List</title>
+    <title>Create Event</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -18,10 +18,6 @@
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
     <!-- datepicker -->
     <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
-    <!-- dropify -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- quil js(text-editor) -->
-    <link rel="stylesheet" href="../../node_modules/quill/dist/quill.core.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -34,7 +30,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.6">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.4">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -270,8 +266,10 @@
 
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
+
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
+
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
@@ -448,333 +446,309 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="d-flex justify-space-between align-center">
-                <h1 class="text-center m-0">
-                    Tickets
-                </h1>
-            </div>
-        </section>
+
+        <!-- event navigation -->
+        <div class="bg-white">
+            <ul class="nav nav-event-navigation d-flex justify-center">
+                <li class="active"><a href="#">Basic Info</a> </li>
+                <li class=""><a href="#">Details</a> </li>
+                <li><a href="#">Tickets</a> </li>
+                <li><a href="#">Publish</a> </li>
+            </ul>
+        </div>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content content-box">
+
+            <h1 class="text-center text-bold text-center mb-20">
+                Create Event
+            </h1>
+
             <div class="box box-success">
+
                 <div class="box-body">
-                    <div class="nav-tabs-custom box-shadow-none">
-                        <ul class="nav nav-tabs nav-tabs-responsive">
-                            <li class="active">
-                                <a href="#addmission" data-toggle="tab" aria-expanded="true"><strong>Addmission</strong></a>
-                            </li>
-                            <li class="">
-                                <a href="#addons" data-toggle="tab" aria-expanded="false"><strong>Add-Ons</strong></a>
-                            </li>
-                            <li class="">
-                                <a href="#promo-codes" data-toggle="tab" aria-expanded="false"><strong>Promo Codes</strong></a>
-                            </li>
-                        </ul>
 
-                        <div class="tab-content">
+                    <div class="form-wrapper v2 w-app pt-15 pb-30">
 
-                            <!-- addmission tab -->
-                            <div class="tab-pane active" id="addmission">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
-                                </div>
-                                <div class="table-custom">
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-50">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
-                                        </div>
-
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-50">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
-                                        </div>
-
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- basic info -->
+                        <div>
+                            <div class="form-section-head">
+                                <h2 class="m-0 mb-10">Basic Info</h2>
+                                <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
                             </div>
 
-                            <!-- addon tab -->
-                            <div class="tab-pane" id="addons">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
-                                </div>
-
-                                <div class="table-custom">
-                                    <div class="d-none d-md-block">
-                                        <div class="table-row table-head bg-gray-light font-600 mb-10">
-                                            <div class="table-column w-40">
-                                                Addon
-                                            </div>
-
-                                            <div class="table-column w-60">
-                                                <div class="d-flex justify-space-between align-center">
-                                                    <span class="">Type</span>
-                                                    <span>Price</span>
-                                                    <div>Action</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-40">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="table-column w-60">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <span class="tagged tagged-success text-uppercase">Paid</span>
-                                                <span>$120</span>
-                                                <div class="button-group">
-                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-40">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="table-column w-60">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <span class="tagged tagged-success text-uppercase">Free</span>
-                                                <p class="m-0 font-600"> -- </p>
-                                                <div class="button-group">
-                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <label class="form-label" for="event-title">Event Title</label>
+                                <input type="text" id="event-title" class="form-control" name="EventTitle" placeholder="Be clear and descriptive">
                             </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="event-type">Event Type</label>
+                                        <select id="event-type" class="form-control select2-searchless" name="EventType">
+                                            <option value="individual_single">Individual Single</option>
+                                            <option value="individual_multiple">Individual Multiple</option>
+                                            <option value="chaplaincy">Chaplaincy</option>
+                                            <option value="matrimonial">Matrimonial</option>
+                                        </select>
+                                    </div>
 
-                            <!-- promo codes tab -->
-                            <div class="tab-pane" id="promo-codes">
-
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Add Coupon</span> </a>
                                 </div>
 
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped table-column-fatty m-0">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                Discount
-                                            </th>
-                                            <th>
-                                                Uses
-                                            </th>
-                                            <th>
-                                                Status
-                                            </th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody>
-                                        <tr>
-
-                                            <td>
-                                                VOUCHER
-                                            </td>
-                                            <td>
-                                                10.00%
-                                            </td>
-                                            <td>
-                                                25
-                                            </td>
-
-                                            <td>
-                                                <span class="tagged tagged-success text-uppercase">Active</span>
-                                            </td>
-
-                                            <td class="">
-                                                <div class="button-group">
-                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-
-
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-
-                                            <td>
-                                                COUPON-2022
-                                            </td>
-                                            <td>
-                                                $22
-                                            </td>
-                                            <td>
-                                                30/50
-                                                <div class="ticket-sell-scale" data-total="50">
-                                                    <div class="ticket-sold-scale" data-sold="35"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <span class="tagged tagged-success text-uppercase">Active</span>
-                                            </td>
-
-                                            <td class="">
-                                                <div class="button-group">
-                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-
-
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-
-                                            <td>
-                                                V-2021
-                                            </td>
-                                            <td>
-                                                10.00%
-                                            </td>
-                                            <td>
-                                                38/40
-                                                <div class="ticket-sell-scale" data-total="40">
-                                                    <div class="ticket-sold-scale" data-sold="38"></div>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <span class="tagged tagged-danger text-uppercase">Inactive</span>
-                                            </td>
-
-                                            <td class="">
-                                                <div class="button-group">
-                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                            class="fa fa-trash"></i></a>
-                                                </div>
-
-
-                                            </td>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="event-organizer">Event Organizer</label>
+                                        <input type="text" id="event-organizer" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- location -->
+                        <div>
+                            <hr>
+                            <div class="form-section-head">
+                                <h2 class="m-0 mb-10">Location</h2>
+                                <p>Help people in the area discover your event and let attendees know where to show up.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="venue-name">Venue Name</label>
+                                <input type="text" id="venue-name" class="form-control" name="VenueName" placeholder="Name of the venue...">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="venue-address">Venue Address</label>
+                                <input type="text" id="venue-address" class="form-control" name="VenueAddress" placeholder="Where do you hosting your event?">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="venue-state">State</label>
+                                        <input type="text" id="venue-state" class="form-control" name="State" placeholder="state of the venue">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label class="form-label" for="venue-city">City</label>
+                                            <input type="text" id="venue-city" class="form-control" name="City" placeholder="city name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- date and time -->
+                        <div>
+                            <hr>
+                            <div class="form-section-head">
+                                <h2 class="m-0 mb-10">Date & Time</h2>
+                                <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="date-start">Start Date</label>
+                                        <input type="text" id="date-start"
+                                               class="form-control datepicker"
+                                               data-start="now"
+                                               name="StartDate"
+                                               placeholder="dd/mm/yy"
+                                               autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="form-label" for="time-start">Start Time</label>
+                                                <select id="time-start" class="form-control select2" name="StartTime">
+                                                    <option>Select Time</option>
+                                                    <option value="12:00 AM">12:00 AM</option>
+                                                    <option value="12:30 AM">12:30 AM</option>
+                                                    <option value="01:00 AM">01:00 AM</option>
+                                                    <option value="01:30 AM">01:30 AM</option>
+                                                    <option value="02:00 AM">02:00 AM</option>
+                                                    <option value="02:30 AM">02:30 AM</option>
+                                                    <option value="03:00 AM">03:00 AM</option>
+                                                    <option value="03:30 AM">03:30 AM</option>
+                                                    <option value="04:00 AM">04:00 AM</option>
+                                                    <option value="04:30 AM">04:30 AM</option>
+                                                    <option value="05:00 AM">05:00 AM</option>
+                                                    <option value="05:30 AM">05:30 AM</option>
+                                                    <option value="06:00 AM">06:00 AM</option>
+                                                    <option value="06:30 AM">06:30 AM</option>
+                                                    <option value="07:00 AM">07:00 AM</option>
+                                                    <option value="07:30 AM">07:30 AM</option>
+                                                    <option value="08:00 AM">08:00 AM</option>
+                                                    <option value="09:00 AM">09:00 AM</option>
+                                                    <option value="09:30 AM">09:30 AM</option>
+                                                    <option value="12:00 PM">12:00 PM</option>
+                                                    <option value="12:30 PM">12:30 PM</option>
+                                                    <option value="01:00 PM">01:00 PM</option>
+                                                    <option value="01:30 PM">01:30 PM</option>
+                                                    <option value="02:00 PM">02:00 PM</option>
+                                                    <option value="02:30 PM">02:30 PM</option>
+                                                    <option value="03:00 PM">03:00 PM</option>
+                                                    <option value="03:30 PM">03:30 PM</option>
+                                                    <option value="04:00 PM">04:00 PM</option>
+                                                    <option value="04:30 PM">04:30 PM</option>
+                                                    <option value="05:00 PM">05:00 PM</option>
+                                                    <option value="05:30 PM">05:30 PM</option>
+                                                    <option value="06:00 PM">06:00 PM</option>
+                                                    <option value="06:30 PM">06:30 PM</option>
+                                                    <option value="07:00 PM">07:00 PM</option>
+                                                    <option value="07:30 PM">07:30 PM</option>
+                                                    <option value="08:00 PM">08:00 PM</option>
+                                                    <option value="09:00 PM">09:00 PM</option>
+                                                    <option value="09:30 PM">09:30 PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="date-end">End Date</label>
+                                        <input type="text" id="date-end" class="form-control datepicker" name="EndDate" placeholder="dd/mm/yy">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="form-label" for="time-end">End Time</label>
+                                                <select id="time-end" class="form-control select2" name="EndTime">
+                                                    <option>Select Time</option>
+                                                    <option value="12:00 AM">12:00 AM</option>
+                                                    <option value="12:30 AM">12:30 AM</option>
+                                                    <option value="01:00 AM">01:00 AM</option>
+                                                    <option value="01:30 AM">01:30 AM</option>
+                                                    <option value="02:00 AM">02:00 AM</option>
+                                                    <option value="02:30 AM">02:30 AM</option>
+                                                    <option value="03:00 AM">03:00 AM</option>
+                                                    <option value="03:30 AM">03:30 AM</option>
+                                                    <option value="04:00 AM">04:00 AM</option>
+                                                    <option value="04:30 AM">04:30 AM</option>
+                                                    <option value="05:00 AM">05:00 AM</option>
+                                                    <option value="05:30 AM">05:30 AM</option>
+                                                    <option value="06:00 AM">06:00 AM</option>
+                                                    <option value="06:30 AM">06:30 AM</option>
+                                                    <option value="07:00 AM">07:00 AM</option>
+                                                    <option value="07:30 AM">07:30 AM</option>
+                                                    <option value="08:00 AM">08:00 AM</option>
+                                                    <option value="09:00 AM">09:00 AM</option>
+                                                    <option value="09:30 AM">09:30 AM</option>
+                                                    <option value="12:00 PM">12:00 PM</option>
+                                                    <option value="12:30 PM">12:30 PM</option>
+                                                    <option value="01:00 PM">01:00 PM</option>
+                                                    <option value="01:30 PM">01:30 PM</option>
+                                                    <option value="02:00 PM">02:00 PM</option>
+                                                    <option value="02:30 PM">02:30 PM</option>
+                                                    <option value="03:00 PM">03:00 PM</option>
+                                                    <option value="03:30 PM">03:30 PM</option>
+                                                    <option value="04:00 PM">04:00 PM</option>
+                                                    <option value="04:30 PM">04:30 PM</option>
+                                                    <option value="05:00 PM">05:00 PM</option>
+                                                    <option value="05:30 PM">05:30 PM</option>
+                                                    <option value="06:00 PM">06:00 PM</option>
+                                                    <option value="06:30 PM">06:30 PM</option>
+                                                    <option value="07:00 PM">07:00 PM</option>
+                                                    <option value="07:30 PM">07:30 PM</option>
+                                                    <option value="08:00 PM">08:00 PM</option>
+                                                    <option value="09:00 PM">09:00 PM</option>
+                                                    <option value="09:30 PM">09:30 PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="forn-group icheck-wrapper">
+                                <div class="checkbox checkbox-lg m-0">
+                                    <label class="m-0 d-block">&nbsp;</label>
+                                    <label>
+                                        <input type="checkbox" class="i-check" id="start-date-show" checked> Display Start Time
+                                        <p class="m-0 check-info">The start time of your event will be displayed to attendees.</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group icheck-wrapper">
+                                <div class="checkbox checkbox-lg m-0">
+                                    <label class="m-0 d-block">&nbsp;</label>
+                                    <label>
+                                        <input type="checkbox" class="i-check" id="end-date-show" checked> Display End Time
+                                        <p class="m-0 check-info">The end time of your event will be displayed to attendees.</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="timezone">Time Zone</label>
+                                <select id="timezone" class="form-control select2" name="TimeZone">
+                                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                                    <option value="-10:00">(GMT -10:00) Hawaii</option>
+                                    <option value="-09:50">(GMT -9:30) Taiohae</option>
+                                    <option value="-09:00">(GMT -9:00) Alaska</option>
+                                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                                    <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                                    <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                                    <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                                    <option value="-04:50">(GMT -4:30) Caracas</option>
+                                    <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                                    <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                                    <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                                    <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                                    <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                                    <option value="+00:00" selected="selected">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                                    <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                                    <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                                    <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                                    <option value="+03:50">(GMT +3:30) Tehran</option>
+                                    <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                                    <option value="+04:50">(GMT +4:30) Kabul</option>
+                                    <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                                    <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                                    <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                                    <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                                    <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                                    <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                                    <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                                    <option value="+08:75">(GMT +8:45) Eucla</option>
+                                    <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                                    <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                                    <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                                    <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                                    <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                                    <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                                    <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                                    <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                                    <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                                    <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-wrapper-foot pt-15">
+                            <hr class="hr-2">
+                            <div class="text-right button-group">
+                                <button type="button" class="btn btn-default btn-lg mr-15">Discard</button>
+                                <a href="create-event-details-v2.html" class="btn btn-success btn-lg">Save & Continue</a>
+                            </div>
+                        </div>
                     </div>
+
 
                 </div>
 
@@ -805,16 +779,12 @@
 <script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- datepicker -->
 <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
-<!-- dropify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- CK EDITOR -->
-<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.6"></script>
+<script src="../../dist/js/custom_script.js"></script>
 
 
 </body>

@@ -65,19 +65,13 @@ if($('.datepicker').length>0){
 
     $('.datepicker').datepicker({
         'autoclose': true,
+        'format': 'dd/mm/yyyy',
         'startDate': new Date()
     });
 }
 
 //=== height fix for ticket add popup
 ticketFormHeight();
-function ticketFormHeight(){
-    let heightNav = $('.main-header .navbar').outerHeight();
-    let heightTicketHead = $('.ticket-add-form-head').outerHeight();
-    let heightTicketFoot = $('.ticket-add-form-foot').outerHeight();
-    let minHeightTicketBody = `calc(100vh - ${heightNav+heightTicketHead+heightTicketFoot}px)`;
-    $('.ticket-add-form-body').css('height', minHeightTicketBody);
-}
 
 //=== ticket sold scale
 let ticketSellScale = $('.ticket-sell-scale');
@@ -160,17 +154,15 @@ $(document).on('click', '#create-enroll', function (e) {
     },600);
 });
 
-$(document).on('click', '.ticket-add-js', function(){
-    $('.ticket-add-form-js').addClass('active');
-    $('.body-overlayer').addClass('active');
-    setTimeout(function (){
-        ticketFormHeight();
-        $('.ticket-add-form-js').css('visibility','visible');
-    },100);
-});
+//=== open popup form
+$(document).on('click', '.popup-form-open-js', function(e){
+    e.preventDefault();
+    popupFormOpen($(this).attr('data-target'));
+})
 
-$(document).on('click', '.ticket-add-form-close-js', function (){
-    $(this).closest('.ticket-add-form-js').removeClass('active');
+$(document).on('click', '.popup-form-close-js', function (){
+    $(this).closest('.ticket-add-form').removeClass('active');
+    $(this).closest('.ticket-add-form').removeClass('visible');
     $('.body-overlayer').removeClass('active');
 })
 
@@ -187,6 +179,16 @@ $(document).on('click', '.desktop-preview-js', function (e){
     $(this).closest('.preview-nav').find('li').removeClass('active');
     $(this).closest('li').addClass('active');
     $('.preview-holder').removeClass('preview-mobile');
+})
+
+//=== ticket edit
+$(document).on('click', '.ticket-edit-js', ()=>{
+    $('.loader-wrapper').addClass('active');
+})
+
+//=== addon edit
+$(document).on('click', '.addon-edit-js', ()=>{
+    $('.loader-wrapper').addClass('active');
 })
 
 /**
@@ -411,4 +413,31 @@ function validationFailed(paramObj) {
 function notifyError(paramObj) {
     paramObj.formGroup.find('.'+paramObj.errorMessageClassName).remove();
     paramObj.formGroup.append('<p class="'+paramObj.errorMessageClassName+' text-danger">'+paramObj.errorMessage+'</p>');
+}
+
+
+/**
+ * Calculate ticket form height
+ * - and set footer visible in the footer
+ */
+function ticketFormHeight(){
+    let heightNav = $('.main-header .navbar').outerHeight();
+    let heightTicketHead = $('.ticket-add-form-head').outerHeight();
+    let heightTicketFoot = $('.ticket-add-form-foot').outerHeight();
+    let minHeightTicketBody = `calc(100vh - ${heightNav+heightTicketHead+heightTicketFoot}px)`;
+    $('.ticket-add-form-body').css('height', minHeightTicketBody);
+}
+
+
+/**
+ * opens popup form
+ * @param popupSelectorClass
+ */
+function popupFormOpen(popupSelectorClass){
+    $(popupSelectorClass).addClass('active');
+    $('.body-overlayer').addClass('active');
+    setTimeout(function (){
+        ticketFormHeight();
+        $(popupSelectorClass).addClass('visible');
+    },100);
 }

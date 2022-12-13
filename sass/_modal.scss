@@ -24,7 +24,9 @@
   }
 
   &-preview{
-    background-color: #f8f7fa;
+    .modal-body{
+      background-color: #f8f7fa;
+    }
     .modal-body{
       padding: 0;
     }

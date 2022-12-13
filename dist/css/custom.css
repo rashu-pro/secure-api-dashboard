@@ -110,6 +110,9 @@
 .position-relative {
   position: relative; }
 
+.visible {
+  visibility: visible !important; }
+
 .alert-warning.alert-warning-custom p {
   margin: 0; }
 
@@ -362,10 +365,11 @@ textarea.form-control {
   .modal-full .close-modal {
     right: 30px; }
 
-.modal-preview {
+.modal-preview .modal-body {
   background-color: #f8f7fa; }
-  .modal-preview .modal-body {
-    padding: 0; }
+
+.modal-preview .modal-body {
+  padding: 0; }
 
 .modal-content {
   border-radius: 0.8rem; }
@@ -2160,6 +2164,10 @@ table tr.bg-white tr th {
   text-align: center;
   background-color: #f8f7fa;
   box-shadow: rgba(40, 44, 53, 0.06) 0 4px 8px 0, rgba(40, 44, 53, 0.06) 0 2px 2px 0; }
+  .preview-close-wrap.bottom {
+    box-shadow: rgba(40, 44, 53, 0.06) 4px 0 8px 0, rgba(40, 44, 53, 0.06) 4px 2px 2px 6px;
+    padding: 10px;
+    margin-top: 4px; }
   .preview-close-wrap .btn {
     color: #2196f3;
     text-decoration: underline; }
@@ -2268,7 +2276,7 @@ table tr.bg-white tr th {
   .nav-event-navigation li.complete a {
     color: #00a65a; }
     .nav-event-navigation li.complete a:before {
-      content: url(../img/check-circle.png);
+      content: url("../img/check-circle.png");
       background-color: #00a65a;
       right: 86%;
       top: 30%;
@@ -2276,6 +2284,12 @@ table tr.bg-white tr th {
       height: 0; }
   .nav-event-navigation li.active {
     background-color: #ecf0f5; }
+    .nav-event-navigation li.active:hover {
+      cursor: default;
+      background-color: #ecf0f5; }
+    .nav-event-navigation li.active a:hover {
+      cursor: default;
+      background-color: #ecf0f5; }
 
 .ticket-icon {
   max-width: 70%; }

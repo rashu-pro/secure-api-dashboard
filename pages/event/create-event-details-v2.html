@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Event - Tickets</title>
+    <title>Create Event Details</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -70,7 +70,7 @@
                             <div class="dropdown-toggle-content">
                                 <div class="dropdown-toggle-content-inner">
                                     <div class="dropdown-toggle-icon">
-                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png" alt="company">
                                     </div>
                                     <div class="dropdown-toggle-title">IWS-ICGC</div>
                                 </div>
@@ -450,158 +450,126 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
+        <!-- event navigation -->
         <div class="bg-white">
             <ul class="nav nav-event-navigation d-flex justify-center">
                 <li class="complete"><a href="#">Basic Info</a> </li>
-                <li class="complete"><a href="#">Details</a> </li>
-                <li class="active"><a href="#">Tickets</a> </li>
+                <li class="active"><a href="#">Details</a> </li>
+                <li><a href="#">Tickets</a> </li>
                 <li><a href="#">Publish</a> </li>
             </ul>
         </div>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content content-box">
 
-            <h1 class="text-center text-bold mb-20">
-                Tickets
+            <h1 class="text-left text-md-center text-bold">
+                Add Event Details
             </h1>
-
             <div class="box box-success">
-
+                <a href="#" class="link-preview font-600 font-md-medium" data-toggle="modal" data-target="#preview-event">Preview Event</a>
                 <div class="box-body">
 
-                    <div class="nav-tabs-custom box-shadow-none">
-                        <ul class="nav nav-tabs nav-tabs-responsive">
-                            <li class="active">
-                                <a href="#addmission" data-toggle="tab" aria-expanded="true"><strong>Addmission</strong></a>
-                            </li>
-                            <li class="">
-                                <a href="#addons" data-toggle="tab" aria-expanded="false"><strong>Add-Ons</strong></a>
-                            </li>
-                            <li class="">
-                                <a href="#promo-codes" data-toggle="tab" aria-expanded="false"><strong>Promo Codes</strong></a>
-                            </li>
-                        </ul>
+                    <div class="form-wrapper v2 w-app pt-15 pb-30">
 
-                        <div class="tab-content">
-
-                            <!-- addmission tab -->
-                            <div class="tab-pane active" id="addmission">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
-                                </div>
-                                <div class="table-custom">
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-50">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
-                                        </div>
-
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-50">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                    <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                        <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                    </p>
-                                                </div>
-
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-column w-25">
-                                            <span class="tagged tagged-success text-uppercase">Free</span>
-                                        </div>
-
-                                        <div class="table-column w-25">
-                                            <div class="button-group">
-                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- banner image -->
+                        <div>
+                            <div class="form-section-head">
+                                <h2 class="m-0 mb-10">Main Banner Image</h2>
+                                <p>82% of attendees prefer main event images that show an event's vibe and atmosphere.</p>
                             </div>
 
-                            <!-- addon tab -->
-                            <div class="tab-pane" id="addons">
-                                <div class="addon-empty">
-                                    <div class="text-center mb-10 mt-15">
-                                        <div class="addon-empty-image">
-                                            <img src="../../dist/img/ticket-addon.png" alt="addon">
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <h2 class="text-bold m-0 mb-10">Do you want to add addons for your event?</h2>
-                                        <p class="font-600 text-medium mb-30">Sell additional items for your event - like parking, merchandise, or campsites.</p>
-                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
-                                    </div>
+                            <div class="form-group">
+                                <div class="file-uploader-wrapper">
+                                    <input type="file" class="file-uploader image-input dropify" id="image-input">
                                 </div>
-                            </div>
-
-                            <!-- promo codes tab -->
-                            <div class="tab-pane" id="promo-codes">
-                                <div class="promo-empty">
-                                    <div class="text-center mb-10 mt-15">
-                                        <div class="empty-image">
-                                            <img src="../../dist/img/discount.png" alt="addon">
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <h2 class="text-bold m-0 mb-10">Attract more attendees with promo codes</h2>
-                                        <p class="font-600 text-medium mb-30">With promo codes, you can offer reduced prices with discount codes or reveal hidden tickets to attendees with access codes.</p>
-                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Promo Code</span> </a>
-                                    </div>
+                                <div>
+                                    <ul class="d-sm-flex justify-space-between pt-4 pl-15">
+                                        <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
+                                        <li class="text-small text-info">Maximum file size: 10MB</li>
+                                        <li class="text-small text-info">Supported image files: JPEG or PNG</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- summary -->
+                        <div>
+                            <hr>
+                            <div class="form-section-head">
+                                <h2 class="m-0 mb-10">Summary</h2>
+                                <p>Grab people's attention with a short description about your event. Attendees will see this at the top of your event page.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="4"></textarea>
+                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
+                            </div>
+                        </div>
+
+                        <!-- text editor -->
+                        <div class="">
+                            <hr>
+                            <h2 class="m-0 mb-10">Description</h2>
+                            <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
+                            <div class="form-group">
+                                <textarea id="editor"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-wrapper-foot pt-15">
+                            <hr class="hr-2">
+                            <div class="text-right button-group">
+                                <button type="button" class="btn btn-default btn-lg mr-15">Discard</button>
+                                <a href="create-event-ticket.html" class="btn btn-success btn-lg">Next</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
             </div>
+
+            <!-- modal -->
+            <div id="preview-event" class="modal">
+                <!-- 'modal-sm' class is needed to change the width of the modal -->
+                <div class="modal-dialog modal-full modal-preview">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-center">Preview Event</h3>
+                        </div>
+                        <!-- modal close button -->
+                        <button type="button" class="close close-modal" data-dismiss="modal">
+                            <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+
+                        <div class="modal-body">
+                            <div class="preview-close-wrap">
+                                <button type="button" class="btn btn-transparent" data-dismiss="modal">
+                                    Close Preview
+                                </button>
+                            </div>
+                            <div class="preview-wrapper pt-30">
+                                <ul class="nav preview-nav text-center d-none d-md-flex">
+                                   <li class="nav-item active"><a href="javascript:void(0)" class="desktop-preview-js">Desktop View</a> </li>
+                                   <li class="nav-item"><a href="javascript:void(0)" class="mobile-preview-js">Mobile View</a></li>
+                                </ul>
+
+                                <div class="preview-holder">
+                                    <iframe src="https://secure-api.net/event/registration/alamine-academy/field-trip-bowling" height="1632px" width="100%" title="Iframe Example"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-close-wrap bottom">
+                            <button type="button" class="btn btn-transparent" data-dismiss="modal">
+                                Close Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- /.content -->
     </div>
@@ -637,6 +605,28 @@
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.6"></script>
+
+<!-- ck editor -->
+<script>
+  ClassicEditor
+    .create(document.querySelector('#editor'), {
+      toolbar: {
+        items: [
+          'heading', '|',
+          'fontfamily', 'fontsize', '|',
+          'alignment', '|',
+          'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+          'link', '|',
+          'bulletedList', 'numberedList', 'todoList', '|',
+          'code', 'codeBlock', '|',
+        ],
+        shouldNotGroupWhenFull: true
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+</script>
 
 
 </body>

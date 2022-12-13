@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event - Addons Edit</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
+    <!-- dropify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- quil js(text-editor) -->
+    <link rel="stylesheet" href="../../node_modules/quill/dist/quill.core.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+
+    <!-- syncfusion css -->
+    <link rel="stylesheet" href="../../dist/css/syncfusion.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.6">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-red sidebar-mini">
+<div class="wrapper">
+
+    <!-- header -->
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="../../dashboard_new.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu dropdown-custom-action dropdown-company company-dropdown-js">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="dropdown-toggle-content">
+                                <div class="dropdown-toggle-content-inner">
+                                    <div class="dropdown-toggle-icon">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                    </div>
+                                    <div class="dropdown-toggle-title">IWS-ICGC</div>
+                                </div>
+
+                                <div class="dropdown-toggle-sign">
+                                    <img src="../../dist/img/down-arrow_white.png" alt="dropdown-toggle">
+                                </div>
+
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="input-group input-group-transparent">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <input type="text" class="form-control search-dropdown" placeholder="Search By Name">
+                            </div>
+                            <li>
+                                <ul class="menu overlay-scrollbar-js">
+                                    <li class="dropdown-menu-child current" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="ISNA">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/isna/344172_60x60.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                ISNA
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Al-Azhar Foundation
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Al-Azhar Foundation
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Alexander Pierce</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="../../dist/img/avatar.png" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>admin</p>
+
+                    <!-- Status -->
+                    <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">MENU</li>
+                <!-- Optionally, you can add icons to the links -->
+
+                <li class="">
+                    <a href="../../dashboard_new.html" data-route="/secure_api_dashboard/dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-graduation-cap"></i> <span>School</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="../tables/data_class_v5.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                </li>
+
+                <li class="">
+                    <a href="../tables/data_registrations.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="../tables/data_students.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../tables/data_student_details.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/tables/data_student_details.html">Student Details</a> </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0)"><i class="fa fa-male"></i> <span>Parents</span></a>
+
+                </li>
+                <li class="">
+                    <a href="../tables/data_person_details.html"
+                       class="menu-link"
+                       data-route="/secure_api_dashboard/pages/tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
+
+                </li>
+                <li class="">
+                    <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Teachers</span></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Settings</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../tables/data_topics.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_topics.html">Topics</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-sticky-note"></i> <span>Assignments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../tables/data_assignments.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">Due Assignments</a></li>
+                        <li><a href="form_create_assignment.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/forms/form_create_assignment.html">Create Assignment</a></li>
+                        <li><a href="../tables/data_assignments.html"
+                               class="menu-link"
+                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">All Assignments</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-calendar"></i> <span>Events</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../tables/data_events.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/tables/data_events.html">Event List</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-users"></i> <span>Persons</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="javascript:void(0)">All Persons</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-gift"></i> <span>Payments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="javascript:void(0)">Pledges</a></li>
+                        <li><a href="/admin/give/payments">Payments</a></li>
+                        <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
+                        <li><a href="/admin/give/company/customers">CC Customers</a></li>
+                        <li><a href="/admin/give/company/settings">Setup</a></li>
+                        <li><a href="/admin/give/company/deposits">CC Deposits</a></li>
+                        <li><a href="/admin/donation/categories">Donation Categories</a></li>
+                        <li><a href="/admin/give/company/products">CC Products</a></li>
+
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/admin/users"><i class="fa fa-user"></i> <span>User Settings</span></a>
+
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Components</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../components/btn_action.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/components/btn_action.html"> Action Button </a></li>
+                        <li class=""><a href="../components/btn_action_no_text.html"
+                                        class="menu-link"
+                                        data-route="/secure_api_dashboard/pages/components/btn_action_no_text.html"> Action Button (no text) </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="d-flex justify-space-between align-center">
+                <h1 class="text-center m-0">
+                    Tickets
+                </h1>
+            </div>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="box box-success">
+                <div class="box-body">
+                    <div class="nav-tabs-custom box-shadow-none">
+                        <ul class="nav nav-tabs nav-tabs-responsive">
+                            <li class="">
+                                <a href="#addmission" data-toggle="tab" aria-expanded="true"><strong>Addmission</strong></a>
+                            </li>
+                            <li class="active">
+                                <a href="#addons" data-toggle="tab" aria-expanded="false"><strong>Add-Ons</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#promo-codes" data-toggle="tab" aria-expanded="false"><strong>Promo Codes</strong></a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+
+                            <!-- addmission tab -->
+                            <div class="tab-pane" id="addmission">
+                                <div class="text-right mb-10">
+                                    <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                </div>
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+
+                                        <th>
+                                            Event
+                                        </th>
+
+                                        <th>
+                                            Unit sold
+                                        </th>
+
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr class="">
+                                        <td>
+                                            <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
+                                                <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td>4/10</td>
+                                        <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
+                                        <td>$120</td>
+                                        <td>Draft</td>
+                                        <td>
+                                            <div class="button-group">
+                                                <a data-href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
+                                                <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
+                                                        class="fa fa-pencil-square-o"></i></a>
+                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="">
+                                        <td>
+                                            <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
+                                                <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td>4/10</td>
+                                        <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
+                                        <td>$120</td>
+                                        <td>Draft</td>
+                                        <td>
+                                            <div class="button-group">
+                                                <a data-href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
+                                                <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
+                                                        class="fa fa-pencil-square-o"></i></a>
+                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- addon tab -->
+                            <div class="tab-pane active" id="addons">
+                                <div class="text-right mb-10">
+                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
+                                </div>
+
+                                <div class="table-custom">
+                                    <div class="d-none d-md-block">
+                                        <div class="table-row table-head bg-gray-light font-600 mb-10">
+                                            <div class="table-column w-40">
+                                                Addon
+                                            </div>
+
+                                            <div class="table-column w-60">
+                                                <div class="d-flex justify-space-between align-center">
+                                                    <span class="">Type</span>
+                                                    <span>Price</span>
+                                                    <div>Action</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row mb-10">
+                                        <div class="table-column w-40">
+                                            <div class="d-md-flex justify-space-between align-center">
+                                                <div class="mb-md-10">
+                                                    <a href="create-event-addon-edit.html" class="text-dark addon-edit-js">
+                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                        <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                            <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                        </p>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    4/10
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-column w-60">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <span class="tagged tagged-success text-uppercase">Paid</span>
+                                                <span>$120</span>
+                                                <div class="button-group">
+                                                    <a href="create-event-addon-edit.html" class="btn link-btn link-btn-icon addon-edit-js mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="javascript:void(0)"
+                                                       class="btn link-btn link-btn-danger link-btn-icon"
+                                                       data-toggle="modal"
+                                                       data-target="#delete-addon">
+                                                        <i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-row mb-10">
+                                        <div class="table-column w-40">
+                                            <div class="d-md-flex justify-space-between align-center">
+                                                <div class="mb-md-10">
+                                                    <a href="create-event-addon-edit.html" class="text-dark addon-edit-js">
+                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                        <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
+                                                        </span>
+                                                            <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                        </p>
+                                                    </a>
+                                                </div>
+
+                                                <div>
+                                                    4/10
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-column w-60">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <span class="tagged tagged-success text-uppercase">Free</span>
+                                                <p class="m-0 font-600"> -- </p>
+                                                <div class="button-group">
+                                                    <a href="create-event-addon-edit.html" class="btn link-btn link-btn-icon addon-edit-js mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="javascript:void(0)"
+                                                       class="btn link-btn link-btn-danger link-btn-icon"
+                                                       data-toggle="modal"
+                                                       data-target="#delete-addon">
+                                                        <i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Addon edit form popup -->
+                                <div class="ticket-add-form addon-edit-form-js active visible">
+                                    <div class="ticket-add-form-wrapper">
+                                        <div class="ticket-add-form-head add-ticket-padding">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="m-0">Edit Add-On</h2>
+
+                                                <button type="button" class="btn btn-none popup-form-close-js">
+                                                    <span class="d-none d-sm-inline-block mr-5">Close</span> <img src="../../dist/img/close_black_32.png" alt="close">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-body add-ticket-padding">
+                                            <div class="ticket-add-form-body-wrapper">
+
+                                                <div class="form-group">
+                                                    <label class="" for="addon-name">Name</label>
+                                                    <input type="text" id="addon-name" class="form-control" name="AddonName" value="Donation">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="" for="addon-quantity">Quantity</label>
+                                                    <input type="number" id="addon-quantity" class="form-control" name="AddonQuantity" value="4">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-wrapper">
+                                                        <label class="" for="addon-price">Price</label>
+                                                        <input type="text" id="addon-price" class="form-control" name="AddonPrice" value="25">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="" for="addon-description">Description</label>
+                                                    <textarea id="addon-description" class="form-control" name="AddonDescription"></textarea>
+                                                </div>
+
+                                                <!-- date and time -->
+                                                <div>
+                                                    <hr>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-start">Start Date</label>
+                                                                <input type="text" id="date-start"
+                                                                       class="form-control datepicker"
+                                                                       data-start="now"
+                                                                       name="StartDate"
+                                                                       placeholder="dd/mm/yy"
+                                                                       autocomplete="off"
+                                                                       value="18/12/2022">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-start">Start Time</label>
+                                                                        <select id="time-start" class="form-control select2" name="StartTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM" selected>06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM">08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM">05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM">09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-end">End Date</label>
+                                                                <input type="text" id="date-end"
+                                                                       class="form-control datepicker"
+                                                                       name="EndDate"
+                                                                       placeholder="dd/mm/yy"
+                                                                       value="18/12/2022">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-end">End Time</label>
+                                                                        <select id="time-end" class="form-control select2" name="EndTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM">06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM">08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM">05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM" selected>09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-foot add-ticket-padding">
+                                            <div class="text-right button-group">
+                                                <button type="button" class="btn btn-default popup-form-close-js btn-lg mr-15">Cancel</button>
+                                                <a href="create-event-addon-list.html" class="btn btn-success btn-lg ticket-save-js">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- promo codes tab -->
+                            <div class="tab-pane" id="promo-codes">
+                                <div class="promo-empty">
+                                    <div class="text-center mb-10 mt-15">
+                                        <div class="empty-image">
+                                            <img src="../../dist/img/discount.png" alt="addon">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h2 class="text-bold m-0 mb-10">Attract more attendees with promo codes</h2>
+                                        <p class="font-600 text-medium mb-30">With promo codes, you can offer reduced prices with discount codes or reveal hidden tickets to attendees with access codes.</p>
+                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Promo Code</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right BigBold-SubTitle">
+            <a href="mailto:Support@MasjidSolutions.Net">Support@MasjidSolutions.Net</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+13178540207">(317) 854-0207</a>
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright © 2022 <a target="_blank" href="https://MasjidSolutions.Net">Masjid Solutions</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- body overlayer -->
+    <div class="body-overlayer active"></div>
+
+    <!-- LOADER WRAPPER -->
+    <div class="loader-wrapper">
+        <div class="loader-page">
+            <div class="loader-inner">
+                <div>
+                    <div class="loader-spinner"></div>
+                    <p class="m-0 mt-10">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Delete ticket -->
+    <div id="delete-addon" class="modal">
+        <div class="modal-dialog modal-sm2">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <!-- modal close button -->
+                <button type="button" class="close close-modal" data-dismiss="modal">
+                    <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <!-- /.modal close button -->
+
+                <!-- modal body -->
+                <div class="modal-body">
+
+                    <div class="modal-image text-center pb-15">
+                        <svg aria-hidden="true" class="icon-svg-info" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+
+                    <h3 class="text-center m-0">Are you sure you want to delete this addon?</h3>
+                </div>
+                <!-- /.modal body -->
+
+                <!-- modal footer -->
+                <div class="text-center pt-30">
+                    <button type="button" class="btn btn-default btn-md mr-15" data-dismiss="modal">
+                        <i class="fa fa-ban"></i>
+                        <span>Cancel</span>
+                    </button>
+
+                    <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">
+                        <span>Yes, Delete it</span>
+                    </button>
+                </div>
+                <!-- /.modal footer -->
+            </div>
+            <!-- /.Modal content-->
+        </div>
+    </div>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
+<!-- iCheck -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
+<!-- datepicker -->
+<script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- dropify -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- CK EDITOR -->
+<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.js"></script>
+<!-- custom script -->
+<script src="../../dist/js/custom_script.js?v=1.0.6"></script>
+
+
+</body>
+</html>
