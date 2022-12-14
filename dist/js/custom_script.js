@@ -190,6 +190,19 @@ $(document).on('click', '.ticket-edit-js', ()=>{
 $(document).on('click', '.addon-edit-js', ()=>{
     $('.loader-wrapper').addClass('active');
 })
+//=== event type selection
+let eventTypeButtonSelector = '.btn-event-type-js';
+$(document).on('click', eventTypeButtonSelector, function (e){
+    e.preventDefault();
+    let self = $(this);
+    $(eventTypeButtonSelector).removeClass('active');
+    self.addClass('active');
+    $(self.attr('data-input-target')).val(self.attr('data-value'));
+})
+
+/** --Click Action **/
+
+
 
 /**
  * -------------------------------------
@@ -232,13 +245,27 @@ $(document).on('change', '.form-group.required-group .form-control', function (e
     singleValidation(self, self.closest('.form-group'),'field-invalid', 'field-validated', 'error-message', errorMessage);
 });
 
-$('#create-user-checkbox').on('ifChecked', function () {
+let createUserCheckbox = $('#create-user-checkbox');
+
+createUserCheckbox.on('ifChecked', function () {
     $('#user-password').show();
 });
 
-$('#create-user-checkbox').on('ifUnchecked', function () {
+createUserCheckbox.on('ifUnchecked', function () {
     $('#user-password').hide();
 });
+
+//=== show password field for private event
+$(document).on('change', '.event-access-with-js, .event-access-to-js', function (){
+    let self = $(this);
+    let targetSelector = self.attr('data-target');
+    let selectedOption = self.find('option:selected');
+    $(targetSelector).addClass('d-none');
+    $(targetSelector).find('input').removeAttr('required');
+    if(!selectedOption.attr('data-show')) return;
+    $(targetSelector).removeClass('d-none');
+    $(targetSelector).find('input').attr('required', 'required');
+})
 
 
 /**

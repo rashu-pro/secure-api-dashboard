@@ -1804,3 +1804,26 @@ table tr.bg-white tr th{
     }
   }
 }
+
+.list{
+  &-bulleted{
+    padding-left:0;
+    li{
+      display: inline-block;
+      margin-right:5px;
+      position: relative;
+      &:before{
+        content:'';
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: #877979;
+        display: inline-block;
+        top: -2px;
+        position: relative;
+        left: 0;
+        margin-right: 6px;
+      }
+    }
+  }
+}

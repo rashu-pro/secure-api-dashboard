@@ -25,6 +25,10 @@
     &:hover{
       background-color: #f8f8f8;
     }
+    &:focus{
+      outline-offset: 0!important;
+      outline-color: #3659e3!important;
+    }
     &.active{
       background-color: rgba(54,89,227,.1);
       border: 1px solid #3659e3;
@@ -35,33 +39,39 @@
   &-outline2{
     position: relative;
     /* border: 1px solid #c8e3f9; */
-    border: 1px solid #1d527c;
     display: inline-block;
     line-height: inherit;
     font-size: 15px;
     border-radius: 4px;
     padding: 6px 10px;
-    background-color: #c8e3f9;
-    color: #0a3a60;
+    border: 1px solid;
     font-weight: 600;
     text-transform: uppercase;
+    background-color: #eaf5fe;
+    color: #2196f3;
+    border-color: #2196f3;
 
     &:hover{
-      background-color: #eaf5fe;
-      color: #2196f3;
-      border-color: #2196f3;
+      background-color: #c8e3f9;
+      color: #0a3a60;
+      border-color: #1d527c;
     }
 
     &.success{
-      background-color: #cbf6e2;
-      /* border-color: #31674c; */
-      border-color: #134d33;
-      color: #134d33;
+      background-color: #e7f3ee;
+      border-color: #1db26e;
+      color: #1db26e;
       &:hover{
-        background-color: #e7f3ee;
-        border-color: #1db26e;
-        color: #1db26e;
+        background-color: #cbf6e2;
+        border-color: #134d33;
+        color: #134d33;
       }
+    }
+  }
+
+  &-border{
+    &-2{
+      border-width:2px;
     }
   }
 

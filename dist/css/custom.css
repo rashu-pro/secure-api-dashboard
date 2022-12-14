@@ -7,6 +7,12 @@
     .mr-30 {
       margin-right: 30px; } }
 
+.mt-50 {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .mt-50 {
+      margin-top: 50px; } }
+
 .mr-20 {
   margin-right: 15px; }
   @media (min-width: 768px) {
@@ -15,6 +21,12 @@
 
 .mb-20 {
   margin-bottom: 20px; }
+
+.m-0-auto {
+  margin: 0 auto; }
+
+.ml-auto {
+  margin-left: auto; }
 
 .p-20 {
   padding: 20px; }
@@ -265,6 +277,9 @@
   text-align: center; }
   .btn-outlined:hover {
     background-color: #f8f8f8; }
+  .btn-outlined:focus {
+    outline-offset: 0 !important;
+    outline-color: #3659e3 !important; }
   .btn-outlined.active {
     background-color: rgba(54, 89, 227, 0.1);
     border: 1px solid #3659e3;
@@ -273,29 +288,32 @@
 .btn-outline2 {
   position: relative;
   /* border: 1px solid #c8e3f9; */
-  border: 1px solid #1d527c;
   display: inline-block;
   line-height: inherit;
   font-size: 15px;
   border-radius: 4px;
   padding: 6px 10px;
-  background-color: #c8e3f9;
-  color: #0a3a60;
+  border: 1px solid;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: #eaf5fe;
+  color: #2196f3;
+  border-color: #2196f3; }
   .btn-outline2:hover {
-    background-color: #eaf5fe;
-    color: #2196f3;
-    border-color: #2196f3; }
+    background-color: #c8e3f9;
+    color: #0a3a60;
+    border-color: #1d527c; }
   .btn-outline2.success {
-    background-color: #cbf6e2;
-    /* border-color: #31674c; */
-    border-color: #134d33;
-    color: #134d33; }
+    background-color: #e7f3ee;
+    border-color: #1db26e;
+    color: #1db26e; }
     .btn-outline2.success:hover {
-      background-color: #e7f3ee;
-      border-color: #1db26e;
-      color: #1db26e; }
+      background-color: #cbf6e2;
+      border-color: #134d33;
+      color: #134d33; }
+
+.btn-border-2 {
+  border-width: 2px; }
 
 .btn-lg {
   min-width: 100px;
@@ -514,6 +532,20 @@ button.close-modal {
   @media (min-width: 768px) {
     .table-custom .table-column {
       padding: 15px; } }
+
+.table.table-bordered-2 {
+  border: 0; }
+  .table.table-bordered-2 thead th, .table.table-bordered-2 thead td {
+    background-color: #e3e3e3 !important;
+    color: #000;
+    border-bottom: 1px solid #c1c1c1 !important;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .table.table-bordered-2 tbody tr td {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 10px; }
 
 .main-header {
   max-height: min-content; }
@@ -2136,6 +2168,24 @@ table tr.bg-white tr th {
     padding-left: 4px;
     padding-right: 4px; }
 
+.list-bulleted {
+  padding-left: 0; }
+  .list-bulleted li {
+    display: inline-block;
+    margin-right: 5px;
+    position: relative; }
+    .list-bulleted li:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background: #877979;
+      display: inline-block;
+      top: -2px;
+      position: relative;
+      left: 0;
+      margin-right: 6px; }
+
 .w-app {
   margin: 0 auto; }
   @media (min-width: 768px) {
@@ -2359,6 +2409,41 @@ table tr.bg-white tr th {
       top: 50%;
       transform: translateY(-50%); }
 
+.stat-box {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  border-radius: 0.6rem;
+  padding: 1.75rem;
+  background-color: #fff;
+  max-width: 400px; }
+  .stat-box-blue {
+    border-color: #2196f3;
+    background-color: #F2F7FF; }
+    .stat-box-blue .stat-title {
+      color: #2196f3; }
+  .stat-box-red {
+    border-color: #e91e63;
+    background-color: #FFF2F9; }
+    .stat-box-red .stat-title {
+      color: #e91e63; }
+  .stat-box-green {
+    border-color: #009688;
+    background-color: #E9FCF6; }
+    .stat-box-green .stat-title {
+      color: #009688; }
+
+.stat-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 10px; }
+  .stat-title-secondary {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px; }
+
 .ticket-icon {
   max-width: 70%; }
   .ticket-icon-holder {
@@ -2413,7 +2498,7 @@ table tr.bg-white tr th {
   top: 0;
   height: 100%;
   width: 50%;
-  background-color: #0f74a8;
+  background-color: #41c39a;
   border-radius: 8px; }
 
 .add-ticket-padding {

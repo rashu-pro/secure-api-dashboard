@@ -34,7 +34,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.7">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.8">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -460,7 +460,6 @@
             </ul>
 
             <div class="nav-right">
-                <a href="create-event-publish.html" class="btn btn-outline2 success mr-15"> <img src="../../dist/img/publish.png" class="mr-5" alt="publish"> Publish Event</a>
                 <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview Event</a>
             </div>
         </div>
@@ -472,69 +471,84 @@
                 Publish Your Event
             </h1>
 
-            <div class="box box-success">
+            <form action="create-event-list.html" method="post">
+                <div class="box box-success">
 
-                <div class="box-body">
-                    <div class="event-view-wrapper mb-30">
-                        <div class="event-view">
-                            <div class="d-flex">
-                                <div class="w-40">
-                                    <div class="event-view-image">
-                                        <div class="image-holder">
-                                            <img class="img-responsive"
-                                                 src="../../dist/img/image-event.jpg" alt="event">
+                    <div class="box-body">
+                        <div class="event-view-wrapper mb-30">
+                            <div class="event-view">
+                                <div class="d-flex">
+                                    <div class="w-40">
+                                        <div class="event-view-image">
+                                            <div class="image-holder">
+                                                <img class="img-responsive"
+                                                     src="../../dist/img/image-event.jpg" alt="event">
+                                            </div>
+
                                         </div>
-
                                     </div>
-                                </div>
-                                <div class="w-60">
-                                    <div class="event-view-content p-20">
-                                        <h3 class="event-view-title text-bold m-0 mb-10">Seed Youth Leadership Program Winter Break</h3>
-                                        <p class="m-0 font-600 text-blue">Thursday, December 15, 2022 at 9:30 AM PST</p>
-                                        <p class="m-0 font-600">Maligaya Village, San Fernando, Central Luzon 2000</p>
-                                        <p class=""><span class="mr-15 text-medium text-bold">$120</span> </p>
-                                        <p>Amet quod rerum eius voluptatibus quam nisi laborum Officia rem porro assumenda et dolorum in velit illo necessitatibus rerum iure</p>
+                                    <div class="w-60">
+                                        <div class="event-view-content p-20">
+                                            <h3 class="event-view-title text-bold m-0 mb-10">Seed Youth Leadership Program Winter Break</h3>
+                                            <p class="m-0 font-600 text-blue">Thursday, December 15, 2022 at 9:30 AM PST</p>
+                                            <p class="m-0 font-600">Maligaya Village, San Fernando, Central Luzon 2000</p>
+                                            <p class=""><span class="mr-15 text-medium text-bold">$120</span> </p>
+                                            <p>Amet quod rerum eius voluptatibus quam nisi laborum Officia rem porro assumenda et dolorum in velit illo necessitatibus rerum iure</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <h4>Who can see your event?</h4>
+                                    <select class="form-control select2-searchless event-access-to-js" data-target=".event-is-private">
+                                        <option value="public">Public</option>
+                                        <option value="private" data-show="1">Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-is-private d-none">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <h4>Choose your audience?</h4>
+                                        <select class="form-control select2-searchless event-access-with-js" data-target=".password-field-wrapper">
+                                            <option value="anyone">Anyone with the link</option>
+                                            <option value="password-protected" data-show="1">Only people with the password</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group password-field-wrapper d-none">
+                                        <label for="password-field">Password</label>
+                                        <input type="text" id="password-field" class="form-control" name="SetPassword">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group mb-30">
-                                <h4>Who can see your event?</h4>
-                                <select class="form-control select2-searchless">
-                                    <option value="private">Private</option>
-                                    <option value="public">Public</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="box-footer">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <h4>Chosse your audience?</h4>
-                                <select class="form-control select2-searchless">
-                                    <option value="anyone">Anyone with the link</option>
-                                    <option value="password-protected">Only people with the password</option>
-                                </select>
+                            <div class="col-sm-4">
+                                <div class="py-10">
+                                    <button type="submit" class="btn btn-success btn-block btn-lg">Publish</button>
+                                </div>
                             </div>
+                            <div class="col-sm-4"></div>
                         </div>
                     </div>
                 </div>
+            </form>
 
-                <div class="box-footer">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
-                            <div class="py-10">
-                                <button type="button" class="btn btn-success btn-block btn-lg">Publish</button>
-                            </div>
-                        </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- /.content -->
     </div>
@@ -624,7 +638,7 @@
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.7"></script>
+<script src="../../dist/js/custom_script.js?v=1.0.8"></script>
 
 
 </body>
