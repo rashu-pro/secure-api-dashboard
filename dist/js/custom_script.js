@@ -91,7 +91,6 @@ let base_url = window.location.origin,
     pathString = window.location.pathname,
     pathArray = pathString.split( '/' );
 let consoleString = `base url: ${base_url}\nHost: ${host}\n Path: ${pathString}\nPath array: ${pathArray}`;
-console.log(consoleString);
 
 $('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
     if($(element).data('route') === pathString){
@@ -198,6 +197,19 @@ $(document).on('click', eventTypeButtonSelector, function (e){
     $(eventTypeButtonSelector).removeClass('active');
     self.addClass('active');
     $(self.attr('data-input-target')).val(self.attr('data-value'));
+})
+
+//=== event navigation toggle
+$(document).on('click', '.nav-event-navigation-toggler-js', function (e){
+    e.preventDefault();
+    $('.nav-event-navigation-wrapper').addClass('expanded');
+    $('body').addClass('overflow-hidden');
+})
+
+$(document).on('click', '.event-navigation-close-js', function (e){
+    e.preventDefault();
+    $('.nav-event-navigation-wrapper').removeClass('expanded');
+    $('body').removeClass('overflow-hidden');
 })
 
 /** --Click Action **/
@@ -451,6 +463,9 @@ function ticketFormHeight(){
     let heightNav = $('.main-header .navbar').outerHeight();
     let heightTicketHead = $('.ticket-add-form-head').outerHeight();
     let heightTicketFoot = $('.ticket-add-form-foot').outerHeight();
+    if($('body').width()<768){
+        heightNav = 0;
+    }
     let minHeightTicketBody = `calc(100vh - ${heightNav+heightTicketHead+heightTicketFoot}px)`;
     $('.ticket-add-form-body').css('height', minHeightTicketBody);
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Create Event Details</title>
+    <title>Event Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -18,10 +18,6 @@
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
     <!-- datepicker -->
     <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
-    <!-- dropify -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- quil js(text-editor) -->
-    <link rel="stylesheet" href="../../node_modules/quill/dist/quill.core.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -451,188 +447,195 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="d-flex justify-space-between align-center">
-                <h1 class="text-center m-0">
-                    Events List
-                </h1>
-            </div>
-        </section>
-
         <!-- Main content -->
-        <section class="content">
-            <div class="box box-success">
+        <section class="content content-box medium">
 
-                <div class="box-header">
-                    <div class="d-flex justify-space-between align-center mb-10">
-                        <div class="w-md-50">
-                            <h2 class="m-0 mb-10">Search Events</h2>
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="search-event">
-                                            <label class="input-group-addon" for="search-event"><img src="../../dist/img/search-24.png" alt="search events"></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-group">
-                                        <select class="form-control select2-searchless">
-                                            <option value="draft">Draft</option>
-                                            <option value="upcoming_events">Upcoming Events</option>
-                                            <option value="past_events">Past Events</option>
-                                            <option value="all_events">All Events</option>
-                                        </select>
-                                    </div>
+            <div class="alert alert-success alert-success-custom">
+                <p class="m-0">
+                    <img src="../../dist/img/icon_success.png" class="alert-icon" alt="success">
+                    <span class="ml-2">Event has been published successfully!</span>
+                </p>
+            </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add New</span> </a>
+            <div class="d-flex align-center">
+                <h1 class="text-bold mb-20">
+                    Dashboard
+                </h1>
+
+                <a href="create-event-list.html" class="pl-15">All Events</a>
+            </div>
+
+            <!-- stat box -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="stat-box stat-box-green">
+                        <h3 class="stat-title">Net Sales</h3>
+                        <h2 class="stat-title-secondary">$ 0.00</h2>
+                        <p class="m-0">$0.00 gross sales</p>
                     </div>
                 </div>
 
-                <div class="box-body">
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-column-fatty">
-                            <thead>
-                            <tr>
-                                <th>
-                                    Event
-                                </th>
-                                <th>
-                                    Sold
-                                </th>
-                                <th>
-                                    Gross
-                                </th>
-                                <th>
-                                    Status
-                                </th>
-                                <th>
-                                    Action
-                                </th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-
-                                <td>
-                                    <a href="event-dashboard.html">
-                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
-                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
-                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
-                                    </a>
-                                </td>
-                                <td>
-                                    05/10
-                                    <div class="ticket-sell-scale">
-                                        <div class="ticket-sold-scale"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $120
-                                </td>
-                                <td>
-                                    <span class="tagged tagged-success text-uppercase">Active</span>
-                                </td>
-
-                                <td class="">
-                                    <div class="button-group">
-                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                class="fa fa-trash"></i></a>
-                                    </div>
-
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td>
-                                    <a href="event-dashboard.html">
-                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
-                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
-                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
-                                    </a>
-                                </td>
-                                <td>
-                                    05/10
-                                    <div class="ticket-sell-scale">
-                                        <div class="ticket-sold-scale"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $120
-                                </td>
-                                <td>
-                                    <span class="tagged tagged-success text-uppercase">Active</span>
-                                </td>
-
-                                <td class="">
-                                    <div class="button-group">
-                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                class="fa fa-trash"></i></a>
-                                    </div>
-
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td>
-                                    <a href="event-dashboard.html">
-                                        <p class="m-0">Seed Youth Leadership Program - Winter Break</p>
-                                        <p class="m-0 text-dark font-600">Indianapolis, Indiana</p>
-                                        <p class="m-0 text-success font-600">Sunday, December 11, 2022 at 1:00 AM WIB</p>
-                                    </a>
-                                </td>
-                                <td>
-                                    05/10
-                                    <div class="ticket-sell-scale">
-                                        <div class="ticket-sold-scale"></div>
-                                    </div>
-                                </td>
-                                <td>
-                                    $120
-                                </td>
-                                <td>
-                                    <span class="tagged tagged-success text-uppercase">Active</span>
-                                </td>
-
-                                <td class="">
-                                    <div class="button-group">
-                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
-                                                class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                class="fa fa-trash"></i></a>
-                                    </div>
-
-
-                                </td>
-
-                            </tr>
-                            </tbody>
-                        </table>
-
-
+                <div class="col-sm-4">
+                    <div class="stat-box stat-box-red">
+                        <h3 class="stat-title">Ticket Sold</h3>
+                        <h2 class="stat-title-secondary">5/15</h2>
+                        <ul class="m-0 list-bulleted">
+                            <li>3 paid</li>
+                            <li>2 free</li>
+                        </ul>
                     </div>
-
                 </div>
 
+                <div class="col-sm-4">
+                    <div class="stat-box stat-box-blue">
+                        <h3 class="stat-title">Add-On Sold</h3>
+                        <h2 class="stat-title-secondary">5/15</h2>
+                        <ul class="m-0 list-bulleted">
+                            <li>3 paid</li>
+                            <li>2 free</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- share area -->
+            <div class="mt-50">
+                <div class="alert alert-default alert-default-custom">
+                    <p class="text-md text-bold">Event Url</p>
+                    <p class="m-0">
+                        <span class="ml-2"><a class="text-dark" href="https://secure-api.net/event/registration/isna/59th-annual-isna-convention-2022" target="_blank">https://secure-api.net/event/registration/isna/59th-annual-isna-convention-2022</a> </span>
+                    </p>
+                </div>
 
             </div>
+
+            <!-- Sales By Ticket -->
+            <div class="mt-50">
+                <h2 class="text-bold mb-20">Sales By Ticket</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-bordered-2 bg-white">
+                        <thead>
+                        <tr>
+                            <th>Ticket</th>
+                            <th>Price</th>
+                            <th>Sold</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr class="">
+                            <td>
+                                Field Trip
+                            </td>
+                            <td>$80</td>
+                            <td>
+                                12/20
+                                <div class="ticket-sell-scale" data-total="20">
+                                    <div class="ticket-sold-scale" data-sold="12"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="">
+                            <td>
+                                Field Trip
+                            </td>
+                            <td>$80</td>
+                            <td>
+                                5/20
+                                <div class="ticket-sell-scale" data-total="20">
+                                    <div class="ticket-sold-scale" data-sold="5"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="">
+                            <td>
+                                Field Trip
+                            </td>
+                            <td>$80</td>
+                            <td>
+                                8/20
+                                <div class="ticket-sell-scale" data-total="20">
+                                    <div class="ticket-sold-scale" data-sold="8"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="">
+                            <td>
+                                Field Trip
+                            </td>
+                            <td>$80</td>
+                            <td>
+                                2/20
+                                <div class="ticket-sell-scale" data-total="20">
+                                    <div class="ticket-sold-scale" data-sold="2"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="mt-50">
+                <h2 class="text-bold mb-20">Recent Orders</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-bordered-2 bg-white">
+                        <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr class="">
+                            <td>
+                                #1548524
+                            </td>
+                            <td>Azhar Ali</td>
+                            <td>1</td>
+                            <td>$120</td>
+                            <td>14/12/2022</td>
+                        </tr>
+
+                        <tr class="">
+                            <td>
+                                #1548524
+                            </td>
+                            <td>Azhar Ali</td>
+                            <td>1</td>
+                            <td>$120</td>
+                            <td>14/12/2022</td>
+                        </tr>
+
+                        <tr class="">
+                            <td>
+                                #1548524
+                            </td>
+                            <td>Azhar Ali</td>
+                            <td>1</td>
+                            <td>$120</td>
+                            <td>14/12/2022</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
         </section>
         <!-- /.content -->
     </div>
@@ -658,16 +661,12 @@
 <script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- datepicker -->
 <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
-<!-- dropify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- CK EDITOR -->
-<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.9"></script>
+<script src="../../dist/js/custom_script.js?v=7.0.9"></script>
 
 
 </body>

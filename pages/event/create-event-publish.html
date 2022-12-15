@@ -34,7 +34,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.8">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.9">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -452,12 +452,23 @@
     <div class="content-wrapper">
 
         <div class="bg-white nav-event-navigation-wrapper">
-            <ul class="nav nav-event-navigation d-flex justify-center">
-                <li class="complete"><a href="#">Basic Info</a> </li>
-                <li class="complete"><a href="#">Details</a> </li>
-                <li class="complete"><a href="#">Tickets</a> </li>
-                <li class="active"><a href="#">Publish</a> </li>
-            </ul>
+            <button type="button" class="btn btn-transparent nav-event-navigation-toggler nav-event-navigation-toggler-js">
+                <img src="../../dist/img/dots.png" alt="event navigation">
+            </button>
+            <span class="event-navigation-text">Publish</span>
+
+            <button type="button" class="btn btn-transparent event-navigation-close event-navigation-close-js">
+                <img src="../../dist/img/close_black_32.png" alt="event navigation close">
+            </button>
+
+            <div class="nav-event-navigation-holder">
+                <ul class="nav nav-event-navigation d-flex justify-center">
+                    <li class="complete"><a href="#">Basic Info</a> </li>
+                    <li class="complete"><a href="#">Details</a> </li>
+                    <li class="complete"><a href="#">Tickets</a> </li>
+                    <li class="active"><a href="#">Publish</a> </li>
+                </ul>
+            </div>
 
             <div class="nav-right">
                 <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview Event</a>
@@ -477,8 +488,8 @@
                     <div class="box-body">
                         <div class="event-view-wrapper mb-30">
                             <div class="event-view">
-                                <div class="d-flex">
-                                    <div class="w-40">
+                                <div class="d-sm-flex">
+                                    <div class="w-sm-40">
                                         <div class="event-view-image">
                                             <div class="image-holder">
                                                 <img class="img-responsive"
@@ -487,7 +498,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="w-60">
+                                    <div class="w-sm-60">
                                         <div class="event-view-content p-20">
                                             <h3 class="event-view-title text-bold m-0 mb-10">Seed Youth Leadership Program Winter Break</h3>
                                             <p class="m-0 font-600 text-blue">Thursday, December 15, 2022 at 9:30 AM PST</p>
@@ -540,7 +551,7 @@
 
                             <div class="col-sm-4">
                                 <div class="py-10">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg">Publish</button>
+                                    <a href="event-dashboard-after-publish.html" class="btn btn-success btn-block btn-lg">Publish</a>
                                 </div>
                             </div>
                             <div class="col-sm-4"></div>
@@ -638,7 +649,7 @@
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.8"></script>
+<script src="../../dist/js/custom_script.js?v=1.0.9"></script>
 
 
 </body>

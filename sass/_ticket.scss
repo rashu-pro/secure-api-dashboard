@@ -17,19 +17,20 @@
       display: none;
       visibility: hidden;
       position: fixed;
-      top: 54px;
+      top: 0;
       right: 0;
       bottom: 0;
       width: 100%;
       background: #fff;
       box-shadow: 0 1px 17px 0 rgba(40, 44, 53, 0.1),
                   0 2px 4px 0 rgba(40, 44, 53, 0.1);
-      z-index: 999;
+      z-index: 9999;
       &.active{
         display: block;
       }
       @media (min-width: 768px){
         width: 500px;
+        top: 54px;
       }
 
       &-wrapper{

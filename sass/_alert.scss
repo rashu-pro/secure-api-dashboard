@@ -14,6 +14,24 @@
   border-bottom-left-radius: 0;
   border-left-width:4px;
   &.alert{
+
+    &-default{
+      padding:30px 20px;
+    }
+
+    &-default-custom{
+      background-color: #ffffff!important;
+      color: #000!important;
+      border-color: #ddd!important;
+      border-left-color: #9e9e9e!important;
+      a{
+        color:#000;
+        &:hover{
+          color:$color-blue;
+        }
+      }
+    }
+
     &-warning-custom{
       background-color: #fff3cd!important;
       color: #856404!important;

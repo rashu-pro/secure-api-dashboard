@@ -34,7 +34,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.7">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.9">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -452,21 +452,34 @@
     <div class="content-wrapper">
 
         <div class="bg-white nav-event-navigation-wrapper">
-            <ul class="nav nav-event-navigation d-flex justify-center">
-                <li class="complete"><a href="#">Basic Info</a> </li>
-                <li class="complete"><a href="#">Details</a> </li>
-                <li class="active"><a href="#">Tickets</a> </li>
-                <li><a href="#">Publish</a> </li>
-            </ul>
+
+            <button type="button" class="btn btn-transparent nav-event-navigation-toggler nav-event-navigation-toggler-js">
+                <img src="../../dist/img/dots.png" alt="event navigation">
+            </button>
+            <span class="event-navigation-text">Tickets</span>
+
+            <button type="button" class="btn btn-transparent event-navigation-close event-navigation-close-js">
+                <img src="../../dist/img/close_black_32.png" alt="event navigation close">
+            </button>
+
+            <div class="nav-event-navigation-holder">
+                <ul class="nav nav-event-navigation d-flex justify-center">
+                    <li class="complete"><a href="#">Basic Info</a> </li>
+                    <li class="complete"><a href="#">Details</a> </li>
+                    <li class="active"><a href="#">Tickets</a> </li>
+                    <li><a href="#">Publish</a> </li>
+                </ul>
+            </div>
+
 
             <div class="nav-right">
-                <a href="create-event-publish.html" class="btn btn-outline2 success mr-15"> <img src="../../dist/img/publish.png" class="mr-5" alt="publish"> Publish Event</a>
-                <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview Event</a>
+                <a href="create-event-publish.html" class="btn btn-outline2 success mr-15"> <img src="../../dist/img/publish.png" class="mr-5" alt="publish"> Publish <span class="hidden-md">Event</span> </a>
+                <a href="javascript:void(0)" class="btn btn-outline2" data-toggle="modal" data-target="#preview-event"><img src="../../dist/img/preview.png" class="mr-5" alt="publish"> Preview <span class="hidden-md">Event</span> </a>
             </div>
         </div>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content content-box medium">
 
             <h1 class="text-center text-bold mb-20">
                 Tickets
@@ -493,17 +506,21 @@
 
                             <!-- addmission tab -->
                             <div class="tab-pane active" id="addmission">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                <div class="d-sm-flex justify-space-between align-center mb-20">
+                                    <h2>Tickets List</h2>
+
+                                    <div class="">
+                                        <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                    </div>
                                 </div>
 
                                 <div class="table-responsive">
-                                    <table class="table table-bordered table-striped">
+                                    <table class="table table-bordered-2">
                                         <thead>
                                         <tr>
 
                                             <th>
-                                                Event
+                                                Ticket
                                             </th>
 
                                             <th>
@@ -1094,7 +1111,7 @@
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.7"></script>
+<script src="../../dist/js/custom_script.js?v=1.0.9"></script>
 
 
 </body>

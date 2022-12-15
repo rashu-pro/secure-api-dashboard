@@ -34,7 +34,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.7">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.9">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -448,17 +448,16 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
+
+        <!-- Main content -->
+        <section class="content content-box medium">
+
             <div class="d-flex justify-space-between align-center">
-                <h1 class="text-center m-0">
+                <h1 class="text-center text-bold">
                     Tickets
                 </h1>
             </div>
-        </section>
 
-        <!-- Main content -->
-        <section class="content">
             <div class="box box-success">
                 <div class="box-body">
                     <div class="nav-tabs-custom box-shadow-none">
@@ -478,195 +477,372 @@
 
                             <!-- addmission tab -->
                             <div class="tab-pane" id="addmission">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="create-event.html"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                <div class="d-sm-flex justify-space-between align-center mb-20">
+                                    <h2>Tickets List</h2>
+
+                                    <div class="">
+                                        <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Add Tickets</span> </a>
+                                    </div>
                                 </div>
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr>
 
-                                        <th>
-                                            Event
-                                        </th>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered-2">
+                                        <thead>
+                                        <tr>
 
-                                        <th>
-                                            Unit sold
-                                        </th>
+                                            <th>
+                                                Ticket
+                                            </th>
 
-                                        <th>Type</th>
-                                        <th>Price</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                            <th>
+                                                Unit sold
+                                            </th>
 
-                                    </tr>
-                                    </thead>
+                                            <th>Type</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
 
-                                    <tbody>
+                                        </tr>
+                                        </thead>
 
-                                    <tr class="">
-                                        <td>
-                                            <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
-                                                <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                <p class="p-0">
+                                        <tbody>
+
+                                        <tr class="">
+                                            <td>
+                                                <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
+                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                    <p class="p-0">
                                                         <span class="d-inline-flex align-center mr-10">
                                                             <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
                                                         </span>
-                                                    <span class="d-none d-md-inline-flex align-center">
+                                                        <span class="d-none d-md-inline-flex align-center">
                                                             <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
                                                         </span>
-                                                </p>
-                                            </a>
-                                        </td>
-                                        <td>4/10</td>
-                                        <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
-                                        <td>$120</td>
-                                        <td>Draft</td>
-                                        <td>
-                                            <div class="button-group">
-                                                <a data-href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
-                                                <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                    </p>
+                                                </a>
+                                            </td>
+                                            <td>4/10</td>
+                                            <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
+                                            <td>$120</td>
+                                            <td>Draft</td>
+                                            <td>
+                                                <div class="button-group">
+                                                    <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                                    <tr class="">
-                                        <td>
-                                            <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
-                                                <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                <p class="p-0">
+                                        <tr class="">
+                                            <td>
+                                                <a href="create-event-ticket-edit.html" class="text-dark ticket-edit-js">
+                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                    <p class="p-0">
                                                         <span class="d-inline-flex align-center mr-10">
                                                             <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
                                                         </span>
-                                                    <span class="d-none d-md-inline-flex align-center">
+                                                        <span class="d-none d-md-inline-flex align-center">
                                                             <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
                                                         </span>
-                                                </p>
-                                            </a>
-                                        </td>
-                                        <td>4/10</td>
-                                        <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
-                                        <td>$120</td>
-                                        <td>Draft</td>
-                                        <td>
-                                            <div class="button-group">
-                                                <a data-href="create-event-publish.html" class="btn link-btn link-btn-success mr-10">Publish <i class="fa fa-tick"></i> </a>
-                                                <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
-                                                        class="fa fa-pencil-square-o"></i></a>
-                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
-                                                        class="fa fa-trash"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                    </p>
+                                                </a>
+                                            </td>
+                                            <td>4/10</td>
+                                            <td><span class="tagged tagged-success text-uppercase">Paid</span></td>
+                                            <td>$120</td>
+                                            <td>Draft</td>
+                                            <td>
+                                                <div class="button-group">
+                                                    <a href="create-event-ticket-edit.html" class="ticket-edit-js btn link-btn link-btn-icon mr-10"><i
+                                                            class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#delete-ticket" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- ticket edit popup -->
+                                <div class="ticket-add-form ticket-add-form-js active visible">
+                                    <div class="ticket-add-form-wrapper">
+                                        <div class="ticket-add-form-head add-ticket-padding">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="m-0">Edit Ticket</h2>
+
+                                                <button type="button" class="btn btn-none popup-form-close-js">
+                                                    <span class="d-none d-sm-inline-block mr-5">Close</span> <img src="../../dist/img/close_black_32.png" alt="close">
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-body add-ticket-padding">
+                                            <div class="ticket-add-form-body-wrapper">
+                                                <div class="form-group">
+                                                    <label for="ticket-type">Ticket Type</label>
+                                                    <select id="ticket-type" class="form-control select2-searchless">
+                                                        <option value="paid" selected>Paid</option>
+                                                        <option value="free">Free</option>
+                                                        <option value="donation">Donation</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="" for="ticket-name">Name</label>
+                                                    <input type="text" id="ticket-name" class="form-control" name="TicketName" value="Tanek Salazar">
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="" for="ticket-quantity">Quantity</label>
+                                                            <input type="number" id="ticket-quantity" class="form-control" name="TicketQuantity" value="10">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="" for="ticket-quantity-per-order">Tickets per order</label>
+                                                            <input type="number" id="ticket-quantity-per-order" class="form-control" name="TicketQuantity" value="6">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <div class="input-wrapper">
+                                                                <label class="" for="ticket-price">Price</label>
+                                                                <input type="text" id="ticket-price" class="form-control" name="TicketPrice" value="120">
+                                                            </div>
+                                                            <div class="d-flex justify-space-between align-center">
+                                                                <p class="m-0 text-small">Buyer total: $120</p>
+                                                                <a href="javascript:void(0)" class="text-small text-underline" data-toggle="modal" data-target="#event-price-details">View Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- date and time -->
+                                                <div>
+                                                    <hr>
+                                                    <div class="form-section-head">
+                                                        <h2 class="m-0 mb-10">Sales Time</h2>
+                                                        <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-start">Sales Start</label>
+                                                                <input type="text" id="date-start"
+                                                                       class="form-control datepicker"
+                                                                       data-start="now"
+                                                                       name="StartDate"
+                                                                       placeholder="dd/mm/yyyy"
+                                                                       autocomplete="off" value="18/12/2022">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-start">Start Time</label>
+                                                                        <select id="time-start" class="form-control select2" name="StartTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM">06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM" selected>08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM">05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM">09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="date-end">Sales End</label>
+                                                                <input type="text"
+                                                                       id="date-end"
+                                                                       class="form-control datepicker"
+                                                                       name="EndDate"
+                                                                       placeholder="dd/mm/yyyy"
+                                                                       autocomplete="off" value="18/12/2022">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="form-group">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label" for="time-end">End Time</label>
+                                                                        <select id="time-end" class="form-control select2" name="EndTime">
+                                                                            <option>Select Time</option>
+                                                                            <option value="12:00 AM">12:00 AM</option>
+                                                                            <option value="12:30 AM">12:30 AM</option>
+                                                                            <option value="01:00 AM">01:00 AM</option>
+                                                                            <option value="01:30 AM">01:30 AM</option>
+                                                                            <option value="02:00 AM">02:00 AM</option>
+                                                                            <option value="02:30 AM">02:30 AM</option>
+                                                                            <option value="03:00 AM">03:00 AM</option>
+                                                                            <option value="03:30 AM">03:30 AM</option>
+                                                                            <option value="04:00 AM">04:00 AM</option>
+                                                                            <option value="04:30 AM">04:30 AM</option>
+                                                                            <option value="05:00 AM">05:00 AM</option>
+                                                                            <option value="05:30 AM">05:30 AM</option>
+                                                                            <option value="06:00 AM">06:00 AM</option>
+                                                                            <option value="06:30 AM">06:30 AM</option>
+                                                                            <option value="07:00 AM">07:00 AM</option>
+                                                                            <option value="07:30 AM">07:30 AM</option>
+                                                                            <option value="08:00 AM">08:00 AM</option>
+                                                                            <option value="09:00 AM">09:00 AM</option>
+                                                                            <option value="09:30 AM">09:30 AM</option>
+                                                                            <option value="12:00 PM">12:00 PM</option>
+                                                                            <option value="12:30 PM">12:30 PM</option>
+                                                                            <option value="01:00 PM">01:00 PM</option>
+                                                                            <option value="01:30 PM">01:30 PM</option>
+                                                                            <option value="02:00 PM">02:00 PM</option>
+                                                                            <option value="02:30 PM">02:30 PM</option>
+                                                                            <option value="03:00 PM">03:00 PM</option>
+                                                                            <option value="03:30 PM">03:30 PM</option>
+                                                                            <option value="04:00 PM">04:00 PM</option>
+                                                                            <option value="04:30 PM">04:30 PM</option>
+                                                                            <option value="05:00 PM" selected>05:00 PM</option>
+                                                                            <option value="05:30 PM">05:30 PM</option>
+                                                                            <option value="06:00 PM">06:00 PM</option>
+                                                                            <option value="06:30 PM">06:30 PM</option>
+                                                                            <option value="07:00 PM">07:00 PM</option>
+                                                                            <option value="07:30 PM">07:30 PM</option>
+                                                                            <option value="08:00 PM">08:00 PM</option>
+                                                                            <option value="09:00 PM">09:00 PM</option>
+                                                                            <option value="09:30 PM">09:30 PM</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="ticket-add-form-foot add-ticket-padding">
+                                            <div class="text-right button-group">
+                                                <button type="button" class="btn btn-default popup-form-close-js btn-lg mr-15" data-dismiss="modal">Cancel</button>
+                                                <a href="create-event-single.html" class="btn btn-success btn-lg ticket-save-js">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- addon tab -->
                             <div class="tab-pane active" id="addons">
-                                <div class="text-right mb-10">
-                                    <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
+                                <div class="d-sm-flex justify-space-between align-center mb-20">
+                                    <h2>Add-Ons List</h2>
+
+                                    <div class="">
+                                        <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Create Add-On</span> </a>
+                                    </div>
                                 </div>
 
-                                <div class="table-custom">
-                                    <div class="d-none d-md-block">
-                                        <div class="table-row table-head bg-gray-light font-600 mb-10">
-                                            <div class="table-column w-40">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered-2 m-0">
+                                        <thead>
+                                        <tr>
+                                            <th>
                                                 Addon
-                                            </div>
+                                            </th>
+                                            <th>Unit Sold</th>
+                                            <th>
+                                                Price
+                                            </th>
+                                            <th>
+                                                Action
+                                            </th>
+                                        </tr>
+                                        </thead>
 
-                                            <div class="table-column w-60">
-                                                <div class="d-flex justify-space-between align-center">
-                                                    <span class="">Type</span>
-                                                    <span>Price</span>
-                                                    <div>Action</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <tbody>
+                                        <tr>
 
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-40">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <a href="create-event-addon-edit.html" class="text-dark addon-edit-js">
-                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                        <p class="p-0">
+                                            <td>
+                                                <a href="create-event-addon-edit.html" class="text-dark">
+                                                    <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
+                                                    <p class="p-0">
                                                         <span class="d-inline-flex align-center mr-10">
                                                             <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
                                                         </span>
-                                                            <span class="d-none d-md-inline-flex align-center">
+                                                        <span class="d-none d-md-inline-flex align-center">
                                                             <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
                                                         </span>
-                                                        </p>
-                                                    </a>
-                                                </div>
+                                                    </p>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                4/10
+                                            </td>
+                                            <td>
+                                                $30
+                                            </td>
 
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="table-column w-60">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <span class="tagged tagged-success text-uppercase">Paid</span>
-                                                <span>$120</span>
+                                            <td class="">
                                                 <div class="button-group">
-                                                    <a href="create-event-addon-edit.html" class="btn link-btn link-btn-icon addon-edit-js mr-10"><i
+                                                    <a href="create-event-addon-edit.html" class="btn link-btn link-btn-icon mr-10"><i
                                                             class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="javascript:void(0)"
-                                                       class="btn link-btn link-btn-danger link-btn-icon"
-                                                       data-toggle="modal"
-                                                       data-target="#delete-addon">
-                                                        <i class="fa fa-trash"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-row mb-10">
-                                        <div class="table-column w-40">
-                                            <div class="d-md-flex justify-space-between align-center">
-                                                <div class="mb-md-10">
-                                                    <a href="create-event-addon-edit.html" class="text-dark addon-edit-js">
-                                                        <p class="m-0 font-600 text-md-medium">Tanek Salazar</p>
-                                                        <p class="p-0">
-                                                        <span class="d-inline-flex align-center mr-10">
-                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> On Sale
-                                                        </span>
-                                                            <span class="d-none d-md-inline-flex align-center">
-                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
-                                                        </span>
-                                                        </p>
-                                                    </a>
+                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                            class="fa fa-trash"></i></a>
                                                 </div>
 
-                                                <div>
-                                                    4/10
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="table-column w-60">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <span class="tagged tagged-success text-uppercase">Free</span>
-                                                <p class="m-0 font-600"> -- </p>
-                                                <div class="button-group">
-                                                    <a href="create-event-addon-edit.html" class="btn link-btn link-btn-icon addon-edit-js mr-10"><i
-                                                            class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="javascript:void(0)"
-                                                       class="btn link-btn link-btn-danger link-btn-icon"
-                                                       data-toggle="modal"
-                                                       data-target="#delete-addon">
-                                                        <i class="fa fa-trash"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            </td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
                                 </div>
 
                                 <!-- Addon edit form popup -->
@@ -715,7 +891,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="form-group">
                                                                 <label class="form-label" for="date-start">Start Date</label>
-                                                                <input type="text" id="date-start"
+                                                                <input type="text" id="addon-date-start"
                                                                        class="form-control datepicker"
                                                                        data-start="now"
                                                                        name="StartDate"
@@ -730,7 +906,7 @@
                                                                 <div class="form-group">
                                                                     <div class="form-group">
                                                                         <label class="form-label" for="time-start">Start Time</label>
-                                                                        <select id="time-start" class="form-control select2" name="StartTime">
+                                                                        <select id="addon-time-start" class="form-control select2" name="StartTime">
                                                                             <option>Select Time</option>
                                                                             <option value="12:00 AM">12:00 AM</option>
                                                                             <option value="12:30 AM">12:30 AM</option>
@@ -781,7 +957,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="form-group">
                                                                 <label class="form-label" for="date-end">End Date</label>
-                                                                <input type="text" id="date-end"
+                                                                <input type="text" id="addon-date-end"
                                                                        class="form-control datepicker"
                                                                        name="EndDate"
                                                                        placeholder="dd/mm/yy"
@@ -794,7 +970,7 @@
                                                                 <div class="form-group">
                                                                     <div class="form-group">
                                                                         <label class="form-label" for="time-end">End Time</label>
-                                                                        <select id="time-end" class="form-control select2" name="EndTime">
+                                                                        <select id="addon-time-end" class="form-control select2" name="EndTime">
                                                                             <option>Select Time</option>
                                                                             <option value="12:00 AM">12:00 AM</option>
                                                                             <option value="12:30 AM">12:30 AM</option>
@@ -858,16 +1034,131 @@
                             <!-- promo codes tab -->
                             <div class="tab-pane" id="promo-codes">
                                 <div class="promo-empty">
-                                    <div class="text-center mb-10 mt-15">
-                                        <div class="empty-image">
-                                            <img src="../../dist/img/discount.png" alt="addon">
+                                    <div class="d-sm-flex justify-space-between align-center mb-20">
+                                        <h2>Promo Codes</h2>
+
+                                        <div class="">
+                                            <a class="btn btn-lg btn-primary popup-form-open-js mr-10" href="javascript:void(0)" data-target=".ticket-add-form-js"> <i class="fa fa-plus"></i> <span class="ml-2">Add Promo Code</span> </a>
                                         </div>
                                     </div>
 
-                                    <div class="text-center">
-                                        <h2 class="text-bold m-0 mb-10">Attract more attendees with promo codes</h2>
-                                        <p class="font-600 text-medium mb-30">With promo codes, you can offer reduced prices with discount codes or reveal hidden tickets to attendees with access codes.</p>
-                                        <a class="btn btn-lg btn-primary mr-10" href="#"> <i class="fa fa-plus"></i> <span class="ml-2">Create Promo Code</span> </a>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered-2 m-0">
+                                            <thead>
+                                            <tr>
+                                                <th>
+                                                    Name
+                                                </th>
+                                                <th>
+                                                    Discount
+                                                </th>
+                                                <th>
+                                                    Uses
+                                                </th>
+                                                <th>
+                                                    Status
+                                                </th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            <tr>
+
+                                                <td>
+                                                    VOUCHER
+                                                </td>
+                                                <td>
+                                                    10.00%
+                                                </td>
+                                                <td>
+                                                    25
+                                                </td>
+
+                                                <td>
+                                                    <span class="tagged tagged-success text-uppercase">Active</span>
+                                                </td>
+
+                                                <td class="">
+                                                    <div class="button-group">
+                                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                                class="fa fa-pencil-square-o"></i></a>
+                                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                                class="fa fa-trash"></i></a>
+                                                    </div>
+
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                    COUPON-2022
+                                                </td>
+                                                <td>
+                                                    $22
+                                                </td>
+                                                <td>
+                                                    30/50
+                                                    <div class="ticket-sell-scale" data-total="50">
+                                                        <div class="ticket-sold-scale" data-sold="35"></div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <span class="tagged tagged-success text-uppercase">Active</span>
+                                                </td>
+
+                                                <td class="">
+                                                    <div class="button-group">
+                                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                                class="fa fa-pencil-square-o"></i></a>
+                                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                                class="fa fa-trash"></i></a>
+                                                    </div>
+
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                    V-2021
+                                                </td>
+                                                <td>
+                                                    10.00%
+                                                </td>
+                                                <td>
+                                                    38/40
+                                                    <div class="ticket-sell-scale" data-total="40">
+                                                        <div class="ticket-sold-scale" data-sold="38"></div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <span class="tagged tagged-danger text-uppercase">Inactive</span>
+                                                </td>
+
+                                                <td class="">
+                                                    <div class="button-group">
+                                                        <a href="#" class="btn link-btn link-btn-icon mr-10"><i
+                                                                class="fa fa-pencil-square-o"></i></a>
+                                                        <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i
+                                                                class="fa fa-trash"></i></a>
+                                                    </div>
+
+
+                                                </td>
+
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -968,7 +1259,7 @@
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.7"></script>
+<script src="../../dist/js/custom_script.js?v=1.0.9"></script>
 
 
 </body>
