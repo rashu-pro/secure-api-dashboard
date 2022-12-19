@@ -29,25 +29,35 @@ if($('.overlay-scrollbar-js').length>0 && typeof $.fn.overlayScrollbars != 'unde
     $('.navbar .menu.overlay-scrollbar-js').overlayScrollbars({ });
 }
 //=== Initialize Select2 Elements
-if($(".select2").length>0){
-    $(".select2").select2();
+function select2(){
+    if($(".select2").length>0){
+        $(".select2").select2();
+    }
 }
+select2();
 
 //=== SELECT2 SEARCH FIELD LESS
-if($('.select2-searchless').length>0){
-    $('.select2-searchless').select2({
-        minimumResultsForSearch: -1
-    });
+function select2Searchless(){
+    if($('.select2-searchless').length>0){
+        $('.select2-searchless').select2({
+            minimumResultsForSearch: -1
+        });
+    }
 }
+select2Searchless();
 
 //=== INITIALIZING ICHECK
-if ($('.i-check').length > 0) {
-    $('.i-check').iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
-    });
+function icheck(){
+    if ($('.i-check').length > 0) {
+        $('.i-check').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    }
 }
+icheck();
+
 
 $(document).on('click', '.file-uploader-icon', function (e) {
     e.preventDefault();
@@ -55,20 +65,28 @@ $(document).on('click', '.file-uploader-icon', function (e) {
     self.closest('.file-uploader-wrapper').find('input[type=file]').trigger('click');
 });
 
-if($('.dropify').length>0){
-    $('.dropify').dropify();
+function dropify(){
+    if($('.dropify').length>0){
+        $('.dropify').dropify();
+    }
 }
+dropify();
+
 
 //=== datepicker initialization
-if($('.datepicker').length>0){
-    let startDate = true;
+function datePicker(){
+    if($('.datepicker').length>0){
+        let startDate = true;
 
-    $('.datepicker').datepicker({
-        'autoclose': true,
-        'format': 'dd/mm/yyyy',
-        'startDate': new Date()
-    });
+        $('.datepicker').datepicker({
+            'autoclose': true,
+            'format': 'dd/mm/yyyy',
+            'startDate': new Date()
+        });
+    }
 }
+datePicker();
+
 
 //=== height fix for ticket add popup
 ticketFormHeight();

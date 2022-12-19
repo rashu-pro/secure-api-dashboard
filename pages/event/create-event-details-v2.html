@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
     <!-- dropify -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- quil js(text-editor) -->
-    <link rel="stylesheet" href="../../node_modules/quill/dist/quill.core.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -620,24 +618,27 @@
 
 <!-- ck editor -->
 <script>
-  ClassicEditor
-    .create(document.querySelector('#editor'), {
-      toolbar: {
-        items: [
-          'heading', '|',
-          'fontfamily', 'fontsize', '|',
-          'alignment', '|',
-          'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-          'link', '|',
-          'bulletedList', 'numberedList', 'todoList', '|',
-          'code', 'codeBlock', '|',
-        ],
-        shouldNotGroupWhenFull: true
-      }
-    })
-    .catch(error => {
-      console.error(error);
-    });
+  if($('#editor').length>0){
+    ClassicEditor
+      .create(document.querySelector('#editor'), {
+        toolbar: {
+          items: [
+            'heading', '|',
+            'fontfamily', 'fontsize', '|',
+            'alignment', '|',
+            'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+            'link', '|',
+            'bulletedList', 'numberedList', 'todoList', '|',
+            'code', 'codeBlock', '|',
+          ],
+          shouldNotGroupWhenFull: true
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
 </script>
 
 
