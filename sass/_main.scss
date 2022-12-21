@@ -1744,19 +1744,19 @@ table tr.bg-white tr th{
   padding:0 10px;
 }
 
-.box{
-  &-header{
-    @media(min-width:992px){
-      padding:15px 30px;
-    }
-  }
-  &-body{
-
-    @media(min-width:992px){
-      padding:20px 30px;
-    }
-  }
-}
+//.box{
+//  &-header{
+//    @media(min-width:992px){
+//      padding:15px 30px;
+//    }
+//  }
+//  &-body{
+//
+//    @media(min-width:992px){
+//      padding:20px 30px;
+//    }
+//  }
+//}
 
 
 @media(max-width:992px){
