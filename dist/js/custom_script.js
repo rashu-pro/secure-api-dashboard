@@ -116,6 +116,7 @@ let base_url = window.location.origin,
     pathString = window.location.pathname,
     pathArray = pathString.split( '/' );
 let consoleString = `base url: ${base_url}\nHost: ${host}\n Path: ${pathString}\nPath array: ${pathArray}`;
+console.log("path string:", pathString);
 
 $('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
     if($(element).data('route') === pathString){
