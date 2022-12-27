@@ -77,17 +77,19 @@ dropify();
 function datePicker(){
     let datePickerSelector = $('.datepicker');
     if(datePickerSelector.length>0){
-        let startDate = new Date('01/01/1970');
+        datePickerSelector.each(function (i, element){
+            let startDate = new Date('01/01/1970');
+            if($(element).attr('data-start'))
+                startDate = new Date();
 
-        if(datePickerSelector.attr('data-start'))
-            startDate = new Date(datePickerSelector.attr('data-start'));
+            $(element).datepicker({
+                'autoclose': true,
+                'format': 'mm/dd/yyyy',
+                'todayHighlight': true,
+                'startDate': startDate
+            });
+        })
 
-        datePickerSelector.datepicker({
-            'autoclose': true,
-            'format': 'mm/dd/yyyy',
-            'todayHighlight': true,
-            'startDate': startDate
-        });
     }
 }
 datePicker();

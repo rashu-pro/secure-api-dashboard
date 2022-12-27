@@ -58,6 +58,12 @@ textarea.form-control{
         }
       }
     }
+
+    &-addon{
+      .btn{
+        padding:6px 12px;
+      }
+    }
   }
 }
 
