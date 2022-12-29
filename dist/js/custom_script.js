@@ -238,6 +238,23 @@ $(document).on('click', '.event-navigation-close-js', function (e){
     $('body').removeClass('overflow-hidden');
 })
 
+$(document).on('click', '.copy-clipboard-js', function (e){
+    e.preventDefault();
+    let text = $(this).attr('data-text');
+    copyContent(text);
+    $(this).attr('title', 'Link Copied')
+      .tooltip('fixTitle')
+      .tooltip('show');
+})
+const copyContent = async (text) => {
+    try {
+        await navigator.clipboard.writeText(text);
+        console.log('Content copied to clipboard');
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
+
 /** --Click Action **/
 
 

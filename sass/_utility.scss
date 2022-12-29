@@ -119,8 +119,16 @@
     font-size: 20px;
   }
 
+  &-lg{
+    font-size: 22px;
+  }
+
   &-xs-small{
     font-size: 8px;
+  }
+
+  &-normalcase{
+    text-transform: none;
   }
 }
 

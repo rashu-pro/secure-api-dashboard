@@ -4,7 +4,7 @@
   "description": "Secure api portal UI customization",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/style.scss dist/css/custom.css -w"
+    "compile:sass": "sass sass:dist/css -w"
   },
   "repository": {
     "type": "git",

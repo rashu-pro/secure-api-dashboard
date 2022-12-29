@@ -1300,30 +1300,7 @@ HELP PAGE
 .select2-dropdown .select2-search__field:focus, .select2-search--inline .select2-search__field:focus{
   border:0;
 }
-.btn{
-  font-weight:600;
-  text-transform: uppercase;
-  border-radius:6px;
-}
-.btn img{
-  max-height: 18px;
-  position: relative;
-  top:-2px;
-}
-.btn img.img-after{
-  margin-left:3px;
-}
-.btn img.img-before{
-  margin-right:3px;
-}
-.btn-navy{
-  background-color: #001f3f;
-  color:#fff;
-}
-.btn-navy:hover{
-  background-color: #00295b;
-  color:#fff;
-}
+
 
 .filter-box{
   /*min-height: 68px;*/
