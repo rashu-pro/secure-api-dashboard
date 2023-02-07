@@ -3151,24 +3151,6 @@ table tr.bg-white tr th {
   padding-bottom: 10px;
 }
 
-.back-to-dashboard {
-  position: absolute;
-  left: 108px;
-  top: 48%;
-  transform: translateY(-50%);
-  color: #333;
-  font-weight: 600;
-}
-.back-to-dashboard:hover .img-back {
-  transform: translateX(-1px);
-}
-@media (min-width: 768px) {
-  .back-to-dashboard {
-    left: 15px;
-    top: 50%;
-  }
-}
-
 .ticket-icon {
   max-width: 70%;
 }

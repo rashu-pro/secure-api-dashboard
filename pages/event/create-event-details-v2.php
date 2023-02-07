@@ -459,11 +459,6 @@
                 <img src="../../dist/img/close_black_32.png" alt="event navigation close">
             </button>
 
-            <a href="event-dashboard.html" class="back-to-dashboard">
-                <img src="../../dist/img/back.png" alt="back" class="img-back" style="max-height: 18px">
-                <span><span class="hidden-md">Back to</span> Dashboard </span>
-            </a>
-
             <div class="nav-event-navigation-holder">
                 <ul class="nav nav-event-navigation d-flex justify-center">
                     <li class="complete"><a href="#">Basic Info</a> </li>
@@ -495,9 +490,17 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="file-uploader-wrapper">
-                                    <input type="file" class="file-uploader image-input dropify" id="image-input">
-                                </div>
+                                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+                                    <div class="file-uploader-wrapper">
+                                        <input type="file"
+                                               name="CoverImage"
+                                               class="file-uploader image-input dropify"
+                                               data-url="avatar.png"
+                                               id="image-input">
+                                    </div>
+                                    <input type="file" id="image-file" name="ImageTest" class="image-url" value="">
+                                    <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                </form>
                                 <div>
                                     <ul class="d-sm-flex justify-space-between pt-4 pl-15">
                                         <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
@@ -505,6 +508,18 @@
                                         <li class="text-small text-info">Supported image files: JPEG or PNG</li>
                                     </ul>
                                 </div>
+                                <pre>
+                                    <?php
+                                    var_dump($_FILES);
+                                    if(isset($_POST['submit'])):
+                                        $tmp_name = $_FILES["ImageTest"]["tmp_name"];
+                                        // basename() may prevent filesystem traversal attacks;
+                                        // further validation/sanitation of the filename may be appropriate
+                                        $name = basename($_FILES["ImageTest"]["name"]);
+                                        move_uploaded_file($tmp_name, "upload/$name");
+                                    endif;
+                                    ?>
+                                </pre>
                             </div>
                         </div>
 
@@ -644,6 +659,33 @@
       });
   }
 
+  function loadURLToInputFiled(url, filename, element){
+    getImgURL(url, (imgBlob)=>{
+      // Load img blob to input
+      // WIP: UTF8 character error
+      let file = new File([imgBlob], filename,{type:"", lastModified:new Date().getTime()}, 'utf-8');
+      let container = new DataTransfer();
+      container.items.add(file);
+      $(element).files = container.files;
+
+    })
+  }
+  // xmlHTTP return blob respond
+  function getImgURL(url, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+      callback(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
+  }
+
+  $('.file-uploader').each(function (i, element){
+    if($(element).attr('data-url') && $(element).attr('data-url')!==''){
+      loadURLToInputFiled($(element).attr('data-url'), 'avatar.png', element);
+    }
+  })
 </script>
 
 
