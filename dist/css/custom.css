@@ -544,6 +544,9 @@ textarea.form-control {
 .control-label {
   text-align: right !important;
 }
+.control-label .text-medium {
+  line-height: 1;
+}
 
 .input-lg {
   font-size: 15px !important;
@@ -2182,6 +2185,11 @@ HELP PAGE
 .select2-container--default .select2-selection--multiple {
   border-color: #c3c3c3;
   position: relative;
+  height: 36px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  display: flex;
+  overflow-x: auto;
 }
 
 .select2-container--default .select2-selection--multiple:before {
