@@ -111,6 +111,15 @@
     padding:8px 20px;
   }
 
+  &-xl{
+    padding:10px 25px;
+    @media (min-width: 768px){
+      font-size: 20px;
+      min-width:120px;
+      padding:12px 40px;
+    }
+  }
+
   &-md{
     padding:8px 12px;
   }

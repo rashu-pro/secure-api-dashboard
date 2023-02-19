@@ -26,6 +26,7 @@
   "homepage": "https://github.com/rashu-pro/secure-api-dashboard#readme",
   "dependencies": {
     "@editorjs/editorjs": "^2.26.2",
-    "quill": "^1.3.6"
+    "quill": "^1.3.6",
+    "summernote": "^0.8.20"
   }
 }
