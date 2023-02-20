@@ -30,7 +30,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=2.0.0">
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=2.0.1">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -447,92 +447,453 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        <!-- event navigation -->
-        <div class="bg-white nav-event-navigation-wrapper">
-
-            <button type="button" class="btn btn-transparent nav-event-navigation-toggler nav-event-navigation-toggler-js">
-                <img src="../../dist/img/dots.png" alt="event navigation">
-            </button>
-            <span class="event-navigation-text">Basic Info</span>
-
-            <button type="button" class="btn btn-transparent event-navigation-close event-navigation-close-js">
-                <img src="../../dist/img/close_black_32.png" alt="event navigation close">
-            </button>
-
-            <div class="nav-event-navigation-holder">
-                <ul class="nav nav-event-navigation d-flex justify-center">
-                    <li class="active"><a href="#">Basic Info</a> </li>
-                    <li class=""><a href="#">Campaign Details</a> </li>
-                    <li><a href="#">Campaign Story</a> </li>
-                </ul>
-            </div>
-
-        </div>
+        <section class="content-header">
+            <h1>
+                My Campaigns
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Campaigns </a></li>
+                <li class="active">My Campaigns</li>
+            </ol>
+        </section>
 
         <!-- Main content -->
-        <section class="content content-box">
+<!--        <section class="content content-box content-box-left">-->
+        <section class="content">
+            <!--my campaign tab-->
+            <div class="tab-wrapper">
+                <!--Person-->
+                <div class="nav-tabs-custom tabs-custom nav-tabs-custom-md" id="person-tab">
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="person-info-li"><a href="#campaign-active" data-toggle="tab"
+                                                                  aria-expanded="true">Active(2)</a></li>
+                        <li id="person-address-li" class=""><a href="#campaign-draft" data-toggle="tab"
+                                                               aria-expanded="false">Draft(1)</a></li>
+                        <li id="person-other-li" class=""><a href="#campaign-closed" data-toggle="tab"
+                                                             aria-expanded="false">Closed(2)</a></li>
+                    </ul>
 
-            <div class="box box-success mt-50">
+                    <div class="callout callout-danger" style="display:none">
+                        <h4 class="callout-title"></h4>
+                        <p class="callout-message"></p>
+                    </div>
 
-                <div class="box-body">
+                    <div class="tab-content p-30">
+                        <div class="tab-pane active" id="campaign-active">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="card-box bg-white">
+                                            <div class="card-box-image">
+                                                <a href="campaign-dashboard.html">
+                                                    <img src="../../dist/img/earthquake-damage.jpg" alt="earthquake damage">
+                                                </a>
 
-                    <div class="form-wrapper v2 w-app pt-15 pb-30">
+                                            </div>
+                                            <div class="card-box-content">
+                                                <h3 class="card-box-title m-0 mb-20"><a href="campaign-dashboard.html">Lorem ipsum dolor sit amet, consectetur.</a> </h3>
+                                                <div class="ticket-sell-scale" data-total="8000">
+                                                    <div class="ticket-sold-scale" data-sold="1600"></div>
+                                                </div>
+                                                <p class="m-0 text-md">$1600 funded of $8000</p>
+                                            </div>
+                                            <div class="card-box-foot">
+                                                <div class="d-flex align-center justify-space-between text-md">
+                                                    <div>
+                                                        <img src="../../dist/img/people.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>2</span>
+                                                    </div>
 
-                        <!-- basic info -->
-                        <div>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Basic Info</h2>
-                                <p class="text-medium mb-30">Changes can be made later if needed.</p>
-                            </div>
+                                                    <div>
+                                                        <img src="../../dist/img/time-left.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>25 days left</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <div class="form-section-head">
-                                    <h2 class="m-0 mb-10">
-                                        <label for="title-campaign" class="m-0">Campaign Title</label>
-                                        <span class="text-danger text-md font-600">*</span></h2>
-                                    <p>Tip: keep the title short and simple.</p>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="card-box bg-white">
+                                            <div class="card-box-image">
+                                                <a href="campaign-dashboard.html"><img src="../../dist/img/image-event.jpg" alt="event"></a>
+                                            </div>
+                                            <div class="card-box-content">
+                                                <h3 class="card-box-title m-0 mb-20"><a href="campaign-dashboard.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a> </h3>
+                                                <div class="ticket-sell-scale" data-total="7000">
+                                                    <div class="ticket-sold-scale" data-sold="6000"></div>
+                                                </div>
+                                                <p class="m-0 text-md">$6000 funded of $7000</p>
+                                            </div>
+                                            <div class="card-box-foot">
+                                                <div class="d-flex align-center justify-space-between text-md">
+                                                    <div>
+                                                        <img src="../../dist/img/people.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>15</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <img src="../../dist/img/time-left.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>4 days left</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <input type="text"
-                                       id="title-campaign"
-                                       class="form-control form-control-lg"
-                                       name="TitleCampaign"
-                                       placeholder="Title">
-                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
                             </div>
-
-                            <div class="form-group">
-                                <div class="form-section-head">
-                                    <h2 class="m-0 mb-10">
-                                        <label for="goal-amount" class="m-0">Goal Amount</label>
-                                        <span class="text-danger text-md font-600">*</span></h2>
-                                    <p>Tip: What is the goal of your campaign?</p>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon" id="basic-addon1">$</span>
-                                    <input type="number"
-                                           id="goal-amount"
-                                           class="form-control form-control-lg"
-                                           name="TitleCampaign"
-                                           placeholder=""
-                                           style="font-size: 3rem; font-weight: 600">
-                                </div>
-                            </div>
-
                         </div>
+                        <!-- /.tab-pane -->
 
-                        <div class="form-wrapper-foot pt-15">
-                            <hr class="hr-2">
-                            <div class="text-right button-group">
-                                <button type="button" class="btn btn-default btn-xl mr-15">Discard</button>
-                                <a href="create-campaign-details.html" class="btn btn-success btn-xl">Save & Continue</a>
+                        <div class="tab-pane" id="campaign-draft">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="card-box bg-white">
+                                            <div class="card-box-image">
+                                                <a href="campaign-dashboard.html">
+                                                    <img src="../../dist/img/earthquake-damage.jpg" alt="earthquake damage">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-box-content">
+                                                <h3 class="card-box-title m-0 mb-20"><a href="campaign-dashboard.html">Lorem ipsum dolor sit amet, consectetur.</a> </h3>
+                                                <div class="ticket-sell-scale" data-total="8000">
+                                                    <div class="ticket-sold-scale" data-sold="1600"></div>
+                                                </div>
+                                                <p class="m-0 text-md">$0 funded of $8000</p>
+                                            </div>
+                                            <div class="card-box-foot">
+                                                <a href="#" class="hover-underlined">Edit Campaign</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+
+                        <div class="tab-pane" id="campaign-closed">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="card-box bg-white">
+                                            <div class="card-box-image">
+                                                <a href="campaign-dashboard.html">
+                                                    <img src="../../dist/img/earthquake-damage.jpg" alt="earthquake damage">
+                                                </a>
+                                            </div>
+                                            <div class="card-box-content">
+                                                <h3 class="card-box-title m-0 mb-20"><a href="campaign-dashboard.html">Lorem ipsum dolor sit amet, consectetur.</a> </h3>
+                                                <div class="ticket-sell-scale" data-total="8000">
+                                                    <div class="ticket-sold-scale" data-sold="7500"></div>
+                                                </div>
+                                                <p class="m-0 text-md">$7500 funded of $8000</p>
+                                            </div>
+                                            <div class="card-box-foot">
+                                                <div class="d-flex align-center justify-space-between text-md">
+                                                    <div>
+                                                        <img src="../../dist/img/people.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>12</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <img src="../../dist/img/time-left.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>0 days left</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <span class="tagged tagged-danger">CLOSED</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="card-box bg-white">
+                                            <div class="card-box-image">
+                                                <a href="campaign-dashboard.html"><img src="../../dist/img/image-event.jpg" alt="event"></a>
+                                            </div>
+                                            <div class="card-box-content">
+                                                <h3 class="card-box-title m-0 mb-20"><a href="campaign-dashboard.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a> </h3>
+                                                <div class="ticket-sell-scale" data-total="7000">
+                                                    <div class="ticket-sold-scale" data-sold="7000"></div>
+                                                </div>
+                                                <p class="m-0 text-md">$7000 funded of $7000</p>
+                                            </div>
+                                            <div class="card-box-foot">
+                                                <div class="d-flex align-center justify-space-between text-md">
+                                                    <div>
+                                                        <img src="../../dist/img/people.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>20</span>
+                                                    </div>
+
+                                                    <div>
+                                                        <img src="../../dist/img/time-left.png"
+                                                             style="max-width: 16px;margin-right: 4px;"
+                                                             alt="contributors">
+                                                        <span>0 days left</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <span class="tagged tagged-danger">CLOSED</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+
+                <!-- /.nav-tabs-custom -->
+                <div class="box box-success" id="add-spouse-and-child" style="display:none">
+                    <div class="box-header">
+                        <h4 class="box-title text-center">Add Person's Other Family Members</h4>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a href="/admin/persons" class="btn btn-default btn-lrg">
+                                    <i class="fa fa-arrow-circle-left"></i>&nbsp; Back to List
+                                </a>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary btn-lrg" id="add-spouse">
+                                    <i class="fa fa-user"></i>&nbsp; Add Spouse
+                                </button>
+                                &nbsp;
+                                <button type="button" class="btn btn-success btn-lrg" id="add-childs">
+                                    <i class="fa fa-users"></i>&nbsp; Add Childs
+                                </button>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
+                <!--Spouse-->
+                <div class="box box-success" id="add-person-spouse" style="display:none">
+                    <div class="box-header">
+                        <h4 class="box-title">Spuose Information</h4>
+                    </div>
+                    <div class="box-body">
+                        <form class="form-horizontal" id="spouse-info-form" novalidate="novalidate">
+                            <input type="hidden" name="UniqueKey" value="" class="unique-key">
+                            <input type="hidden" name="isSpouse" value="True">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3" for="first-name-spouse">First Name</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control text-box single-line" id="first-name-spouse"
+                                                   name="FirstName" required="required" type="text" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="FirstName"
+                                                  data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-9">
+                                            <div class="checkbox checkbox-inline">
+                                                <label>
+                                                    <input type="checkbox" id="no-email-checkbox-spouse"> No Email <span
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        title="If checked, Email is not required."><i
+                                                        class="fa fa-question-circle"></i></span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox checkbox-inline">
+                                                <label>
+                                                    <input type="checkbox" id="create-user-checkbox-spouse"> Create User
+                                                    <span data-toggle="tooltip" data-placement="top"
+                                                          title="If checked, A User will create."><i
+                                                            class="fa fa-question-circle"></i></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="create-user-spouse" name="createUser" value="">
+                                    </div>
+
+                                    <div class="form-group has-error" id="email-address-validation-div-spouse">
+                                        <label class="control-label col-md-3" for="email-address"> Email Address</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control text-box single-line valid" data-val="true"
+                                                   data-val-email="The Email field is not a valid e-mail address."
+                                                   id="email-address-spouse" name="EmailAddress" required="required"
+                                                   type="email" value="">
+                                            <span class="text-danger field-validation-valid"
+                                                  data-valmsg-for="EmailAddress" data-valmsg-replace="true"
+                                                  id="email-address-validation-spouse">There is already a record in our database with your email address. Please contact support.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3" for="date-of-birth">Date of Birth</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control datepicker text-box single-line" data-val="true"
+                                                   data-val-date="The field Date of Birth must be a date."
+                                                   id="dob-spouse" name="DOB" type="datetime" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="DOB"
+                                                  data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3" for="last-name">Last Name</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control text-box single-line" id="last-name-spouse"
+                                                   name="LastName" required="required" type="text" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="LastName"
+                                                  data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3" for="cell-number">Mobile Number</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control text-box single-line"
+                                                   data-inputmask="'mask':'(999) 999-9999'" data-mask=""
+                                                   id="cell-number-spouse" name="CellNumber" type="text" value="">
+                                            <span class="field-validation-valid text-danger"
+                                                  data-valmsg-for="CellNumber" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="display:none" id="user-password-spouse">
+                                        <label class="control-label col-md-3" for="Password">Password</label>
+                                        <div class="col-md-9">
+                                            <input class="form-control text-box single-line valid"
+                                                   id="user-password-spouse" name="Password" type="password" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Password"
+                                                  data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-11">
+                                        <button type="button" id="btn-spouse-info"
+                                                class="btn btn-success btn-lg pull-right">Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Childs-->
+                <div class="box box-success" id="add-person-childs" style="display:none">
+                    <div class="box-header">
+                        <h3 class="box-title text-center">Childs</h3>
+                    </div>
+                    <div class="box-body">
+                        <form id="child-info-form">
+                            <input type="hidden" name="personKey" value="" class="unique-key">
+                            <input type="hidden" name="spouseKey" value="" class="unique-key-spouse">
+                            <div class="custom-wrapper">
+                                <div class="form-row-wrapper">
+                                    <div class="row field-row form-row-head">
+                                        <span class="serial">0.</span>
+                                        <div class="col-md-6">
+                                            <div class="row form-row">
+                                                <div class="col-md-6">
+                                                    <label>First Name</label>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label>Last Name</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row form-row">
+                                                <div class="col-md-6">
+                                                    <label>Gender</label>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label>Date of Birth</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row field-row form-row first-row">
+                                        <span class="serial">1.</span>
+
+                                        <div class="col-md-6">
+                                            <div class="row form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="StudentFirstName[]"
+                                                               class="form-control chaild-first-name">
+                                                        <span class="field-validation-valid text-danger"
+                                                              data-valmsg-for="FirstName"
+                                                              data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="StudentLastName[]"
+                                                               class="form-control chaild-last-name">
+                                                        <span class="field-validation-valid text-danger"
+                                                              data-valmsg-for="LastName"
+                                                              data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="row form-row">
+                                                <div class="col-md-6">
+                                                    <select name="StudentGender[]" class="form-control">
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Undeclared">Undeclared</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="date" name="Dob[]" class="form-control chaild-dob">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="action-area text-right">
+                                            <a class="add-row btn btn-info"><i class="fa fa-plus"></i> </a>
+                                            <a class="delete-row btn btn-danger"><i class="fa fa-trash"></i> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button type="button" id="btn-child-info"
+                                                class="btn btn-success btn-lg pull-right">Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="overlay" style="display:none">
+                    <i class="fa fa-refresh fa-spin"></i>
+                </div>
             </div>
         </section>
         <!-- /.content -->
