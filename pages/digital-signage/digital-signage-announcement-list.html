@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digital Signage: Announcement</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+
+    <!-- syncfusion css -->
+    <link rel="stylesheet" href="../../dist/css/syncfusion.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.5">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition skin-red sidebar-mini">
+<div class="wrapper">
+
+    <!-- header -->
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="../../dashboard_new.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu dropdown-custom-action dropdown-company company-dropdown-js">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="dropdown-toggle-content">
+                                <div class="dropdown-toggle-content-inner">
+                                    <div class="dropdown-toggle-icon">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                    </div>
+                                    <div class="dropdown-toggle-title">IWS-ICGC</div>
+                                </div>
+
+                                <div class="dropdown-toggle-sign">
+                                    <img src="../../dist/img/down-arrow_white.png" alt="dropdown-toggle">
+                                </div>
+
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="input-group input-group-transparent">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <input type="text" class="form-control search-dropdown" placeholder="Search By Name">
+                            </div>
+                            <li>
+                                <ul class="menu overlay-scrollbar-js">
+                                    <li class="dropdown-menu-child current" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="ISNA">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/isna/344172_60x60.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                ISNA
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Al-Azhar Foundation
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Al-Azhar Foundation
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                IWS-ICGC
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img class="company-img" src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                            </div>
+                                            <h4 class="dropdown-child-title">
+                                                Demo-Mosque
+                                            </h4>
+                                            <p class="dropdown-child-subtitle">
+                                                CompanyAdmin
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Alexander Pierce</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="../../dist/img/avatar.png" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>admin</p>
+
+                    <!-- Status -->
+                    <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">MENU</li>
+                <!-- Optionally, you can add icons to the links -->
+
+                <li class="">
+                    <a href="../../dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-graduation-cap"></i> <span>School</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="../tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                </li>
+
+                <li class="">
+                    <a href="../tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
+                </li>
+                <li class="treeview">
+                    <a href="../tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../tables/data_student_details.html">Student Details</a> </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="data_parents.html"><i class="fa fa-male"></i> <span>Parents</span></a>
+
+                </li>
+                <li class="">
+                    <a href="../tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
+
+                </li>
+                <li class="">
+                    <a href="data_teachers.html"><i class="fa fa-user"></i> <span>Teachers</span></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Settings</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../tables/data_topics.html">Topics</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview active">
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-television"></i>
+                        <span>Digital Signage</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </span>
+                    </a>
+
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="digital-signage-prayer-times.html">Prayer Times</a>
+                        </li>
+                        <li class="active">
+                            <a href="digital-signage-announcement.html">Announcement</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-sticky-note"></i> <span>Assignments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="../tables/data_assignments.html">Due Assignments</a></li>
+                        <li><a href="../forms/form_create_assignment.html">Create Assignment</a></li>
+                        <li><a href="../tables/data_assignments.html">All Assignments</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-calendar"></i> <span>Events</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../tables/data_events.html">Event List</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-users"></i> <span>Persons</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="data_persons.html">All Persons</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview ">
+                    <a href="#">
+                        <i class="fa fa-gift"></i> <span>Payments</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="data_pledges.html">Pledges</a></li>
+                        <li><a href="/admin/give/payments">Payments</a></li>
+                        <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
+                        <li><a href="/admin/give/company/customers">CC Customers</a></li>
+                        <li><a href="/admin/give/company/settings">Setup</a></li>
+                        <li><a href="/admin/give/company/deposits">CC Deposits</a></li>
+                        <li><a href="/admin/donation/categories">Donation Categories</a></li>
+                        <li><a href="/admin/give/company/products">CC Products</a></li>
+
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="/admin/users"><i class="fa fa-user"></i> <span>User Settings</span></a>
+
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cog"></i> <span>Components</span>
+                        <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class=""><a href="../components/btn_action.html"> Action Button </a></li>
+                        <li class=""><a href="../components/btn_action_no_text.html"> Action Button (no text) </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+<!--            <h1>-->
+<!--                Digital Signage-->
+<!--            </h1>-->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="tab-wrapper">
+                <div class="tab-nav">
+                    <div class="tab-nav-inner">
+                        <a href="digital-signage-prayer-times.html"
+                           class="tab-nav-link">
+                            Prayer Times
+                        </a>
+                        <a href="digital-signage-announcement.html"
+                           class="tab-nav-link active">
+                            Announcement
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="tab-details pt-30">
+
+                    <div class="tab-wrapper">
+                        <!--Person-->
+                        <div class="nav-tabs-custom tabs-custom" id="person-tab">
+                            <ul class="nav nav-tabs">
+                                <li class="active" id="person-info-li">
+                                    <a href="#announcement"
+                                       data-toggle="tab"
+                                       aria-expanded="true">
+                                        Announcement
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#ticker"
+                                       data-toggle="tab"
+                                       aria-expanded="false">
+                                        Ticker
+                                    </a>
+                                </li>
+
+                                <li class="">
+                                    <a href="#event"
+                                       data-toggle="tab"
+                                       aria-expanded="false">
+                                        Event
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content p-30">
+
+                                <!-- tab - announcement -->
+                                <div class="tab-pane active" id="announcement">
+                                    <div class="row">
+
+                                        <div class="col-sm-12">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="text-bold text-blue">All Announcements</h2>
+
+                                                <a class="btn btn-lg btn-primary mr-10" href="digital-signage-announcement-create.html">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span class="ml-2">Add Announcement</span>
+                                                </a>
+                                            </div>
+                                            <!-- ticker list -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered-2 m-0 bg-white">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Announcement Title
+                                                        </th>
+                                                        <th>Status</th>
+                                                        <th>
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-danger text-uppercase">Inactive</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- tab - ticker -->
+                                <div class="tab-pane" id="ticker">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <h2 class="text-bold text-blue">All Tickers</h2>
+                                            <!-- ticker list -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered-2 m-0 bg-white">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Ticker
+                                                        </th>
+                                                        <th>Status</th>
+                                                        <th>
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    We are pleased to announce that we will start masjid expansion soon. If you have not yet fulfilled your pledge, please do so as soon as possible.
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    Join / Renew Membership: $500
+
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    We are pleased to announce that we will start masjid expansion soon.
+                                                                </p>
+                                                                <p class="p-0">
+
+                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ended on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-danger text-uppercase">Inactive</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <h2 class="text-bold text-blue">Add a ticker</h2>
+                                            <div class="box">
+                                                <div class="box-body">
+                                                    <div class="form-wrapper v2 w-app pt-15 pb-30 px-20">
+
+                                                        <!-- basic info -->
+                                                        <div>
+
+                                                            <div class="form-group">
+                                                                <div class="form-section-head">
+                                                                    <h2 class="m-0 mb-10">
+                                                                        <label for="title-campaign" class="m-0">Ticker Title</label>
+                                                                        <span class="text-danger text-md font-600">*</span></h2>
+                                                                    <p>Tip: keep the title short and simple.</p>
+                                                                </div>
+                                                                <input type="text" id="title-campaign" class="form-control form-control-lg" name="TitleCampaign" placeholder="Title">
+                                                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="form-section-head">
+                                                                    <h2 class="m-0 mb-10">
+                                                                        <label for="ticker-details" class="m-0">Ticker Details</label>
+                                                                        <span class="text-danger text-md font-600">*</span></h2>
+                                                                    <p>Details about ticker</p>
+                                                                </div>
+                                                                <textarea id="ticker-details" class="form-control" rows="3"></textarea>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <div class="form-section-head">
+                                                                            <h2 class="m-0 mb-10">
+                                                                                <label for="run-from" class="m-0">Run From</label>
+                                                                                <span class="text-danger text-md font-600">*</span></h2>
+                                                                            <p>Start time for ticker</p>
+                                                                        </div>
+                                                                        <input type="date" id="run-from" class="form-control">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <div class="form-section-head">
+                                                                            <h2 class="m-0 mb-10">
+                                                                                <label for="run-till" class="m-0">Run Till</label>
+                                                                                <span class="text-danger text-md font-600">*</span></h2>
+                                                                            <p>End time for ticker</p>
+                                                                        </div>
+                                                                        <input type="date" id="run-till" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group m-0">
+                                                                <div class="forn-group icheck-wrapper">
+                                                                    <div class="checkbox checkbox-lg m-0">
+                                                                        <label class="m-0 d-block">Status</label>
+                                                                        <label>
+                                                                            <input type="checkbox" class="i-check" id="start-date-show" checked> Active
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-wrapper-foot pt-15">
+                                                            <hr class="hr-2">
+                                                            <div class="text-right button-group">
+                                                                <button type="button" class="btn btn-default btn-xl mr-15">Clear</button>
+                                                                <a href="#" class="btn btn-success btn-xl">Save Ticker</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right BigBold-SubTitle">
+            <a href="mailto:Support@MasjidSolutions.Net">Support@MasjidSolutions.Net</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+13178540207">(317) 854-0207</a>
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright © 2022 <a target="_blank" href="https://MasjidSolutions.Net">Masjid Solutions</a>.</strong> All rights reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- iCheck -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.js"></script>
+<!-- custom script -->
+<script src="../../dist/js/custom_script.js"></script>
+
+</body>
+</html>

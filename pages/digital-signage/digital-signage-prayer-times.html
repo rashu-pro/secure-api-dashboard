@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Create Event Details</title>
+    <title>Digital Signage</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -12,16 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
-    <!-- datepicker -->
-    <link rel="stylesheet" href="../../plugins/datepicker/datepicker3.css">
-    <!-- dropify -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- quil js(text-editor) -->
-    <link rel="stylesheet" href="../../node_modules/quill/dist/quill.core.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -34,8 +28,7 @@
     <!-- syncfusion css -->
     <link rel="stylesheet" href="../../dist/css/syncfusion.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.9">
-
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=1.0.5">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,7 +63,7 @@
                             <div class="dropdown-toggle-content">
                                 <div class="dropdown-toggle-content-inner">
                                     <div class="dropdown-toggle-icon">
-                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png" alt="company">
+                                        <img class="company-img" src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
                                     </div>
                                     <div class="dropdown-toggle-title">IWS-ICGC</div>
                                 </div>
@@ -283,7 +276,7 @@
                     <p>admin</p>
 
                     <!-- Status -->
-                    <a href="javascript:void(0)"><i class="fa fa-circle text-success"></i> Online</a>
+                    <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
 
@@ -293,7 +286,7 @@
                 <!-- Optionally, you can add icons to the links -->
 
                 <li class="">
-                    <a href="../../dashboard_new.html" data-route="/secure_api_dashboard/dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                    <a href="../../dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
                 </li>
 
                 <li class="">
@@ -306,39 +299,28 @@
                 </li>
 
                 <li class="">
-                    <a href="../tables/data_class_v5.html"
-                       class="menu-link"
-                       data-route="/secure_api_dashboard/pages/tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
+                    <a href="../tables/data_class_v5.html"><i class="fa fa-university"></i> <span>Classes</span></a>
                 </li>
 
                 <li class="">
-                    <a href="../tables/data_registrations.html"
-                       class="menu-link"
-                       data-route="/secure_api_dashboard/pages/tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
-
+                    <a href="../tables/data_registrations.html"><i class="fa fa-list"></i> <span>Registrations</span></a>
                 </li>
                 <li class="treeview">
-                    <a href="../tables/data_students.html"
-                       class="menu-link"
-                       data-route="/secure_api_dashboard/pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
+                    <a href="../tables/data_students.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a>
                     <ul class="treeview-menu">
-                        <li class=""><a href="../tables/data_student_details.html"
-                                        class="menu-link"
-                                        data-route="/secure_api_dashboard/pages/tables/data_student_details.html">Student Details</a> </li>
+                        <li class=""><a href="../tables/data_student_details.html">Student Details</a> </li>
                     </ul>
                 </li>
                 <li class="">
-                    <a href="javascript:void(0)"><i class="fa fa-male"></i> <span>Parents</span></a>
+                    <a href="data_parents.html"><i class="fa fa-male"></i> <span>Parents</span></a>
 
                 </li>
                 <li class="">
-                    <a href="../tables/data_person_details.html"
-                       class="menu-link"
-                       data-route="/secure_api_dashboard/pages/tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
+                    <a href="../tables/data_person_details.html"><i class="fa fa-male"></i> <span>Profile</span></a>
 
                 </li>
                 <li class="">
-                    <a href="javascript:void(0)"><i class="fa fa-user"></i> <span>Teachers</span></a>
+                    <a href="data_teachers.html"><i class="fa fa-user"></i> <span>Teachers</span></a>
 
                 </li>
                 <li class="treeview">
@@ -349,12 +331,30 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="../tables/data_topics.html"
-                               class="menu-link"
-                               data-route="/secure_api_dashboard/pages/tables/data_topics.html">Topics</a></li>
+                        <li><a href="../tables/data_topics.html">Topics</a></li>
 
                     </ul>
                 </li>
+
+                <li class="treeview active">
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-television"></i>
+                        <span>Digital Signage</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </span>
+                    </a>
+
+                    <ul class="treeview-menu">
+                        <li class="active">
+                            <a href="digital-signage-prayer-times.html">Prayer Times</a>
+                        </li>
+                        <li class="">
+                            <a href="digital-signage-announcement.html">Announcement</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="treeview ">
                     <a href="#">
                         <i class="fa fa-sticky-note"></i> <span>Assignments</span>
@@ -363,15 +363,10 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="../tables/data_assignments.html"
-                               class="menu-link"
-                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">Due Assignments</a></li>
-                        <li><a href="form_create_assignment.html"
-                               class="menu-link"
-                               data-route="/secure_api_dashboard/pages/forms/form_create_assignment.html">Create Assignment</a></li>
-                        <li><a href="../tables/data_assignments.html"
-                               class="menu-link"
-                               data-route="/secure_api_dashboard/pages/tables/data_assignments.html">All Assignments</a></li>
+                        <li><a href="../tables/data_assignments.html">Due Assignments</a></li>
+                        <li><a href="../forms/form_create_assignment.html">Create Assignment</a></li>
+                        <li><a href="../tables/data_assignments.html">All Assignments</a></li>
+
                     </ul>
                 </li>
 
@@ -379,13 +374,11 @@
                     <a href="#">
                         <i class="fa fa-calendar"></i> <span>Events</span>
                         <span class="pull-right-container">
-                    <i class="fa fa-angle-right pull-right"></i>
+                    <i class="fa fa-angle-left pull-right"></i>
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class=""><a href="../tables/data_events.html"
-                                        class="menu-link"
-                                        data-route="/secure_api_dashboard/pages/tables/data_events.html">Event List</a></li>
+                        <li class=""><a href="../tables/data_events.html">Event List</a></li>
                     </ul>
                 </li>
 
@@ -397,7 +390,7 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="javascript:void(0)">All Persons</a></li>
+                        <li><a href="data_persons.html">All Persons</a></li>
 
                     </ul>
                 </li>
@@ -410,7 +403,7 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="javascript:void(0)">Pledges</a></li>
+                        <li><a href="data_pledges.html">Pledges</a></li>
                         <li><a href="/admin/give/payments">Payments</a></li>
                         <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
                         <li><a href="/admin/give/company/customers">CC Customers</a></li>
@@ -434,12 +427,8 @@
                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class=""><a href="../components/btn_action.html"
-                                        class="menu-link"
-                                        data-route="/secure_api_dashboard/pages/components/btn_action.html"> Action Button </a></li>
-                        <li class=""><a href="../components/btn_action_no_text.html"
-                                        class="menu-link"
-                                        data-route="/secure_api_dashboard/pages/components/btn_action_no_text.html"> Action Button (no text) </a></li>
+                        <li class=""><a href="../components/btn_action.html"> Action Button </a></li>
+                        <li class=""><a href="../components/btn_action_no_text.html"> Action Button (no text) </a></li>
                     </ul>
                 </li>
             </ul>
@@ -452,138 +441,71 @@
     <div class="content-wrapper">
 
         <!-- Content Header (Page header) -->
-        <section class="content-header position-relative">
-<!--            <h1 class="text-left text-md-center">-->
-<!--                Add Event Details-->
+        <section class="content-header">
+<!--            <h1>-->
+<!--                Digital Signage-->
 <!--            </h1>-->
         </section>
 
         <!-- Main content -->
-        <section class="content content-box">
+        <section class="content">
 
-            <div class="event-navigation-wrapper">
-                <ul class="nav event-navigation d-flex justify-space-between">
-                    <li class="complete"><a href="javascript:void(0)">
-                        <p class="step-count">
-                            1
-                            <img src="../../dist/img/tick.png" alt="active">
-                        </p>
-                        Basic Info
-                    </a> </li>
-                    <li class="active"><a href="javascript:void(0)">
-                        <p class="step-count">2</p>
-                        Details</a> </li>
-                    <li><a href="javascript:void(0)">
-                        <p class="step-count">3</p>
-                        Tickets</a> </li>
-                    <li><a href="javascript:void(0)">
-                        <p class="step-count">4</p>
-                        Publish</a> </li>
-                </ul>
-            </div>
-
-            <h1 class="text-left text-md-center text-bold">
-                Add Event Details
-            </h1>
-            <div class="box box-success">
-                <a href="#" class="link-preview font-600 font-md-medium" data-toggle="modal" data-target="#preview-event">Preview Event</a>
-                <div class="box-body">
-
-                    <div class="form-wrapper v2 w-app pt-15 pb-30">
-
-                        <!-- banner image -->
-                        <div>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Main Banner Image</h2>
-                                <p>82% of attendees prefer main event images that show an event's vibe and atmosphere.</p>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="file-uploader-wrapper">
-                                    <input type="file" class="file-uploader image-input dropify" id="image-input">
-                                </div>
-                                <div>
-                                    <ul class="d-sm-flex justify-space-between pt-4 pl-15">
-                                        <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
-                                        <li class="text-small text-info">Maximum file size: 10MB</li>
-                                        <li class="text-small text-info">Supported image files: JPEG or PNG</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- summary -->
-                        <div>
-                            <hr>
-                            <div class="form-section-head">
-                                <h2 class="m-0 mb-10">Summary</h2>
-                                <p>Grab people's attention with a short description about your event. Attendees will see this at the top of your event page.</p>
-                            </div>
-
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4"></textarea>
-                                <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
-                            </div>
-                        </div>
-
-                        <!-- text editor -->
-                        <div class="">
-                            <hr>
-                            <h2 class="m-0 mb-10">Description</h2>
-                            <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
-                            <div class="form-group">
-                                <textarea id="editor"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-wrapper-foot pt-15">
-                            <hr class="hr-2">
-                            <div class="text-right button-group">
-                                <button type="button" class="btn btn-default btn-lg mr-15">Discard</button>
-                                <a href="create-event-ticket.html" class="btn btn-success btn-lg">Next</a>
-                            </div>
-                        </div>
+            <div class="tab-wrapper">
+                <div class="tab-nav">
+                    <div class="tab-nav-inner">
+                        <a href="digital-signage-prayer-times.html"
+                           class="tab-nav-link active">
+                            Prayer Times
+                        </a>
+                        <a href="digital-signage-announcement.html"
+                           class="tab-nav-link">
+                            Announcement
+                        </a>
                     </div>
+
                 </div>
 
-            </div>
+                <div class="tab-details pt-30">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-4 col-md-3">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        <a href="digital-signage-ticker.html" class="link-white">Ticker</a>
+                                    </h3>
 
-            <!-- modal -->
-            <div id="preview-event" class="modal">
-                <!-- 'modal-sm' class is needed to change the width of the modal -->
-                <div class="modal-dialog modal-full modal-preview">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title text-center">Preview Event</h3>
-                        </div>
-                        <!-- modal close button -->
-                        <button type="button" class="close close-modal" data-dismiss="modal">
-                            <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-
-                        <div class="modal-body">
-                            <div class="preview-close-wrap">
-                                <button type="button" class="btn btn-transparent" data-dismiss="modal">
-                                    Close Preview
-                                </button>
-                            </div>
-                            <div class="preview-wrapper pt-30">
-                                <ul class="nav preview-nav text-center d-none d-md-flex">
-                                   <li class="nav-item active"><a href="javascript:void(0)" class="desktop-preview-js">Desktop View</a> </li>
-                                   <li class="nav-item"><a href="javascript:void(0)" class="mobile-preview-js">Mobile View</a></li>
-                                </ul>
-
-                                <div class="preview-holder">
-                                    <iframe src="https://secure-api.net/event/registration/alamine-academy/field-trip-bowling" height="1632px" width="100%" title="Iframe Example"></iframe>
+                                    <p>5 tickers active</p>
                                 </div>
+                                <div class="icon">
+                                    <img src="../../dist/img/ticker.png" alt="ticker">
+                                </div>
+                                <a href="digital-signage-ticker.html"
+                                   class="small-box-footer"
+                                   style="font-size:18px;font-weight: 600;padding:10px 10px">
+                                    Add new ticker
+                                    <i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
 
-                        <div class="preview-close-wrap">
-                            <button type="button" class="btn btn-transparent" data-dismiss="modal">
-                                Close Preview
-                            </button>
+                        <div class="col-sm-4 col-md-3">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>Prayer Times</h3>
+
+                                    <p>&nbsp;</p>
+                                </div>
+                                <div class="icon">
+                                    <img src="../../dist/img/time-call.png" alt="times">
+                                </div>
+                                <a href="#"
+                                   class="small-box-footer"
+                                   style="font-size:18px;font-weight: 600;padding:10px 10px">
+                                    Upload Prayer Times
+                                    <i class="fa fa-plus-circle"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -610,43 +532,19 @@
 <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
 <script src="../../plugins/select2/select2.full.min.js"></script>
-<!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
-<!-- datepicker -->
-<script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>
-<!-- dropify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- CK EDITOR -->
-<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- iCheck -->
+<script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
-<script src="../../dist/js/custom_script.js?v=1.0.9"></script>
-
-<!-- ck editor -->
-<script>
-  ClassicEditor
-    .create(document.querySelector('#editor'), {
-      toolbar: {
-        items: [
-          'heading', '|',
-          'fontfamily', 'fontsize', '|',
-          'alignment', '|',
-          'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
-          'link', '|',
-          'bulletedList', 'numberedList', 'todoList', '|',
-          'code', 'codeBlock', '|',
-        ],
-        shouldNotGroupWhenFull: true
-      }
-    })
-    .catch(error => {
-      console.error(error);
-    });
-</script>
-
+<script src="../../dist/js/custom_script.js"></script>
 
 </body>
 </html>
