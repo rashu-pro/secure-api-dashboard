@@ -258,6 +258,13 @@ const copyContent = async (text) => {
     }
 }
 
+$(document).on('click', '.toggle-div', function (e){
+    e.preventDefault();
+    let self = $(this);
+    $(self.attr('data-toggle-off')).addClass('d-none');
+    $(self.attr('data-toggle-on')).removeClass('d-none');
+})
+
 /** --Click Action **/
 
 
