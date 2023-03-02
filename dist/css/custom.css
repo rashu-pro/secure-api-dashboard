@@ -843,6 +843,24 @@ button.close-modal {
   border-bottom: 1px solid #ddd;
   padding: 15px 10px;
 }
+.table.table-style2 thead th {
+  background-color: #e3e3e3 !important;
+  color: #000;
+  border-bottom: 1px solid #c1c1c1 !important;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.table.table-style2 thead td {
+  background-color: #bbdefb !important;
+  border: 0;
+  border-top: 1px solid #ddd;
+  color: #202020;
+}
+.table.table-style2 tbody tr td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
 
 .main-header {
   max-height: min-content;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Digital Signage: Add Announcement</title>
+    <title>Digital Signage: Prayer Times</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -16,15 +16,11 @@
     <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
-    <!-- summernote css -->
-    <link rel="stylesheet" href="../../node_modules/summernote/dist/summernote.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-    <!-- dropify -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- iCheck -->
     <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
@@ -351,10 +347,10 @@
                     </a>
 
                     <ul class="treeview-menu">
-                        <li>
+                        <li class="active">
                             <a href="digital-signage-prayer-times.html">Prayer Times</a>
                         </li>
-                        <li class="active">
+                        <li class="">
                             <a href="digital-signage-announcement.html">Announcement</a>
                         </li>
                     </ul>
@@ -447,9 +443,6 @@
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
-<!--            <h1>-->
-<!--                Digital Signage-->
-<!--            </h1>-->
         </section>
 
         <!-- Main content -->
@@ -458,11 +451,11 @@
                 <div class="tab-nav">
                     <div class="tab-nav-inner">
                         <a href="digital-signage-prayer-times.html"
-                           class="tab-nav-link">
+                           class="tab-nav-link active">
                             Prayer Times
                         </a>
                         <a href="digital-signage-announcement.html"
-                           class="tab-nav-link active">
+                           class="tab-nav-link">
                             Announcement
                         </a>
                     </div>
@@ -472,16 +465,25 @@
                 <div class="tab-details pt-30">
 
                     <div class="tab-wrapper">
-                        <!--Person-->
+                        <!--tab details-->
                         <div class="nav-tabs-custom tabs-custom tab-page-content">
                             <ul class="nav nav-tabs">
-                                <li class="announcement active">
-                                    <a href="#announcement"
+                                <li class="prayer-times active">
+                                    <a href="#prayer-times"
                                        data-toggle="tab"
                                        aria-expanded="true">
-                                        Announcement
+                                        Prayer Times
                                     </a>
                                 </li>
+
+                                <li class="jummah-times">
+                                    <a href="#jummah-times"
+                                       data-toggle="tab"
+                                       aria-expanded="true">
+                                        Jummah Times
+                                    </a>
+                                </li>
+
                                 <li class="ticker">
                                     <a href="#ticker"
                                        data-toggle="tab"
@@ -489,134 +491,229 @@
                                         Ticker
                                     </a>
                                 </li>
-
-                                <li class="event">
-                                    <a href="#event"
-                                       data-toggle="tab"
-                                       aria-expanded="false">
-                                        Event
-                                    </a>
-                                </li>
                             </ul>
 
                             <div class="tab-content p-30">
 
                                 <!-- tab details -->
+                                <div class="tab-pane prayer-times active" id="prayer-times">
 
-                                <!-- tab - announcement -->
-                                <div class="tab-pane announcement active" id="announcement">
                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="text-bold text-blue">Prayer Times</h2>
 
-                                        <div class="">
-                                            <div class="m-auto content-box">
-                                                <h2 class="text-bold text-blue">
-                                                    <span class="mr-15">Add Announcements</span>
-
-                                                    <a href="digital-signage-announcement-content.html?tab=announcement"
-                                                       style="font-size: 18px;text-decoration: underline;font-weight: 600">
-                                                        All Announcements
-                                                    </a>
-                                                </h2>
+                                                <a class="btn btn-lg btn-primary mr-10" href="#">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span class="ml-2">Add Prayer Times</span>
+                                                </a>
                                             </div>
 
-                                            <!-- basic info -->
-                                            <div class="content content-box v2 pt-15 pb-30 px-20 bg-white">
+                                            <!-- prayer times table -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-striped table-column-fatty table-style2">
+                                                    <thead class="text-center">
+                                                    <tr>
+                                                        <th>
+                                                            &nbsp;
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Fajr
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Dhuhr
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Asr
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Maghrib
+                                                        </th>
+                                                        <th colspan="2" class="text-center">Isha</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-right:1px solid #202020;">Date</td>
 
-                                                <div>
-                                                    <div class="form-group mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">
-                                                                <label for="title-campaign" class="m-0">Announcement Title</label>
-                                                                <span class="text-danger text-md font-600">*</span></h2>
-                                                            <p>Tip: keep the title short and simple.</p>
-                                                        </div>
-                                                        <input type="text" id="title-campaign" class="form-control form-control-lg" name="TitleCampaign" placeholder="Title">
-                                                        <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
-                                                    </div>
+                                                        <td>Adhan</td>
+                                                        <td style="border-right:1px solid #202020;">Iqama</td>
 
-                                                    <!-- banner image -->
-                                                    <div class="form-group mb-30 mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">Announcement Banner</h2>
-                                                            <p>Use an attention seeking image</p>
-                                                        </div>
+                                                        <td>Adhan</td>
+                                                        <td style="border-right:1px solid #202020;">Iqama</td>
 
-                                                        <div class="form-group">
-                                                            <div class="file-uploader-wrapper">
-                                                                <input type="file" class="file-uploader image-input dropify" id="image-input">
-                                                            </div>
-                                                            <div>
-                                                                <ul class="d-sm-flex justify-space-between pt-4 pl-15">
-                                                                    <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
-                                                                    <li class="text-small text-info">Maximum file size: 10MB</li>
-                                                                    <li class="text-small text-info">Supported image files: JPEG or PNG</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        <td>Adhan</td>
+                                                        <td style="border-right:1px solid #202020;">Iqama</td>
 
-                                                    <div class="form-group mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">
-                                                                <label for="announcement-editor" class="m-0">Announcement Details</label>
-                                                                <span class="text-danger text-md font-600">*</span></h2>
-                                                            <p>Details about ticker</p>
-                                                        </div>
+                                                        <td>Adhan</td>
+                                                        <td style="border-right:1px solid #202020;">Iqama</td>
 
-                                                        <div class="form-group">
-                                                            <textarea id="announcement-editor" class="form-control"></textarea>
-                                                        </div>
-                                                    </div>
+                                                        <td>Adhan</td>
+                                                        <td>Iqama</td>
+                                                    </tr>
+                                                    </thead>
 
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <div class="form-section-head">
-                                                                    <h2 class="m-0 mb-10">
-                                                                        <label for="run-from" class="m-0">Run From</label>
-                                                                        <span class="text-danger text-md font-600">*</span></h2>
-                                                                    <p>Start time for announcement</p>
-                                                                </div>
-                                                                <input type="date" id="run-from" class="form-control">
-                                                            </div>
-                                                        </div>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">02/03/2023</td>
+                                                        <td>5:55 AM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:15 AM</td>
 
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <div class="form-section-head">
-                                                                    <h2 class="m-0 mb-10">
-                                                                        <label for="run-till" class="m-0">Run Till</label>
-                                                                        <span class="text-danger text-md font-600">*</span></h2>
-                                                                    <p>End time for announcement</p>
-                                                                </div>
-                                                                <input type="date" id="run-till" class="form-control">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:15 PM</td>
 
-                                                    <div class="m-0">
-                                                        <div class="form-group icheck-wrapper">
-                                                            <div class="checkbox checkbox-lg m-0">
-                                                                <label class="m-0 d-block">Status</label>
-                                                                <label>
-                                                                    <input type="checkbox" class="i-check" id="start-date-show" checked> Active
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        <td>4:15 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">4:30 PM</td>
 
-                                                </div>
+                                                        <td>6:33 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:38 PM</td>
 
-                                                <div class="form-wrapper-foot pt-15">
-                                                    <hr class="hr-2">
-                                                    <div class="text-right button-group">
-                                                        <button type="button" class="btn btn-default btn-xl mr-15">Clear</button>
-                                                        <a href="#" class="btn btn-success btn-xl">Save Announcement</a>
-                                                    </div>
-                                                </div>
+                                                        <td>7:55 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">7:10 PM</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">03/03/2023</td>
+                                                        <td>5:55 AM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:15 AM</td>
+
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:15 PM</td>
+
+                                                        <td>4:15 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">4:30 PM</td>
+
+                                                        <td>6:33 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:38 PM</td>
+
+                                                        <td>7:55 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">7:10 PM</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">04/03/2023</td>
+                                                        <td>5:55 AM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:15 AM</td>
+
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:15 PM</td>
+
+                                                        <td>4:15 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">4:30 PM</td>
+
+                                                        <td>6:33 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:38 PM</td>
+
+                                                        <td>7:55 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">7:10 PM</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">05/03/2023</td>
+                                                        <td>5:55 AM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:15 AM</td>
+
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:15 PM</td>
+
+                                                        <td>4:15 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">4:30 PM</td>
+
+                                                        <td>6:33 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:38 PM</td>
+
+                                                        <td>7:55 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">7:10 PM</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">06/03/2023</td>
+                                                        <td>5:55 AM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:15 AM</td>
+
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:15 PM</td>
+
+                                                        <td>4:15 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">4:30 PM</td>
+
+                                                        <td>6:33 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">6:38 PM</td>
+
+                                                        <td>7:55 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">7:10 PM</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
                                             </div>
                                         </div>
                                     </div>
+
+                                </div>
+
+                                <!-- tab details -->
+                                <div class="tab-pane jummah-times" id="jummah-times">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="text-bold text-blue">Jummah Times</h2>
+
+                                                <a class="btn btn-lg btn-primary mr-10" href="#">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span class="ml-2">Add Jummah Times</span>
+                                                </a>
+                                            </div>
+
+                                            <!-- prayer times table -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-striped table-column-fatty table-style2">
+                                                    <thead class="text-center">
+                                                    <tr>
+                                                        <th>
+                                                            &nbsp;
+                                                        </th>
+                                                        <th>
+                                                            &nbsp;
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Jummah
+                                                        </th>
+                                                        <th colspan="2" class="text-center">
+                                                            Khateeb
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-right:1px solid #202020;">#</td>
+                                                        <td style="border-right:1px solid #202020;">Date</td>
+
+                                                        <td>Adhan</td>
+                                                        <td style="border-right:1px solid #202020;">Iqama</td>
+
+                                                        <td>Name</td>
+                                                        <td>Topic</td>
+                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">02/03/2023</td>
+                                                        <td>1:00 PM</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">1:30 PM</td>
+
+                                                        <td>Khateeb Name</td>
+                                                        <td style="border-right: 1px solid #b1b1b1;">About Islam</td>
+                                                    </tr>
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
 
                                 <!-- tab - ticker -->
@@ -826,73 +923,6 @@
                                     </div>
                                 </div>
 
-                                <!-- tab - event -->
-                                <div class="tab-pane event" id="event">
-                                    <div class="row">
-
-                                        <div class="col-sm-12">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <h2 class="text-bold text-blue">All Events</h2>
-
-                                                <a class="btn btn-lg btn-primary mr-10" href="#">
-                                                    <i class="fa fa-plus"></i>
-                                                    <span class="ml-2">Add Event</span>
-                                                </a>
-                                            </div>
-                                            <!-- ticker list -->
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered-2 m-0 bg-white">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Event Title
-                                                        </th>
-                                                        <th>Event Date</th>
-                                                        <th>Agenda</th>
-                                                        <th>
-                                                            Action
-                                                        </th>
-                                                    </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                    <tr>
-
-                                                        <td style="width: 60%">
-                                                            <a href="#" class="text-dark">
-                                                                <p class="m-0 font-600 text-md-medium max-two-line">
-                                                                    ICS Thanksgiving Picnic
-                                                                </p>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <p style="margin:0">Start Date: 03/03/2023</p>
-                                                            <p style="margin:0">End Date: 03/03/2023</p>
-                                                        </td>
-                                                        <td>
-
-                                                        </td>
-
-                                                        <td class="">
-                                                            <div class="button-group">
-                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
-                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
-                                                            </div>
-
-
-                                                        </td>
-
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
                             </div>
                             <!-- /.tab-content -->
                         </div>
@@ -930,35 +960,10 @@
 <script src="../../plugins/fastclick/fastclick.js"></script>
 <!-- iCheck -->
 <script src="../../plugins/iCheck/icheck.min.js"></script>
-<!-- dropify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- summernote editor -->
-<script src="../../node_modules/summernote/dist/summernote.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.7"></script>
-
-<!-- summernote editor -->
-<script>
-  //Summernote
-  if ($('#announcement-editor').length > 0) {
-    $("#announcement-editor").summernote({
-      height: 300,
-      toolbar: [
-        ['style', ['style']],
-        ['font', ['bold', 'italic', 'strikethrough']],
-        ['fontsize', ['fontsize']],
-        ['color', ['color']],
-        ['para', ['ul', 'paragraph', 'height']],
-        ['insert', ['link', 'picture']],
-        ['view', ['fullscreen', 'codeview']]
-      ]
-    })
-  }
-
-</script>
-
 
 </body>
 </html>

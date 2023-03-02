@@ -24,6 +24,7 @@
  * 2. ON DOCUMENT READY
  * * -------------------------------------
  */
+
 //=== pas active class to specific tab on after page load
 tabActive();
 
@@ -68,12 +69,12 @@ $(document).on('click', '.file-uploader-icon', function (e) {
     self.closest('.file-uploader-wrapper').find('input[type=file]').trigger('click');
 });
 
-function dropify(){
-    if($('.dropify').length>0){
-        $('.dropify').dropify();
-    }
-}
-dropify();
+//function dropify(){
+//    if($('.dropify').length>0){
+//        $('.dropify').dropify();
+//    }
+//}
+//dropify();
 
 
 //=== datepicker initialization
@@ -530,7 +531,6 @@ function popupFormOpen(popupSelectorClass){
     },100);
 }
 
-
 /**
  * pass active class to the tab
  */
@@ -544,3 +544,12 @@ function tabActive(){
     $('.tab-page-content .nav-tabs li, .tab-page-content .tab-pane').removeClass('active');
     $('.'+tabName).addClass('active');
 }
+
+
+$('.banner-image').on('change', function (e) {
+    $('.existing-banner-image-url').val('');
+});
+
+$('.ticket-image').on('change', function (e) {
+    $('.existing-ticket-image-url').val('');
+});

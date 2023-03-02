@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Digital Signage: Add Announcement</title>
+    <title>Digital Signage: Announcement Content</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -16,15 +16,11 @@
     <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
-    <!-- summernote css -->
-    <link rel="stylesheet" href="../../node_modules/summernote/dist/summernote.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-    <!-- dropify -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- iCheck -->
     <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
@@ -447,9 +443,6 @@
 
         <!-- Content Header (Page header) -->
         <section class="content-header">
-<!--            <h1>-->
-<!--                Digital Signage-->
-<!--            </h1>-->
         </section>
 
         <!-- Main content -->
@@ -473,9 +466,9 @@
 
                     <div class="tab-wrapper">
                         <!--Person-->
-                        <div class="nav-tabs-custom tabs-custom tab-page-content">
+                        <div class="nav-tabs-custom tabs-custom tab-page-content" id="person-tab">
                             <ul class="nav nav-tabs">
-                                <li class="announcement active">
+                                <li class="announcement active" id="person-info-li">
                                     <a href="#announcement"
                                        data-toggle="tab"
                                        aria-expanded="true">
@@ -501,121 +494,232 @@
 
                             <div class="tab-content p-30">
 
-                                <!-- tab details -->
-
                                 <!-- tab - announcement -->
                                 <div class="tab-pane announcement active" id="announcement">
                                     <div class="row">
 
-                                        <div class="">
-                                            <div class="m-auto content-box">
-                                                <h2 class="text-bold text-blue">
-                                                    <span class="mr-15">Add Announcements</span>
+                                        <div class="col-sm-12">
+                                            <div class="d-flex justify-space-between align-center">
+                                                <h2 class="text-bold text-blue">All Announcements</h2>
 
-                                                    <a href="digital-signage-announcement-content.html?tab=announcement"
-                                                       style="font-size: 18px;text-decoration: underline;font-weight: 600">
-                                                        All Announcements
-                                                    </a>
-                                                </h2>
+                                                <a class="btn btn-lg btn-primary mr-10" href="digital-signage-announcement-create.html?tab=announcement">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span class="ml-2">Add Announcement</span>
+                                                </a>
                                             </div>
+                                            <!-- ticker list -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered-2 m-0 bg-white">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Announcement Title
+                                                        </th>
+                                                        <th>Status</th>
+                                                        <th>
+                                                            Action
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
 
-                                            <!-- basic info -->
-                                            <div class="content content-box v2 pt-15 pb-30 px-20 bg-white">
+                                                    <tbody>
+                                                    <tr>
 
-                                                <div>
-                                                    <div class="form-group mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">
-                                                                <label for="title-campaign" class="m-0">Announcement Title</label>
-                                                                <span class="text-danger text-md font-600">*</span></h2>
-                                                            <p>Tip: keep the title short and simple.</p>
-                                                        </div>
-                                                        <input type="text" id="title-campaign" class="form-control form-control-lg" name="TitleCampaign" placeholder="Title">
-                                                        <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
-                                                    </div>
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
 
-                                                    <!-- banner image -->
-                                                    <div class="form-group mb-30 mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">Announcement Banner</h2>
-                                                            <p>Use an attention seeking image</p>
-                                                        </div>
-
-                                                        <div class="form-group">
-                                                            <div class="file-uploader-wrapper">
-                                                                <input type="file" class="file-uploader image-input dropify" id="image-input">
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
                                                             </div>
-                                                            <div>
-                                                                <ul class="d-sm-flex justify-space-between pt-4 pl-15">
-                                                                    <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
-                                                                    <li class="text-small text-info">Maximum file size: 10MB</li>
-                                                                    <li class="text-small text-info">Supported image files: JPEG or PNG</li>
-                                                                </ul>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
                                                             </div>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="form-group mb-30">
-                                                        <div class="form-section-head">
-                                                            <h2 class="m-0 mb-10">
-                                                                <label for="announcement-editor" class="m-0">Announcement Details</label>
-                                                                <span class="text-danger text-md font-600">*</span></h2>
-                                                            <p>Details about ticker</p>
-                                                        </div>
 
-                                                        <div class="form-group">
-                                                            <textarea id="announcement-editor" class="form-control"></textarea>
-                                                        </div>
-                                                    </div>
+                                                        </td>
 
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <div class="form-section-head">
-                                                                    <h2 class="m-0 mb-10">
-                                                                        <label for="run-from" class="m-0">Run From</label>
-                                                                        <span class="text-danger text-md font-600">*</span></h2>
-                                                                    <p>Start time for announcement</p>
-                                                                </div>
-                                                                <input type="date" id="run-from" class="form-control">
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-danger text-uppercase">Inactive</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                <div class="form-section-head">
-                                                                    <h2 class="m-0 mb-10">
-                                                                        <label for="run-till" class="m-0">Run Till</label>
-                                                                        <span class="text-danger text-md font-600">*</span></h2>
-                                                                    <p>End time for announcement</p>
-                                                                </div>
-                                                                <input type="date" id="run-till" class="form-control">
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
                                                             </div>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="m-0">
-                                                        <div class="form-group icheck-wrapper">
-                                                            <div class="checkbox checkbox-lg m-0">
-                                                                <label class="m-0 d-block">Status</label>
-                                                                <label>
-                                                                    <input type="checkbox" class="i-check" id="start-date-show" checked> Active
-                                                                </label>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    ICS Thanksgiving Picnic
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
                                                             </div>
-                                                        </div>
-                                                    </div>
 
-                                                </div>
 
-                                                <div class="form-wrapper-foot pt-15">
-                                                    <hr class="hr-2">
-                                                    <div class="text-right button-group">
-                                                        <button type="button" class="btn btn-default btn-xl mr-15">Clear</button>
-                                                        <a href="#" class="btn btn-success btn-xl">Save Announcement</a>
-                                                    </div>
-                                                </div>
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <tr>
+
+                                                        <td style="width: 60%">
+                                                            <a href="#" class="text-dark">
+                                                                <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                    A Life of Giving Thanks
+                                                                </p>
+                                                                <p class="p-0">
+                                                        <span class="d-inline-flex align-center mr-10">
+                                                            <i class="fa fa-circle text-green text-xs-small mr-5"></i> Running
+                                                        </span>
+                                                                    <span class="d-none d-md-inline-flex align-center">
+                                                            <i class="fa fa-circle text-xs-small mr-5"></i> Ends on Jan 15, 2023 at 11:30 PM
+                                                        </span>
+                                                                </p>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <span class="tagged tagged-success text-uppercase">Active</span>
+                                                        </td>
+
+                                                        <td class="">
+                                                            <div class="button-group">
+                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                            </div>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -930,35 +1034,10 @@
 <script src="../../plugins/fastclick/fastclick.js"></script>
 <!-- iCheck -->
 <script src="../../plugins/iCheck/icheck.min.js"></script>
-<!-- dropify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- summernote editor -->
-<script src="../../node_modules/summernote/dist/summernote.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.7"></script>
-
-<!-- summernote editor -->
-<script>
-  //Summernote
-  if ($('#announcement-editor').length > 0) {
-    $("#announcement-editor").summernote({
-      height: 300,
-      toolbar: [
-        ['style', ['style']],
-        ['font', ['bold', 'italic', 'strikethrough']],
-        ['fontsize', ['fontsize']],
-        ['color', ['color']],
-        ['para', ['ul', 'paragraph', 'height']],
-        ['insert', ['link', 'picture']],
-        ['view', ['fullscreen', 'codeview']]
-      ]
-    })
-  }
-
-</script>
-
 
 </body>
 </html>
