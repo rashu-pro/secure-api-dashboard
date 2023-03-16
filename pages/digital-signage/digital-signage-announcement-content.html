@@ -474,6 +474,7 @@
                             <ul class="nav nav-tabs">
                                 <li class="announcement active" id="person-info-li">
                                     <a href="#announcement"
+                                       class="tab-menu-link"
                                        data-toggle="tab"
                                        aria-expanded="true">
                                         Announcement
@@ -481,6 +482,7 @@
                                 </li>
                                 <li class="ticker">
                                     <a href="#ticker"
+                                       class="tab-menu-link"
                                        data-toggle="tab"
                                        aria-expanded="false">
                                         Ticker
@@ -489,6 +491,7 @@
 
                                 <li class="event">
                                     <a href="#event"
+                                       class="tab-menu-link"
                                        data-toggle="tab"
                                        aria-expanded="false">
                                         Event
@@ -1062,69 +1065,185 @@
 
                                 <!-- tab - event -->
                                 <div class="tab-pane event" id="event">
-                                    <div class="row">
 
-                                        <div class="col-sm-12">
-                                            <div class="d-flex justify-space-between align-center">
-                                                <h2 class="text-bold text-blue">All Events</h2>
+                                    <!-- event list -->
+                                    <div class="event-list">
+                                        <div class="row">
 
-                                                <a class="btn btn-lg btn-primary mr-10" href="#">
-                                                    <i class="fa fa-plus"></i>
-                                                    <span class="ml-2">Add Event</span>
-                                                </a>
+                                            <div class="col-sm-12">
+                                                <div class="d-flex justify-space-between align-center">
+                                                    <h2 class="text-bold text-blue">All Events</h2>
+
+                                                    <a class="btn btn-lg btn-primary mr-10 toggle-div"
+                                                       data-toggle-on=".event-create"
+                                                       data-toggle-off=".event-list"
+                                                       href="javascript:void(0)">
+                                                        <i class="fa fa-plus"></i>
+                                                        <span class="ml-2">Add Event</span>
+                                                    </a>
+                                                </div>
+                                                <!-- ticker list -->
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered-2 m-0 bg-white">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Event Title
+                                                            </th>
+                                                            <th>Event Date</th>
+                                                            <th>Agenda</th>
+                                                            <th>
+                                                                Action
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                        <tr>
+
+                                                            <td style="width: 30%">
+                                                                <a href="#" class="text-dark">
+                                                                    <p class="m-0 font-600 text-md-medium max-two-line">
+                                                                        ICS Thanksgiving Picnic
+                                                                    </p>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <p style="margin:0">Start Date: 03/03/2023</p>
+                                                                <p style="margin:0">End Date: 03/03/2023</p>
+                                                            </td>
+                                                            <td>
+                                                                <p style="margin:0">Breakfast: 10:00 AM</p>
+                                                                <p style="margin:0">Lunch: 01:00 PM</p>
+                                                            </td>
+
+                                                            <td class="">
+                                                                <div class="button-group">
+                                                                    <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
+                                                                    <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                                </div>
+
+
+                                                            </td>
+
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+                                                </div>
                                             </div>
-                                            <!-- ticker list -->
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered-2 m-0 bg-white">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>
-                                                            Event Title
-                                                        </th>
-                                                        <th>Event Date</th>
-                                                        <th>Agenda</th>
-                                                        <th>
-                                                            Action
-                                                        </th>
-                                                    </tr>
-                                                    </thead>
 
-                                                    <tbody>
-                                                    <tr>
+                                        </div>
+                                    </div>
 
-                                                        <td style="width: 60%">
-                                                            <a href="#" class="text-dark">
-                                                                <p class="m-0 font-600 text-md-medium max-two-line">
-                                                                    ICS Thanksgiving Picnic
-                                                                </p>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <p style="margin:0">Start Date: 03/03/2023</p>
-                                                            <p style="margin:0">End Date: 03/03/2023</p>
-                                                        </td>
-                                                        <td>
+                                    <!-- event create -->
+                                    <div class="event-create d-none">
+                                        <div class="row">
+                                            <div class="">
+                                                <div class="m-auto content-box">
+                                                    <h2 class="text-bold text-blue">
+                                                        <span class="mr-15">Add Events</span>
 
-                                                        </td>
+                                                        <a href="javascript:void(0)"
+                                                           class="toggle-div"
+                                                           data-toggle-on=".event-list"
+                                                           data-toggle-off=".event-create"
+                                                           style="font-size: 18px;text-decoration: underline;font-weight: 600">
+                                                            All Events
+                                                        </a>
+                                                    </h2>
+                                                </div>
 
-                                                        <td class="">
-                                                            <div class="button-group">
-                                                                <a href="#" class="btn link-btn link-btn-icon mr-10"><i class="fa fa-pencil-square-o"></i></a>
-                                                                <a href="#" class="btn link-btn link-btn-danger link-btn-icon"><i class="fa fa-trash"></i></a>
+                                                <!-- basic info -->
+                                                <div class="content content-box v2 pt-15 pb-30 px-20 bg-white">
+
+                                                    <div>
+                                                        <div class="form-group mb-30">
+                                                            <div class="form-section-head">
+                                                                <h2 class="m-0 mb-10">
+                                                                    <label for="title-event2" class="m-0">Event Title</label>
+                                                                    <span class="text-danger text-md font-600">*</span></h2>
+                                                                <p>Tip: keep the title short and simple.</p>
+                                                            </div>
+                                                            <input type="text" id="title-event2" class="form-control form-control-lg" name="TitleCampaign" placeholder="Title">
+                                                            <p class="text-small text-info text-right">140 characters max <span>(0/140)</span></p>
+                                                        </div>
+
+                                                        <!-- banner image -->
+                                                        <div class="form-group mb-30 mb-30">
+                                                            <div class="form-section-head">
+                                                                <h2 class="m-0 mb-10">Event Banner</h2>
+                                                                <p>Use an attention seeking image</p>
                                                             </div>
 
+                                                            <div class="form-group">
+                                                                <div class="file-uploader-wrapper">
+                                                                    <input type="file" class="file-uploader image-input dropify" id="image-input-event">
+                                                                </div>
+                                                                <div>
+                                                                    <ul class="d-sm-flex justify-space-between pt-4 pl-15">
+                                                                        <li class="text-small text-info">Recommended image size: 2160 x 1080px</li>
+                                                                        <li class="text-small text-info">Maximum file size: 10MB</li>
+                                                                        <li class="text-small text-info">Supported image files: JPEG or PNG</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                        </td>
+                                                        <div class="form-group mb-30">
+                                                            <div class="form-section-head">
+                                                                <h2 class="m-0 mb-10">
+                                                                    <label for="event-editor" class="m-0">Event Agenda</label>
+                                                                    <span class="text-danger text-md font-600">*</span></h2>
+                                                                <p>Details about Event</p>
+                                                            </div>
 
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                                            <div class="form-group">
+                                                                <textarea id="event-editor" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
 
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-section-head">
+                                                                        <h2 class="m-0 mb-10">
+                                                                            <label for="event-start-date" class="m-0">Start Date</label>
+                                                                            <span class="text-danger text-md font-600">*</span></h2>
+                                                                        <p>Event Start Date</p>
+                                                                    </div>
+                                                                    <input type="date" id="event-start-date" class="form-control">
+                                                                </div>
+                                                            </div>
 
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-section-head">
+                                                                        <h2 class="m-0 mb-10">
+                                                                            <label for="event-end-date" class="m-0">End Date</label>
+                                                                            <span class="text-danger text-md font-600">*</span></h2>
+                                                                        <p>End time for announcement</p>
+                                                                    </div>
+                                                                    <input type="date" id="event-end-date" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-wrapper-foot pt-15">
+                                                        <hr class="hr-2">
+                                                        <div class="text-right button-group">
+                                                            <button type="button" class="btn btn-default btn-xl mr-15">Clear</button>
+                                                            <a href="#" class="btn btn-success btn-xl">Save Event</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
+
                                 </div>
 
                             </div>
@@ -1172,12 +1291,13 @@
 <script src="../../dist/js/app.js"></script>
 <!-- custom script -->
 <script src="../../dist/js/custom_script.js?v=1.0.7"></script>
+<!--<script src="../../dist/js/live/custom_script.js?v=1.0.7"></script>-->
 
 <!-- summernote editor -->
 <script>
   //Summernote
   if ($('#announcement-editor').length > 0) {
-    $("#announcement-editor").summernote({
+    $("#announcement-editor, #event-editor").summernote({
       height: 300,
       toolbar: [
         ['style', ['style']],
@@ -1190,6 +1310,7 @@
       ]
     })
   }
+
 
 </script>
 

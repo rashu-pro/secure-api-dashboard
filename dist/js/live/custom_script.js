@@ -26,7 +26,9 @@
  */
 
 //=== pas active class to specific tab on after page load
-tabActive();
+if($('.tab-page-content').length>0){
+    tabActive();
+}
 
 //=== OVERLAY SCROLLBARS
 if($('.overlay-scrollbar-js').length>0 && typeof $.fn.overlayScrollbars != 'undefined'){
@@ -258,6 +260,13 @@ const copyContent = async (text) => {
         console.error('Failed to copy: ', err);
     }
 }
+
+$(document).on('click', '.toggle-div', function (e){
+    e.preventDefault();
+    let self = $(this);
+    $(self.attr('data-toggle-off')).addClass('d-none');
+    $(self.attr('data-toggle-on')).removeClass('d-none');
+})
 
 /** --Click Action **/
 
@@ -536,11 +545,8 @@ function popupFormOpen(popupSelectorClass){
  */
 function tabActive(){
     let pageUrl = window.location.href;
-    let queryParameter = pageUrl.split('?');
-    if(queryParameter.length<2) return;
-    if(queryParameter[queryParameter.length-1].split('=')[0]!=='tab') return;
-    let tabName = queryParameter[queryParameter.length-1].split('=');
-    tabName = tabName[tabName.length-1];
+    let queryParameter = pageUrl.split('/');
+    let tabName = queryParameter[queryParameter.length-1];
     $('.tab-page-content .nav-tabs li, .tab-page-content .tab-pane').removeClass('active');
     $('.'+tabName).addClass('active');
 }

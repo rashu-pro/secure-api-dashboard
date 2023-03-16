@@ -550,4 +550,12 @@ function tabActive(){
     tabName = tabName[tabName.length-1];
     $('.tab-page-content .nav-tabs li, .tab-page-content .tab-pane').removeClass('active');
     $('.'+tabName).addClass('active');
+    setTimeout(function (){
+        $('.tab-page-content .nav-tabs li.active .tab-menu-link').trigger('click');
+    },50)
 }
+
+$('.tab-page-content .nav-tabs li .tab-menu-link').click(function (){
+    console.log('clicked!');
+})
+
