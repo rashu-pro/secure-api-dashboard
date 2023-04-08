@@ -3038,6 +3038,18 @@ table tr.bg-white tr th {
     border: 0;
   }
 }
+.section-title-bordered.dark {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 25px;
+  color: #000;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn.link-btn.link-btn-md {
+  padding: 10px 15px;
+}
+
 .w-app {
   margin: 0 auto;
 }
