@@ -2001,3 +2001,76 @@ table tr.bg-white tr th{
   padding:10px 15px;
 }
 
+.timeline-wrapper{
+  position: relative;
+  &:after{
+    content:'';
+    position: absolute;
+    left: 8px;
+    bottom: 40px;
+    top: 7px;
+    width: 1px;
+    /* height: 100%; */
+    background-color: #ddd;
+
+  }
+}
+.timeline-single{
+  display: flex;
+  margin-bottom: 14px;
+  font-size: 18px;
+  position: relative;
+  z-index: 9;
+}
+.timeline-icon{
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  background: #009688;
+  border-radius: 50%;
+  font-size: 10px;
+  position: relative;
+  top: 6px;
+}
+
+.subscription-details-wrapper{
+  position: relative;
+}
+.subscription-details-wrapper .close-div{
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  background: #100707;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.subscription-head{
+  background: #BBDEFB;
+  padding: 15px;
+}
+.subscription-body{
+  border:2px solid #BBDEFB;
+  padding:15px;
+}
+.tr-sub-details{
+  &.closed{
+    display: none;
+  }
+}
+
+.expand-subscription{
+padding-left:5px;
+}
+.close-div{
+  cursor: pointer;
+}
+

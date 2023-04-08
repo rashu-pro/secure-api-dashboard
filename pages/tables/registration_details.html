@@ -677,11 +677,112 @@
             </div>
           </div>
 
+          <!-- SUBSCRIPTIONS -->
+          <div class="mb-30">
+            <h3 class="m-0 section-title-bordered dark mb-20">Subscription</h3>
+
+            <div class="table-responsive">
+              <table class="table table-bordered-2">
+                <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr data-row="1">
+                  <td>
+                    <a href="javascript:void(0)" class="sub-title sub-title-js">
+                      Tuition Fee
+                      <span class="expand-subscription"><i class="fa fa-chevron-down"></i></span>
+                    </a>
+                  </td>
+                  <td><span class="font-600">$<span class="amount">100</span></span> </td>
+                  <td>Subscription Update</td>
+                  <td>05/05/2023</td>
+                  <td>05/03/2023</td>
+                  <td><a data-href="#" class="btn link-btn link-btn-success">Cancel Subscription <i class="fa fa-times"></i> </a></td>
+                </tr>
+                <tr class="tr-sub-details closed" data-details="1">
+                  <td colspan="6" style="padding: 0">
+                    <div class="subscription-details-wrapper">
+                      <div class="subscription-head">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div>
+                              <p class="m-0">Last Update</p>
+                              <p class="m-0 font-600">05/04/2022</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div>
+                              <p class="m-0">Customer</p>
+                              <p class="m-0 font-600">cus_4588785445</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <p class="m-0">Payment Method</p>
+                            <p class="m-0 font-600">****4556</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="subscription-body">
+                        <h3 class="m-0 mb-20">Timeline</h3>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-single">
+                          <span class="timeline-icon">
+                            <i class="fa fa-check"></i>
+                          </span>
+                            <div>
+                              <p class="m-0">Payment Succeeded</p>
+                              <p class="m-0 font-600">05/03/2023</p>
+                            </div>
+                          </div>
+
+                          <div class="timeline-single">
+                          <span class="timeline-icon">
+                            <i class="fa fa-check"></i>
+                          </span>
+                            <div>
+                              <p class="m-0">Payment Succeeded</p>
+                              <p class="m-0 font-600">05/03/2023</p>
+                            </div>
+                          </div>
+
+                          <div class="timeline-single">
+                          <span class="timeline-icon bg-success">
+                            <i class="fa fa-calendar"></i>
+                          </span>
+                            <div>
+                              <p class="m-0">Payment Started</p>
+                              <p class="m-0 font-600">05/03/2023</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <span class="close-div close-sub-details-js">
+                        <i class="fa fa-times"></i>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <!-- PAYMENTS LIST -->
           <div class="payments-wrapper mb-30">
             <h3 class="m-0 mb-20">Payments</h3>
             <div class="table-responsive">
-              <table class="table table-bordered-2 table-2tr-for-dtr">
+              <table class="table table-bordered-2">
                 <thead class="indigo text-white">
                 <tr>
                   <th>ID</th>
@@ -1436,15 +1537,18 @@
 <!-- page script -->
 <script>
   $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
+    $(document).on('click', '.sub-title-js', function (e){
+      e.preventDefault();
+      let self = $(this);
+      let rowNumber = self.closest('tr').attr('data-row');
+      $('tr[data-details='+rowNumber+']').toggleClass('closed');
+    })
+
+    $(document).on('click', '.close-sub-details-js', function (e){
+      e.preventDefault();
+      let self = $(this);
+      self.closest('.tr-sub-details').toggleClass('closed');
+    })
   });
 </script>
 </body>
