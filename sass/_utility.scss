@@ -22,8 +22,13 @@
 .m-0{
   margin:0;
 }
-.mb-20{
-  margin-bottom: 20px;
+.mb{
+  &-20{
+    margin-bottom: 20px;
+  }
+  &-15{
+    margin-bottom:15px;
+  }
 }
 .m-0-auto{
   margin:0 auto;
@@ -102,8 +107,16 @@
 }
 
 //=== text
-.text-small{
-  font-size:14px;
+.text{
+  &-small{
+    font-size:14px;
+  }
+  &-18{
+    font-size:18px;
+  }
+  &-22{
+    font-size:22px;
+  }
 }
 
 .text{

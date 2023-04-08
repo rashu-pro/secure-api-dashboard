@@ -37,6 +37,9 @@
 .mb-20 {
   margin-bottom: 20px;
 }
+.mb-15 {
+  margin-bottom: 15px;
+}
 
 .m-0-auto {
   margin: 0 auto;
@@ -127,6 +130,12 @@
 
 .text-small {
   font-size: 14px;
+}
+.text-18 {
+  font-size: 18px;
+}
+.text-22 {
+  font-size: 22px;
 }
 
 .text-dark {
@@ -1282,6 +1291,9 @@ svg {
   padding-top: 15px !important;
   padding-bottom: 15px !important;
 }
+.table.m-0 {
+  margin: 0;
+}
 
 .table thead {
   background-color: #21333D;
@@ -2194,6 +2206,9 @@ HELP PAGE
 .font-600 {
   font-weight: 600;
 }
+.font-700 {
+  font-weight: 700;
+}
 
 .text-medium {
   font-size: 18px;
@@ -2973,6 +2988,54 @@ table tr.bg-white tr th {
 
   .pt-50 {
     padding-top: 50px;
+  }
+}
+.box-bordered {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .box-bordered {
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .box-bordered-plan {
+    min-height: 154px;
+  }
+}
+
+.box-bordered.plan-summary {
+  padding: 10px 10px 10px;
+}
+@media (min-width: 768px) {
+  .box-bordered.plan-summary {
+    padding: 10px 20px 10px;
+  }
+}
+
+.plan-summary .table {
+  font-size: 18px;
+  font-weight: 600;
+}
+.plan-summary .table tfoot td {
+  border-top: 1px solid #ddd !important;
+}
+
+.info-card {
+  background: #fff;
+  padding: 15px;
+  border-top: 2px solid #009688;
+}
+
+.info-success {
+  color: #009688;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .info-card .table-responsive {
+    border: 0;
   }
 }
 .w-app {
