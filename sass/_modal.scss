@@ -36,6 +36,17 @@
   }
 
   &-dialog{
+    &.modal-lg{
+      @media (min-width: 768px){
+        .modal{
+          &-body{
+            padding:30px;
+          }
+        }
+
+      }
+    }
+
     &.modal-md{
       @media (min-width:992px){
         width:800px;

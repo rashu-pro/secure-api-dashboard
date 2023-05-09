@@ -725,6 +725,11 @@ textarea.form-control {
 .modal-content {
   border-radius: 0.8rem;
 }
+@media (min-width: 768px) {
+  .modal-dialog.modal-lg .modal-body {
+    padding: 30px;
+  }
+}
 @media (min-width: 992px) {
   .modal-dialog.modal-md {
     width: 800px;
@@ -869,6 +874,10 @@ button.close-modal {
 .table.table-style2 tbody tr td {
   padding-left: 6px;
   padding-right: 6px;
+}
+
+.e-grid .e-gridcontent .table tr:first-child td {
+  white-space: normal;
 }
 
 .main-header {

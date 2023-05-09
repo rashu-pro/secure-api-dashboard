@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Certificate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../dist/css/custom.css?v=2.0.1">
+
+    <style>
+        body,html{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        body *{
+            margin: 0;
+        }
+        :root{
+            --screen-width:1000px;
+            --screen-height:203.2mm;
+            --logo-max-width: 150px;
+            --logo-max-height: 100px;
+            --content-padding: 120px 60px 120px;
+            --content-foot-width: 80%;
+        }
+        img{
+            max-width: 100%;
+        }
+
+        .text-handwriting{
+            font-family: 'Satisfy', cursive;
+            font-size: 2.8rem;
+            display: inline-block;
+            padding: 0 5rem;
+            border-bottom: 2px solid;
+        }
+        .print-wrapper{
+            position: relative;
+            box-sizing: border-box;
+            width: var(--screen-width);
+            height: var(--screen-height);
+            margin:0 auto;
+        }
+        .print-content{
+            box-sizing: border-box;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            padding:var(--content-padding);
+            width: var(--screen-width);
+            height: var(--screen-height);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .company-logo img{
+            margin-top:0;
+            max-width: var(--logo-max-width);
+            max-height: var(--logo-max-height);
+        }
+        .content-heading{
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #009688;
+            padding: 15px 15px 10px;
+            letter-spacing: 4px;
+        }
+        .content-heading-2{
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .content-heading-3{
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .content-foot{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: var(--content-foot-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+
+
+        @page {
+            size: auto;
+            padding-top:0;
+            margin: 0mm 0mm 0mm 0mm;
+        }
+        @media screen{
+        }
+        @media print{
+            .print-wrapper{
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="print-wrapper">
+    <!-- CERTIFICATE CONTENT -->
+    <div class="print-content">
+        <!-- TOP PART -->
+        <div>
+            <div class="company-logo">
+                <img src="al-ilm-full-logo.png" class="img-responsive" alt="[company name]">
+            </div>
+            <h2 class="content-heading">CERTIFICATE</h2>
+            <p class="content-heading-2 mt-5 text-uppercase" style="margin-top:-5px;">of promotion to 4th GRADE</p>
+        </div>
+
+        <!-- MIDDLE PART -->
+        <div>
+            <p class="content-heading-3 text-uppercase">is presented to :</p>
+            <p class="mt-15 text-handwriting">Ahmed Amara</p>
+
+            <div class="mt-15" style="width: 700px;margin:0 auto;font-size: 1.3rem;margin-top:20px;font-weight: 500;line-height: 1.4">
+                <p>For their successful completion of AL-ILM Weekend School course requirements and the final examination held on  14th May 2023.</p>
+            </div>
+        </div>
+
+        <!-- BOTTOM PART -->
+        <div class="content-foot">
+            <div style="max-width: 40%;flex:0 0 40%;">
+                <p style="font-size: 1.4rem;font-weight: 600;text-transform: uppercase">Nabiha Mahmud</p>
+                <p style="font-size: 1.2rem;font-weight: 600; border-top:1px solid #ddd;text-transform: uppercase;margin-top:6px;">Vice Principal, Academic</p>
+            </div>
+
+            <div style="max-width: 20%;flex:0 0 20%;">
+                <img src="certified-sign.cropped.png" alt="certified" style="max-width: 60px">
+            </div>
+
+            <div style="max-width: 40%;flex:0 0 40%;">
+                <p style="font-size: 1.4rem;font-weight: 600;text-transform: uppercase">Dr. Usman Ahmed</p>
+                <p style="font-size: 1.2rem;font-weight: 600; border-top:1px solid #ddd;text-transform: uppercase;margin-top:6px;">Principal</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CERTIFICATE FRAME -->
+    <div>
+        <img src="certificate-frame.png" alt="[company-name]">
+    </div>
+</div>
+
+</body>
+</html>

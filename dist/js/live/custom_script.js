@@ -118,14 +118,21 @@ if(ticketSellScale.length>0){
 
 //=== pass active class to the active page
 let base_url = window.location.origin,
-    host = window.location.host,
-    pathString = window.location.pathname,
-    pathArray = pathString.split( '/' );
+  host = window.location.host,
+  pathString = window.location.pathname,
+  pathArray = pathString.split('/');
 let consoleString = `base url: ${base_url}\nHost: ${host}\n Path: ${pathString}\nPath array: ${pathArray}`;
-console.log("path string:", pathString);
-
-$('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
-    if($(element).data('route') === pathString){
+let dataRouteRoot = $('.main-sidebar .sidebar-menu').attr('data-route-root');
+let rootLessPath = pathString.split(dataRouteRoot);
+let parentMenu = rootLessPath[rootLessPath.length - 1].split('/');
+parentMenu = parentMenu[1];
+$('.main-sidebar .sidebar-menu>li.treeview').each(function (i, element) {
+    if ($(element).attr('data-route-parent') === parentMenu) {
+        $(element).addClass('active');
+    }
+})
+$('.main-sidebar .sidebar-menu .menu-link').each(function (i, element) {
+    if ($(element).data('route') === pathString) {
         $(element).closest('li').addClass('active');
         $(element).closest('.treeview').addClass('active');
     }
@@ -548,8 +555,21 @@ function tabActive(){
     let queryParameter = pageUrl.split('/');
     let tabName = queryParameter[queryParameter.length-1];
     $('.tab-page-content .nav-tabs li, .tab-page-content .tab-pane').removeClass('active');
-    $('.'+tabName).addClass('active');
+    $('.' + tabName).addClass('active');
+
+    let tabDetails = $('.tab-page-content .tab-pane.active');
+    var targetUrl = tabDetails.attr("data-url");
+    var targetPlace = tabDetails.attr("data-place");
+    console.log(targetUrl);
+    console.log(targetPlace);
+
+    load(targetUrl, targetPlace);
+
+   
 }
+
+//$('.tab-page-content .nav-tabs li').click(function () { console.log('in tab'); });
+
 
 
 $('.banner-image').on('change', function (e) {
@@ -558,4 +578,9 @@ $('.banner-image').on('change', function (e) {
 
 $('.ticket-image').on('change', function (e) {
     $('.existing-ticket-image-url').val('');
+});
+
+
+$(document).on('focus', '.banner-image', function () {
+    $('.existing-banner-image-url').val('');
 });
