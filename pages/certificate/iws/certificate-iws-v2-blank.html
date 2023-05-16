@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Certificate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Satisfy&family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body,html{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            box-sizing: border-box;
+        }
+        body *{
+            margin: 0;
+        }
+        :root{
+            --screen-width:297mm;
+            --screen-height:206mm;
+            --logo-max-width: 150px;
+            --logo-max-height: 100px;
+            --content-padding: 60px 60px 80px;
+            --content-foot-width: 80%;
+        }
+        img{
+            max-width: 100%;
+        }
+
+        .text-handwriting{
+            font-family: 'Satisfy', cursive;
+            font-size: 2.8rem;
+            display: inline-block;
+            padding: 0 5rem;
+            border-bottom: 2px solid;
+        }
+        .print-wrapper{
+            position: relative;
+            box-sizing: border-box;
+            /*width: var(--screen-width);*/
+            height: var(--screen-height);
+            margin:0 auto;
+        }
+        .print-content{
+            box-sizing: border-box;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            padding:var(--content-padding);
+            /*width: var(--screen-width);*/
+            height: var(--screen-height);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .company-logo img{
+            margin-top:0;
+            max-width: var(--logo-max-width);
+            max-height: var(--logo-max-height);
+        }
+        .content-heading{
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #206334;
+            padding: 15px 15px 10px;
+            letter-spacing: 4px;
+        }
+        .content-heading-2{
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .content-heading-3{
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .content-body{
+            height:48%;
+        }
+        .content-foot{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: var(--content-foot-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bg-image-holder{
+            height: 100%;
+        }
+        .bg-image-holder img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .mt-10{
+            margin-top:10px;
+        }
+        .mb-20{
+            margin-bottom: 20px;
+        }
+        .mb-35{
+            margin-bottom: 35px;
+        }
+        .grade-wrap{
+            width:55px;
+            display: inline-block;
+        }
+
+
+        @page {
+            size: auto;
+            padding-top:0;
+            margin: 0mm 0mm 0mm 0mm;
+        }
+        @media screen{
+        }
+        @media print{
+            .print-wrapper{
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div style="width: 300mm;margin:0 auto;">
+    <div class="print-wrapper">
+        <!-- CERTIFICATE CONTENT -->
+        <div class="print-content" style="padding:12% 12% 12% 12%;">
+            <style>
+                body,html{
+                    font-size: 14px;
+                }
+            </style>
+            <!-- TOP PART -->
+            <div>
+                <div class="">
+                    <img src="https://res.cloudinary.com/secure-api/image/upload/v1684235413/secure-api/iws-icgc/images/g2ye0ynb6eegvybnlkjw.jpg"
+                         class="img-responsive"
+                         style="max-width: 250px;max-height: 80px"
+                         alt="bismillah"
+                    />
+                </div>
+                <h2 class="content-heading"
+                    style="color:#93000c;font-family: Spectral; font-size: 2.2rem;letter-spacing: 0;text-transform: uppercase">
+                    The Islamic Center of Greater Miami
+                </h2>
+                <p class="text-uppercase"
+                   style="margin-top:-5px; font-size: 1.8rem;font-weight: 600;text-transform: uppercase">
+                    Islamic Weekend School
+                </p>
+                <p class="text-uppercase"
+                   style="font-size: 1.6rem;font-weight: 500;margin-top:10px">
+                    Annual Islamic Educational Program <br />For The Academic Year 2022-23
+                </p>
+            </div>
+
+            <!-- MIDDLE PART -->
+            <div class="content-body">
+                <p class="content-heading-3 text-uppercase"
+                   style="margin-top:20px;margin-bottom: 10px;font-weight: 700;font-size:2rem;font-family: Spectral">
+                    This is to certify that
+                </p>
+                <p class="mt-15 text-handwriting" style="min-width:250px;min-height: 40px">
+
+                </p>
+
+                <div class="mt-15"
+                     style="width: 90%;margin:0 auto;font-size: 1.3rem;margin-top:20px;font-weight: 500;line-height: 1.4">
+                    <p style="line-height: 1.5;margin-bottom: 4px">has successfully completed the Islamic Education for <strong> </strong> </p>
+                    <p style="line-height: 1.5">May Allah (SWT) allow the student continued success in Islamic Knowledge.</p>
+                </div>
+            </div>
+
+            <!-- BOTTOM PART -->
+            <div class="content-foot" style="width: 90%">
+                <div style="max-width: 40%;flex:0 0 40%;">
+                    <p style="font-size: 1.4rem;font-weight: 600;text-transform: uppercase">
+                        <!--                    <img src="signatue-nabiha.jpg" alt="vice principal" style="max-width: 120px;max-height: 60px;">-->
+                    </p>
+                    <p style="font-size: 1.1rem;padding-top:6px;font-weight: 600; border-top:1px solid #ddd;margin-top:6px;">
+                        <span style="font-size: 1.2rem;font-weight: 600;text-transform: uppercase">Luna Sakkal</span>, <span>Principal</span>
+                    </p>
+                </div>
+
+                <div style="max-width: 20%;flex:0 0 20%;">
+                    <img src="https://res.cloudinary.com/secure-api/image/upload/v1684235337/secure-api/iws-icgc/images/fier7yqym5zpq0muddyw.png"
+                         alt="certified"
+                         style="max-width: 60px"
+                    />
+                </div>
+
+                <div style="max-width: 40%;flex:0 0 40%;">
+                    <p style="font-size: 1.4rem;font-weight: 600;text-transform: uppercase">
+                        <img src="https://res.cloudinary.com/secure-api/image/upload/v1684235383/secure-api/iws-icgc/images/n2g98l5zjszqbyz48imx.jpg"
+                             alt="vice principal"
+                             style="max-width: 120px;max-height: 60px;">
+                    </p>
+                    <p style="font-size: 1.1rem;font-weight: 600; padding-top: 6px; border-top:1px solid #ddd;margin-top:6px;">
+                        <span style="font-size: 1.2rem;font-weight: 600;text-transform: uppercase">Tilat Rizvi</span>, <span>Vice Principal</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CERTIFICATE FRAME -->
+        <div class="bg-image-holder">
+            <img src="https://res.cloudinary.com/secure-api/image/upload/v1684235360/secure-api/iws-icgc/images/jkvbcpo6bupsznbzhstd.jpg"
+                 alt="IWS ICGC"
+            />
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
