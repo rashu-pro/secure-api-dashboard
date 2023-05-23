@@ -880,6 +880,10 @@ button.close-modal {
   white-space: normal;
 }
 
+.e-frozencontent .e-grid .e-rowcell {
+  overflow: auto;
+}
+
 .main-header {
   max-height: min-content;
 }
@@ -2458,6 +2462,7 @@ HELP PAGE
   display: flex;
   align-items: center;
   margin-bottom: 4px;
+  line-height: 1.2;
 }
 
 .avatar-row .avatar {
