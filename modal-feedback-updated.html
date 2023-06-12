@@ -550,6 +550,7 @@ desired effect
 
 <script>
   $(document).ready(function (){
+    //=== FEEDBACK ICON CLICK ACTION
     $(document).on('click', '.recommend-icon-js', function (e){
       e.preventDefault();
       let self = $(this);
@@ -560,12 +561,14 @@ desired effect
       self.closest('.field-group').find('.error-message').remove();
     });
 
+    //== FORM FIELD KEYUP ACTION
     $(document).on('keyup change', '.field-validation', function (e){
       let self = $(this);
       self.addClass('invalid');
       self.closest('.field-group').find('.error-message').remove();
     })
 
+    //=== SUBMIT BUTTON CLICK ACTION
     $(document).on('click', '.btn-submit-feedback-js', function (e){
       e.preventDefault();
       let self = $(this);
@@ -590,8 +593,7 @@ desired effect
 
     });
 
-
-
+    //=== SHOW FEEDBACK MODAL ON DOCUMENT READY
     $('#feedback-modal').modal('show');
   })
 </script>
