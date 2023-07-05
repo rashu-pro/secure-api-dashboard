@@ -118,21 +118,14 @@ if(ticketSellScale.length>0){
 
 //=== pass active class to the active page
 let base_url = window.location.origin,
-  host = window.location.host,
-  pathString = window.location.pathname,
-  pathArray = pathString.split('/');
+    host = window.location.host,
+    pathString = window.location.pathname,
+    pathArray = pathString.split( '/' );
 let consoleString = `base url: ${base_url}\nHost: ${host}\n Path: ${pathString}\nPath array: ${pathArray}`;
-let dataRouteRoot = $('.main-sidebar .sidebar-menu').attr('data-route-root');
-let rootLessPath = pathString.split(dataRouteRoot);
-let parentMenu = rootLessPath[rootLessPath.length - 1].split('/');
-parentMenu = parentMenu[1];
-$('.main-sidebar .sidebar-menu>li.treeview').each(function (i, element) {
-    if ($(element).attr('data-route-parent') === parentMenu) {
-        $(element).addClass('active');
-    }
-})
-$('.main-sidebar .sidebar-menu .menu-link').each(function (i, element) {
-    if ($(element).data('route') === pathString) {
+console.log("path string:", pathString);
+
+$('.main-sidebar .sidebar-menu .menu-link').each(function (i, element){
+    if($(element).data('route') === pathString){
         $(element).closest('li').addClass('active');
         $(element).closest('.treeview').addClass('active');
     }
@@ -274,6 +267,20 @@ $(document).on('click', '.toggle-div', function (e){
     $(self.attr('data-toggle-off')).addClass('d-none');
     $(self.attr('data-toggle-on')).removeClass('d-none');
 })
+
+$(document).on('click', '.sub-title-js', function (e) {
+    e.preventDefault();
+    let self = $(this);
+    let rowNumber = self.closest('tr').attr('data-row');
+    $('tr[data-details=' + rowNumber + ']').toggleClass('closed');
+})
+
+$(document).on('click', '.close-sub-details-js', function (e) {
+    e.preventDefault();
+    let self = $(this);
+    self.closest('.tr-sub-details').toggleClass('closed');
+})
+
 
 /** --Click Action **/
 

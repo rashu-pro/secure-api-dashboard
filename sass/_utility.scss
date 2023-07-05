@@ -210,3 +210,19 @@
   }
 }
 
+// toggling
+.btn.btn-collapse{
+  color:#000;
+
+  .fa{
+    color:#000;
+    font-size: 1.5rem;
+    transform: rotate(180deg);
+  }
+  &.collapsed{
+    .fa{
+      transform: rotate(0);
+    }
+  }
+}
+

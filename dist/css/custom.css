@@ -217,6 +217,18 @@
   text-decoration: underline;
 }
 
+.btn.btn-collapse {
+  color: #000;
+}
+.btn.btn-collapse .fa {
+  color: #000;
+  font-size: 1.5rem;
+  transform: rotate(180deg);
+}
+.btn.btn-collapse.collapsed .fa {
+  transform: rotate(0);
+}
+
 .alert-warning.alert-warning-custom p {
   margin: 0;
 }
