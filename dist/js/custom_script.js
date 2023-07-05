@@ -265,6 +265,13 @@ $(document).on('click', '.toggle-div', function (e){
     $(self.attr('data-toggle-on')).removeClass('d-none');
 })
 
+//=== TOGGLE TITLE FOR COLLAPSE BUTTON
+$(document).on('click', '.btn-collapse-js', function(){
+    let btnTitle = 'show';
+    $(this).hasClass('collapsed') ? btnTitle = 'show' : btnTitle = 'hide';
+    $(this).attr('title', btnTitle);
+})
+
 /** --Click Action **/
 
 

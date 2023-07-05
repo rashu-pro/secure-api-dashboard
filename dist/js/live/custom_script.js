@@ -281,6 +281,13 @@ $(document).on('click', '.close-sub-details-js', function (e) {
     self.closest('.tr-sub-details').toggleClass('closed');
 })
 
+//=== TOGGLE TITLE FOR COLLAPSE BUTTON
+$(document).on('click', '.btn-collapse-js', function(){
+    let btnTitle = 'show';
+    $(this).hasClass('collapsed') ? btnTitle = 'show' : btnTitle = 'hide';
+    $(this).attr('title', btnTitle);
+})
+
 
 /** --Click Action **/
 
