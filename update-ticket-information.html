@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Person</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--select 2-->
+    <link rel="stylesheet" href="plugins/select2/select2.min.css">
+    <!-- prism css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
+    <link rel="stylesheet" href="plugins/intl-tel-input/css/intlTelInput.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- dropify -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+        integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    <!--custom css-->
+    <link rel="stylesheet" href="dist/css/custom.css?v=1.0.4">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+
+<body class="hold-transition skin-red sidebar-mini">
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="dashboard_new.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>A</b>LT</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Admin</b>LTE</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu dropdown-custom-action dropdown-company company-dropdown-js">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <div class="dropdown-toggle-content">
+                                    <div class="dropdown-toggle-content-inner">
+                                        <div class="dropdown-toggle-icon">
+                                            <img class="company-img"
+                                                src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                        </div>
+                                        <div class="dropdown-toggle-title">IWS-ICGC</div>
+                                    </div>
+
+                                    <div class="dropdown-toggle-sign">
+                                        <img src="dist/img/down-arrow_white.png" alt="dropdown-toggle">
+                                    </div>
+
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="input-group input-group-transparent">
+                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                    <input type="text" class="form-control search-dropdown"
+                                        placeholder="Search By Name">
+                                </div>
+                                <li>
+                                    <ul class="menu overlay-scrollbar-js">
+                                        <li class="dropdown-menu-child current" data-text="IWS-ICGC">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    IWS-ICGC
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    Demo-Mosque
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="ISNA">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/isna/344172_60x60.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    ISNA
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    Al-Azhar Foundation
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    IWS-ICGC
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    Demo-Mosque
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="Al-Azhar Foundation">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/Secure-api/948588_logo-masjid-main.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    Al-Azhar Foundation
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="IWS-ICGC">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/iws-icgc/238360_iws-icgc-mobile-logo.png">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    IWS-ICGC
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                        <li class="dropdown-menu-child" data-text="Demo-Mosque">
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img class="company-img"
+                                                        src="https://secure-api.net/resources/Demo-Mosque/951098_demo-mosque-mobile-logo.jpg">
+                                                </div>
+                                                <h4 class="dropdown-child-title">
+                                                    Demo-Mosque
+                                                </h4>
+                                                <p class="dropdown-child-subtitle">
+                                                    CompanyAdmin
+                                                </p>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Alexander Pierce</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                    <p>
+                                        Alexander Pierce - Web Developer
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>admin</p>
+                        <!-- Status -->
+                        <a href="javascript:;"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="header">MENU</li>
+                    <!-- Optionally, you can add icons to the links -->
+
+                    <li class="">
+                        <a href="dashboard_new.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <i class="fa fa-graduation-cap"></i> <span>School</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="pages/tables/data_class_v5.html"><i class="fa fa-university"></i>
+                            <span>Classes</span></a>
+                    </li>
+
+                    <li class="">
+                        <a href="pages/tables/data_registrations.html"><i class="fa fa-list"></i>
+                            <span>Registrations</span></a>
+
+                    </li>
+
+                    <li class="treeview">
+                        <a href="pages/tables/data_students.html"><i class="fa fa-graduation-cap"></i>
+                            <span>Students</span></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/tables/data_student_details.html">Student Details</a> </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="pages/tables/data_parents.html"><i class="fa fa-male"></i> <span>Parents</span></a>
+
+                    </li>
+                    <li class="">
+                        <a href="pages/tables/data_person_details.html"><i class="fa fa-male"></i>
+                            <span>Profile</span></a>
+
+                    </li>
+                    <li class="">
+                        <a href="pages/tables/data_teachers.html"><i class="fa fa-user"></i> <span>Teachers</span></a>
+
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-cog"></i> <span>Settings</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/tables/data_topics.html">Topics</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview ">
+                        <a href="#">
+                            <i class="fa fa-sticky-note"></i> <span>Assignments</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/tables/data_assignments.html">Due Assignments</a></li>
+                            <li><a href="pages/forms/form_create_assignment.html">Create Assignment</a></li>
+                            <li><a href="pages/tables/data_assignments.html">All Assignments</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview ">
+                        <a href="#">
+                            <i class="fa fa-calendar"></i> <span>Events</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/admin/events">Event List</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-users"></i> <span>Persons</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="/admin/persons">All Persons</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview ">
+                        <a href="#">
+                            <i class="fa fa-gift"></i> <span>Payments</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/admin/give/pledges">Pledges</a></li>
+                            <li><a href="/admin/give/payments">Payments</a></li>
+                            <li><a href="/admin/give/company/cc-donations">CC Charges</a></li>
+                            <li><a href="/admin/give/company/customers">CC Customers</a></li>
+                            <li><a href="/admin/give/company/settings">Setup</a></li>
+                            <li><a href="/admin/give/company/deposits">CC Deposits</a></li>
+                            <li><a href="/admin/donation/categories">Donation Categories</a></li>
+                            <li><a href="/admin/give/company/products">CC Products</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/admin/users"><i class="fa fa-user"></i> <span>User Settings</span></a>
+
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-cog"></i> <span>Components</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/components/btn_action.html"> Action Button </a></li>
+                            <li class=""><a href="pages/components/btn_action_no_text.html"> Action Button (no text)
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="d-sm-flex align-center justify-space-between">
+                    <h1 class="m-0 mb-10">
+                        Update ticket Information Modal
+                    </h1>
+                </div>
+            </section>
+
+            <section class="content">
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#updateTicketInfoModal">Update Ticket Information</button>
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Update ticket info modal -->
+        <div id="updateTicketInfoModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="clearfix">
+                            <h3 class="modal-title pull-left">Update Info</h3>
+                            <button type="button" class="close close-modal" data-dismiss="modal">
+                                <svg aria-hidden="true" class="icon-svg-close" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form method="post" class="main-body-form" id="ticket-update-form">
+                                    <input type="hidden" name="EventKey" id="event_key" />
+                                    <input type="hidden" name="UniqueKey" id="UniqueKey" />
+                                    <input type="hidden" id="registrationKey" name="RegistrationKey" />
+                                    <input type="hidden" id="ticketKey" name="TicketKey" />
+
+                                    <!-- ====== BUSINESS INFORMATION ====== -->
+                                    <div class="form-row form-row-required form-row-business">
+                                        <div class="form-row-head">
+                                            <div class="form-row-head-inner">
+                                                <h3 class="form-row-title" style="margin-top:0">Primary Information</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row-body">
+                                            <div class="form-fields-wrapper">
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">First Name <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control" id="firstName"
+                                                                name="firstName" value="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">Last Name <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control" id="lastName"
+                                                                name="lastName" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">Email <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="email" class="form-control" id="email1"
+                                                                name="email" data-validation="email">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">Phone Number <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control phone-number-maskx"
+                                                                data-validation="phone-numberx" id="phone" name="phone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ====== ADDRESS ====== -->
+                                                <h3 class="form-row-title" style="margin-top: 20px;">Address</h3>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">Address Line 1 <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control" id="addressLine1"
+                                                                name="addressLine1">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label">Address Line 2 </label>
+                                                            <input type="text" class="form-control" id="addressLine2"
+                                                                name="addressLine2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">Country <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <select name="Country" id="Country"
+                                                                class="form-control js-country">
+                                                                <option value="0">Select Country</option>
+                                                                <option value="USA">USA</option>
+                                                                <option value="Canada">Canada</option>
+                                                                <option value="Other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group state-field-group">
+                                                            <label class="form-control-label">State <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <div class="state-holder">
+                                                                <select class="form-control state" id="state"
+                                                                    name="state"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group required-group">
+                                                            <label class="form-control-label">ZIP Code <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control" id="zipCode"
+                                                                name="zipCode">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label">City <span
+                                                                    class="required-mark text-denger">*</span></label>
+                                                            <input type="text" class="form-control" id="city"
+                                                                name="city">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="" style="padding:0">
+                                                    <hr />
+                                                    <a target="_blank" href="#" title="Print Badge"
+                                                        class="btn btn-primary btn-md btn-fill js-badge-ticket pull-left"
+                                                        style="margin-right:5px"><i class="fa fa-print fa-lg"></i>
+                                                        Badge</a>
+                                                    <a class="btn btn-info js-update-with-registrant pull-left"
+                                                        title="This button updates Names and Address on the ticket with Primary Registrant's information">Update
+                                                        with Registrant</a>
+
+                                                    <a class="btn btn-success js-ticket-save pull-right">Update</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5 align-bottom js-message"
+                                        style="position: relative;bottom: -15px !important;width: 100%;"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Anything you want
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.2.3 -->
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- datepicker -->
+    <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+    <!-- Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--select 2-->
+    <script src="plugins/select2/select2.min.js"></script>
+    <!-- intl-tel-input -->
+    <script src="plugins/intl-tel-input/js/intlTelInput.min.js"></script>
+    <!-- iCheck -->
+    <script src="plugins/iCheck/icheck.min.js"></script>
+    <!-- input mask -->
+    <script src="plugins/input-mask/jquery.inputmask.js"></script>
+    <!-- dropify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
+        integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--For auto complete state, city with zip code-->
+    <!-- prism js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+    <!-- intl-tel-initialization -->
+    <script src="dist/js/phone_validator.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.js"></script>
+
+    <script src="dist/js/live/custom_script.js?v=1.0.0"></script>
+
+    <script src="dist/js/live/validation.js"></script>
+
+
+    <script>
+        $(document).on('click', '.js-ticket-save', function (e) {
+            e.preventDefault();
+            let self = $(this);
+            let formSelector = self.closest('.form-row');
+            let formGroupRequiredSelector = formSelector.find('.form-row-body .form-group.required-group');
+            formGroupRequiredSelector.find('.form-control').focus();
+            if (isFieldsValidated(self, "btnForm")) {
+                alert('validated!');
+            }
+        })
+    </script>
+
+</body>
+
+</html>
