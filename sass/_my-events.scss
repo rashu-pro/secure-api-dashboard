@@ -1,8 +1,22 @@
 .card{
   &-box{
     &-inner{
-      padding:10px;
+      padding:15px;
       position: relative;
+      &-content{
+        padding-top:10px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &-inner{
+        &-content{
+          padding: 0 20px;
+          border-left: 2px solid #ddd;
+          margin-left: 20px;
+          width:100%;
+        }
+      }
     }
   }
 }
@@ -11,16 +25,23 @@
   .card{
     &-box{
       &-title{
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       @media (min-width: 768px) {
+        &-title{
+          font-size: 2.8rem;
+        }
+
         &-image{
-          padding-top:0;
-          min-height: 210px;
+          //padding-top:0;
+          //min-height: 210px;
+          padding-top: 0;
+          position: relative;
+          height: 100%;
         }
         &-inner-content{
-          margin-left:-10px;
+          //margin-left:-10px;
         }
       }
     }
@@ -29,19 +50,44 @@
 
 
 .date-card{
+  position: absolute;
+  top: 16px;
+  z-index: 9;
+  right: 15px;
+  box-shadow: -2px 4px 6px #00000080;
+
   text-align: center;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 0 0 5px 0;
+  width: 80px;
+  background: #ECF0F5;
+  @media (min-width: 768px) {
+    box-shadow: none;
+    position: static;
+    width: 115px;
+    flex: 0 0 115px;
+  }
 }
 .month-name{
   background: #3F51B5;
   color: #fff;
-  /* padding: 4px 0; */
+  padding: 1px 0;
   margin-bottom: 4px;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    padding:4px 0;
+  }
 }
 .date-name{
-  font-size: 2.2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 4px;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    padding: 15px;
+  }
 }
 
 .event-list{
@@ -100,5 +146,57 @@
   font-size: 24px;
   @media (min-width: 768px) {
     font-size: 28px;
+  }
+}
+
+.event{
+  &-single{
+    &-left{
+      width:100%;
+    }
+    &-right{
+      width:100%;
+      .card-box-image{
+        border-radius: 4px!important;
+        overflow: hidden;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &-left{
+        width:80%;
+      }
+      &-right{
+        width:20%;
+      }
+    }
+  }
+
+  &-date{
+    &-calendar{
+      width:130px;
+      text-align: center;
+    }
+  }
+}
+
+.event-single-box{
+  display: flex;
+  flex-direction: column-reverse;
+  @media (min-width:768px){
+    flex-direction: row;
+  }
+}
+
+.past-event{
+  .event-single-box{
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+    }
+    .card-box-inner-content{
+      margin-left:0;
+      margin-right:0;
+      border:0;
+    }
   }
 }
