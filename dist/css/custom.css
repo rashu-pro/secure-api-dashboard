@@ -3602,7 +3602,8 @@ table tr.bg-white tr th {
 }
 @media (min-width: 768px) {
   .event-list .card-box-title {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+    line-height: 3rem;
   }
   .event-list .card-box-image {
     padding-top: 0;

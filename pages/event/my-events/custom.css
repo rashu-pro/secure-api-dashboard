@@ -3582,39 +3582,82 @@ table tr.bg-white tr th {
 }
 
 .card-box-inner {
-  padding: 10px;
+  padding: 15px;
   position: relative;
+}
+.card-box-inner-content {
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  .card-box-inner-content {
+    padding: 0 20px;
+    border-left: 2px solid #ddd;
+    margin-left: 20px;
+    width: 100%;
+  }
 }
 
 .event-list .card-box-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 @media (min-width: 768px) {
+  .event-list .card-box-title {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
   .event-list .card-box-image {
     padding-top: 0;
-    min-height: 210px;
-  }
-  .event-list .card-box-inner-content {
-    margin-left: -10px;
+    position: relative;
+    height: 100%;
   }
 }
 
 .date-card {
+  position: absolute;
+  top: 16px;
+  z-index: 9;
+  right: 15px;
+  box-shadow: -2px 4px 6px #00000080;
   text-align: center;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 0 0 5px 0;
+  width: 80px;
+  background: #ECF0F5;
+}
+@media (min-width: 768px) {
+  .date-card {
+    box-shadow: none;
+    position: static;
+    width: 115px;
+    flex: 0 0 115px;
+  }
 }
 
 .month-name {
   background: #3F51B5;
   color: #fff;
-  /* padding: 4px 0; */
+  padding: 1px 0;
   margin-bottom: 4px;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .month-name {
+    padding: 4px 0;
+  }
 }
 
 .date-name {
-  font-size: 2.2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 4px;
+}
+@media (min-width: 768px) {
+  .date-name {
+    font-size: 4rem;
+    padding: 15px;
+  }
 }
 
 .event-list td {
@@ -3661,6 +3704,50 @@ table tr.bg-white tr th {
   .event-detail-title {
     font-size: 28px;
   }
+}
+
+.event-single-left {
+  width: 100%;
+}
+.event-single-right {
+  width: 100%;
+}
+.event-single-right .card-box-image {
+  border-radius: 4px !important;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .event-single-left {
+    width: 80%;
+  }
+  .event-single-right {
+    width: 20%;
+  }
+}
+.event-date-calendar {
+  width: 130px;
+  text-align: center;
+}
+
+.event-single-box {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .event-single-box {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .past-event .event-single-box {
+    flex-direction: row-reverse;
+  }
+}
+.past-event .event-single-box .card-box-inner-content {
+  margin-left: 0;
+  margin-right: 0;
+  border: 0;
 }
 
 .ticket-icon {
