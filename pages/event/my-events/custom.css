@@ -949,6 +949,13 @@ button.close-modal {
   border: 1px solid #f2f2f2;
   position: relative;
 }
+.card-box-head {
+  padding: 12px 20px;
+  background-color: #e3e3e3;
+}
+.card-box-head .card-box-title {
+  font-size: 2.2rem;
+}
 .card-box-image {
   padding-top: 60%;
   position: relative;
@@ -981,6 +988,12 @@ button.close-modal {
   position: absolute;
   top: 4px;
   right: 4px;
+}
+.card-box.no-border {
+  border: none;
+}
+.card-box.no-border .card-box-body {
+  border: 1px solid #ddd;
 }
 
 body {
@@ -2908,6 +2921,19 @@ table tr.bg-white tr th {
   left: 0;
   margin-right: 6px;
 }
+.list-bulleted.style-2 li {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .list-bulleted.style-2 li {
+    margin-right: 12px;
+    font-size: 2rem;
+  }
+}
+.list-bulleted.style-2 li a:hover {
+  text-decoration: underline;
+}
 
 .tab-nav-inner {
   display: inline-block;
@@ -3748,6 +3774,12 @@ table tr.bg-white tr th {
   margin-left: 0;
   margin-right: 0;
   border: 0;
+}
+
+@media (min-width: 768px) {
+  .content-box .contact-infos .info-box {
+    min-height: 215px;
+  }
 }
 
 .ticket-icon {

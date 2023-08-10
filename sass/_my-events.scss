@@ -201,3 +201,13 @@
     }
   }
 }
+
+.content-box{
+  .contact-infos{
+    .info-box{
+      @media (min-width:768px){
+        min-height: 215px;
+      }
+    }
+  }
+}
